@@ -3,8 +3,27 @@
 set -x EXPS exp1 exp2 exp3
 # set -x EXPS exp3
 set -x PES pe1 pe28
-set -x ROOTDIR "/home/eryilmaz/repos/fpl26-aie/aie"
-set -x DELAYS 2048 4096
+set -x ROOTDIR "/home/eryilmaz/repos/tmp/fpl26-AIECilk-Artifact-Eval/aie"
+set -x DELAYS 1 2 4 8 16 32 64 128 256 512 1024 2048 4096
+
+
+for exp in $EXPS
+    for pe in $PES
+        set -x EXPDIR "$exp"_"$pe"
+        if test -e "$ROOTDIR"/"$EXPDIR"/src/host/build/projects/pageRank/pageRank_xrt
+            echo "Executable for $EXPDIR already exists, skipping build"
+        else
+            echo "Building $EXPDIR"
+            cd "$ROOTDIR"/"$EXPDIR"/src/host
+            mkdir -p build
+            cd build
+            cmake ..
+            make -j
+        end
+    end
+end
+
+enable_xilinx_2022.2
 
 for exp in $EXPS
     for pe in $PES
