@@ -1,0 +1,1246 @@
+<ENTRY>
+{
+ "thisFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/xclbins/paper_exp1_hw.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:08 2026",
+ "timestampMillis": "1774949048138",
+ "buildStep": {
+  "cmdId": "4e4873ad-0824-46c1-9ecb-7944f12d6f5c",
+  "name": "v++",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target=hw --platform=xilinx_vck5000_gen4x8_qdma_2_202220_1 --save-temps -g --profile.data all:all:all --kernel_frequency 300 -l -o xclbins/paper_exp1_hw.xsa ./libadf.a xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --config ./connectivity.cfg --vivado.synth.jobs 32 --vivado.impl.jobs 16 ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "--target=hw",
+   "--platform=xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--save-temps",
+   "-g",
+   "--profile.data",
+   "all:all:all",
+   "--kernel_frequency",
+   "300",
+   "-l",
+   "-o",
+   "xclbins/paper_exp1_hw.xsa",
+   "./libadf.a",
+   "xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--config",
+   "./connectivity.cfg",
+   "--vivado.synth.jobs",
+   "32",
+   "--vivado.impl.jobs",
+   "16"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/connectivity.cfg",
+    "content": "[connectivity]\nnk=exp1:1:exp1_1\n\nsp=exp1_1.m_axi_00:MC_NOC0\nsp=exp1_1.m_axi_01:MC_NOC0\nsp=exp1_1.m_axi_02:MC_NOC0\nsp=exp1_1.m_axi_03:MC_NOC0\n\nsc=ai_engine_0.PLIO_paper_exp1_task_argOut:exp1_1.BindTo_PE_paper_exp1_task_0_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_taskOut:exp1_1.BindTo_PE_paper_exp1_task_0_taskOut\nsc=exp1_1.BindTo_PE_paper_exp1_task_0_taskIn:ai_engine_0.PLIO_paper_exp1_task_taskIn\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:08 2026",
+ "timestampMillis": "1774949048138",
+ "status": {
+  "cmdId": "4e4873ad-0824-46c1-9ecb-7944f12d6f5c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049682",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "paper_exp1_hw",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "exp1",
+     "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "exp1_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11",
+  "aieInputs": {
+   "base": {
+    "type": "AI_LIBSDF",
+    "name": "libadf",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/libadf.a",
+    "reports": [
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie.partial.aiecompile_summary",
+      "name": "",
+      "fileType": "TEXT",
+      "reportType": "TASK_LOG_SUMMARY",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie_control_config.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_CONTROL_CONFIG",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie.router.soln.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_ROUTER_SOLUTION",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie.mapped.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_GRAPH_MAPPED",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie.compiler.report.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_COMPILER_REPORT",
+      "cmdId": ""
+     }
+    ],
+    "uuid": ""
+   },
+   "sources": [],
+   "type": "AI_UKNOWN"
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049690",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie_control_config.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONTROL_CONFIG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049764",
+ "buildStep": {
+  "cmdId": "27b2c336-1b63-4747-83a1-2c35921ab29b",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo -keep -memory-for-trace BRAM /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/.Xil/v++-14982-lap-c024198l/hw.o --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm --target hw --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "-keep",
+   "-memory-for-trace",
+   "BRAM",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/.Xil/v++-14982-lap-c024198l/hw.o",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/syslinkConfig.ini",
+    "content": "nk=exp1:1:exp1_1\nsc=ai_engine_0.PLIO_paper_exp1_task_argOut:exp1_1.BindTo_PE_paper_exp1_task_0_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_taskOut:exp1_1.BindTo_PE_paper_exp1_task_0_taskOut\nsc=exp1_1.BindTo_PE_paper_exp1_task_0_taskIn:ai_engine_0.PLIO_paper_exp1_task_taskIn\nsp=exp1_1.m_axi_00:MC_NOC0\nsp=exp1_1.m_axi_01:MC_NOC0\nsp=exp1_1.m_axi_02:MC_NOC0\nsp=exp1_1.m_axi_03:MC_NOC0\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049765",
+ "status": {
+  "cmdId": "27b2c336-1b63-4747-83a1-2c35921ab29b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:17 2026",
+ "timestampMillis": "1774949057107",
+ "status": {
+  "cmdId": "27b2c336-1b63-4747-83a1-2c35921ab29b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:17 2026",
+ "timestampMillis": "1774949057108",
+ "buildStep": {
+  "cmdId": "2813eca0-7a23-4e7f-80a3-2e71b18cc0d6",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/sdsl.dat -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/cf2sw.rtd -nofilter /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/cf2sw_full.rtd -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.xml -o /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:17 2026",
+ "timestampMillis": "1774949057108",
+ "status": {
+  "cmdId": "2813eca0-7a23-4e7f-80a3-2e71b18cc0d6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058095",
+ "status": {
+  "cmdId": "2813eca0-7a23-4e7f-80a3-2e71b18cc0d6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058096",
+ "buildStep": {
+  "cmdId": "f6c22129-68fd-47cf-b008-d93e65716196",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058096",
+ "status": {
+  "cmdId": "f6c22129-68fd-47cf-b008-d93e65716196",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058195",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058195",
+ "status": {
+  "cmdId": "f6c22129-68fd-47cf-b008-d93e65716196",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058195",
+ "buildStep": {
+  "cmdId": "5ac597e9-85a5-4e37-a2ef-580145c01dfc",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "-s",
+   "-g",
+   "--kernel_frequency",
+   "300",
+   "--remote_ip_cache",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/.ipcache",
+   "--trace_memory",
+   "BRAM",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int",
+   "--log_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/logs/link",
+   "--report_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0",
+   "--messageDb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/run_link/vpl.pb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1\nmisc=BinaryName=paper_exp1_hw\n\n[connectivity]\nnk=exp1:1:exp1_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nsynth.jobs=32\nimpl.jobs=16\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058195",
+ "status": {
+  "cmdId": "5ac597e9-85a5-4e37-a2ef-580145c01dfc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058723",
+ "buildStep": {
+  "cmdId": "2a3f204a-8741-4f9e-b51d-85e435248f26",
+  "name": "vpl",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058723",
+ "status": {
+  "cmdId": "2a3f204a-8741-4f9e-b51d-85e435248f26",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue Mar 31 11:24:21 2026",
+ "timestampMillis": "1774949061009",
+ "vivadoProject": {
+  "openDir": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:21 2026",
+ "timestampMillis": "1774949061010",
+ "buildStep": {
+  "cmdId": "ec067182-4117-4774-892d-3e5f09ae70cc",
+  "name": "vivado",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:21 2026",
+ "timestampMillis": "1774949061010",
+ "status": {
+  "cmdId": "ec067182-4117-4774-892d-3e5f09ae70cc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:34 2026",
+ "timestampMillis": "1774949074828",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:34 2026",
+ "timestampMillis": "1774949074837",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:30:09 2026",
+ "timestampMillis": "1774949409098",
+ "buildStep": {
+  "cmdId": "ab51646c-cd46-486a-a968-f791950a4407",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:30:09 2026",
+ "timestampMillis": "1774949409098",
+ "status": {
+  "cmdId": "ab51646c-cd46-486a-a968-f791950a4407",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:30:09 2026",
+ "timestampMillis": "1774949409099",
+ "buildStep": {
+  "cmdId": "e594b198-b6c7-46de-8d82-00c653a4bfe2",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:30:09 2026",
+ "timestampMillis": "1774949409099",
+ "status": {
+  "cmdId": "e594b198-b6c7-46de-8d82-00c653a4bfe2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:53:05 2026",
+ "timestampMillis": "1774950785303",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:53:05 2026",
+ "timestampMillis": "1774950785304",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:53:37 2026",
+ "timestampMillis": "1774950817541",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618951",
+ "status": {
+  "cmdId": "ec067182-4117-4774-892d-3e5f09ae70cc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618966",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/syn/ulp_inst_0_exp1_1_0_synth_1_ulp_inst_0_exp1_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618967",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/syn/ulp_inst_0_dpa_trace_s2mm_0_synth_1_ulp_inst_0_dpa_trace_s2mm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618968",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618968",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "e594b198-b6c7-46de-8d82-00c653a4bfe2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618969",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "e594b198-b6c7-46de-8d82-00c653a4bfe2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618969",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "e594b198-b6c7-46de-8d82-00c653a4bfe2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618984",
+ "status": {
+  "cmdId": "2a3f204a-8741-4f9e-b51d-85e435248f26",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618993",
+ "status": {
+  "cmdId": "5ac597e9-85a5-4e37-a2ef-580145c01dfc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618994",
+ "buildStep": {
+  "cmdId": "923f33de-79e5-49b8-b9dd-bb3a443bdccf",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618994",
+ "status": {
+  "cmdId": "923f33de-79e5-49b8-b9dd-bb3a443bdccf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618995",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618995",
+ "buildStep": {
+  "cmdId": "39480d5e-627d-414e-bb56-bc3b5faa80ff",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -force-enable-memory BRAM -a /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/address_map.xml -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/sdsl.dat -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.xml -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.rtd -o /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xml",
+  "args": [
+   "-force-enable-memory",
+   "BRAM",
+   "-a",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.rtd",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:58 2026",
+ "timestampMillis": "1774951618996",
+ "status": {
+  "cmdId": "39480d5e-627d-414e-bb56-bc3b5faa80ff",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619823",
+ "status": {
+  "cmdId": "39480d5e-627d-414e-bb56-bc3b5faa80ff",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619824",
+ "buildStep": {
+  "cmdId": "384ba6b1-8f94-435c-889f-61e0145fa023",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619824",
+ "status": {
+  "cmdId": "384ba6b1-8f94-435c-889f-61e0145fa023",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619825",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "status": {
+  "cmdId": "384ba6b1-8f94-435c-889f-61e0145fa023",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "buildStep": {
+  "cmdId": "d7055c3e-a744-4f26-8775-9affd9aaaa10",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "status": {
+  "cmdId": "d7055c3e-a744-4f26-8775-9affd9aaaa10",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "status": {
+  "cmdId": "d7055c3e-a744-4f26-8775-9affd9aaaa10",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619826",
+ "status": {
+  "cmdId": "923f33de-79e5-49b8-b9dd-bb3a443bdccf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619827",
+ "buildStep": {
+  "cmdId": "5ba6089d-b1f9-4ad5-a1f1-f9ff5b8496ee",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.rtd --append-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xml --add-section SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/systemDiagramModelSlrBaseAddress.json --add-section AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie_control_config.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1 --output /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.rtd",
+   "--append-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--add-section",
+   "AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/aie_control_config.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--output",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619827",
+ "status": {
+  "cmdId": "5ba6089d-b1f9-4ad5-a1f1-f9ff5b8496ee",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619862",
+ "status": {
+  "cmdId": "5ba6089d-b1f9-4ad5-a1f1-f9ff5b8496ee",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619863",
+ "buildStep": {
+  "cmdId": "29542628-eb56-4550-9786-cd114eabe3e9",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin.info --input /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin.info",
+   "--input",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619863",
+ "status": {
+  "cmdId": "29542628-eb56-4550-9786-cd114eabe3e9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619912",
+ "status": {
+  "cmdId": "29542628-eb56-4550-9786-cd114eabe3e9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619913",
+ "buildStep": {
+  "cmdId": "ffbe8f8d-0ee3-4387-a00f-53ab71f1b98b",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619913",
+ "status": {
+  "cmdId": "ffbe8f8d-0ee3-4387-a00f-53ab71f1b98b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619913",
+ "status": {
+  "cmdId": "ffbe8f8d-0ee3-4387-a00f-53ab71f1b98b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619914",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/system_estimate_paper_exp1_hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619976",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619977",
+ "status": {
+  "cmdId": "4e4873ad-0824-46c1-9ecb-7944f12d6f5c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619987",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/reports/link/v++_link_paper_exp1_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:06:59 2026",
+ "timestampMillis": "1774951619987",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe1/_x/v++_link_paper_exp1_hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

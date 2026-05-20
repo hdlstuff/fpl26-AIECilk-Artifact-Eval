@@ -1,0 +1,14 @@
+Benchmark,PE Count,Time,Speedup
+Benchmark 1,1,84.4421,1
+Benchmark 1,4,21.1106,3.999985789
+Benchmark 1,16,5.27773,15.99970063
+Benchmark 1,32,2.63896,31.99824931
+Benchmark 1,64,1.31961,63.99019407
+Benchmark 2,1,40.41,1
+Benchmark 2,4,10.1028,3.999881221
+Benchmark 2,16,2.52583,15.99870142
+Benchmark 2,32,1.263,31.99524941
+Benchmark 3,1,68.2506,1
+Benchmark 3,4,17.0629,3.999941393
+Benchmark 3,16,4.2688,15.98824025
+Benchmark 3,32,2.14042,31.88654563

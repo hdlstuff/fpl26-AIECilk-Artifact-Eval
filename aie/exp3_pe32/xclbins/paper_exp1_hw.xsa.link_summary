@@ -1,0 +1,1915 @@
+<ENTRY>
+{
+ "thisFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xclbins/paper_exp1_hw.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:11 2026",
+ "timestampMillis": "1775061671441",
+ "buildStep": {
+  "cmdId": "161d6a3c-4993-43a1-af81-4af7acf28255",
+  "name": "v++",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target=hw --platform=xilinx_vck5000_gen4x8_qdma_2_202220_1 --save-temps -g --profile.data all:all:all --kernel_frequency 300 -l -o xclbins/paper_exp1_hw.xsa ./libadf.a xos/exp3-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo xos/StreamSplitter_256_64-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --config ./connectivity.cfg --vivado.synth.jobs 32 --vivado.impl.jobs 16 ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "--target=hw",
+   "--platform=xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--save-temps",
+   "-g",
+   "--profile.data",
+   "all:all:all",
+   "--kernel_frequency",
+   "300",
+   "-l",
+   "-o",
+   "xclbins/paper_exp1_hw.xsa",
+   "./libadf.a",
+   "xos/exp3-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "xos/StreamSplitter_256_64-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--config",
+   "./connectivity.cfg",
+   "--vivado.synth.jobs",
+   "32",
+   "--vivado.impl.jobs",
+   "16"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/connectivity.cfg",
+    "content": "[connectivity]\nnk=exp3:1:exp3_1\nnk=StreamSplitter_256_64:32:StreamSplitter_256_64_1,StreamSplitter_256_64_2,StreamSplitter_256_64_3,StreamSplitter_256_64_4,StreamSplitter_256_64_5,StreamSplitter_256_64_6,StreamSplitter_256_64_7,StreamSplitter_256_64_8,StreamSplitter_256_64_9,StreamSplitter_256_64_10,StreamSplitter_256_64_11,StreamSplitter_256_64_12,StreamSplitter_256_64_13,StreamSplitter_256_64_14,StreamSplitter_256_64_15,StreamSplitter_256_64_16,StreamSplitter_256_64_17,StreamSplitter_256_64_18,StreamSplitter_256_64_19,StreamSplitter_256_64_20,StreamSplitter_256_64_21,StreamSplitter_256_64_22,StreamSplitter_256_64_23,StreamSplitter_256_64_24,StreamSplitter_256_64_25,StreamSplitter_256_64_26,StreamSplitter_256_64_27,StreamSplitter_256_64_28,StreamSplitter_256_64_29,StreamSplitter_256_64_30,StreamSplitter_256_64_31,StreamSplitter_256_64_32\n\nsp=exp3_1.m_axi_00:MC_NOC0\nsp=exp3_1.m_axi_01:MC_NOC0\nsp=exp3_1.m_axi_02:MC_NOC0\nsp=exp3_1.m_axi_03:MC_NOC0\nsp=exp3_1.m_axi_04:MC_NOC0\nsp=exp3_1.m_axi_05:MC_NOC0\nsp=exp3_1.m_axi_06:MC_NOC0\nsp=exp3_1.m_axi_07:MC_NOC0\nsp=exp3_1.m_axi_08:MC_NOC0\nsp=exp3_1.m_axi_09:MC_NOC0\nsp=exp3_1.m_axi_10:MC_NOC0\nsp=exp3_1.m_axi_11:MC_NOC0\nsp=exp3_1.m_axi_12:MC_NOC0\nsp=exp3_1.m_axi_13:MC_NOC0\nsp=exp3_1.m_axi_14:MC_NOC0\nsp=exp3_1.m_axi_15:MC_NOC0\nsp=exp3_1.m_axi_16:MC_NOC0\nsp=exp3_1.m_axi_17:MC_NOC0\nsp=exp3_1.m_axi_18:MC_NOC0\nsp=exp3_1.m_axi_19:MC_NOC0\nsp=exp3_1.m_axi_20:MC_NOC0\nsp=exp3_1.m_axi_21:MC_NOC0\nsp=exp3_1.m_axi_22:MC_NOC0\nsp=exp3_1.m_axi_23:MC_NOC0\nsp=exp3_1.m_axi_24:MC_NOC0\nsp=exp3_1.m_axi_25:MC_NOC0\nsp=exp3_1.m_axi_26:MC_NOC0\nsp=exp3_1.m_axi_27:MC_NOC0\nsp=exp3_1.m_axi_28:MC_NOC0\nsp=exp3_1.m_axi_29:MC_NOC0\nsp=exp3_1.m_axi_30:MC_NOC0\nsp=exp3_1.m_axi_31:MC_NOC0\n\nsc=StreamSplitter_256_64_1.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_0_taskOut\nsc=StreamSplitter_256_64_1.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_0_argOut\nsc=StreamSplitter_256_64_10.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_9_taskOut\nsc=StreamSplitter_256_64_10.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_9_argOut\nsc=StreamSplitter_256_64_11.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_10_taskOut\nsc=StreamSplitter_256_64_11.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_10_argOut\nsc=StreamSplitter_256_64_12.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_11_taskOut\nsc=StreamSplitter_256_64_12.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_11_argOut\nsc=StreamSplitter_256_64_13.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_12_taskOut\nsc=StreamSplitter_256_64_13.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_12_argOut\nsc=StreamSplitter_256_64_14.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_13_taskOut\nsc=StreamSplitter_256_64_14.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_13_argOut\nsc=StreamSplitter_256_64_15.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_14_taskOut\nsc=StreamSplitter_256_64_15.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_14_argOut\nsc=StreamSplitter_256_64_16.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_15_taskOut\nsc=StreamSplitter_256_64_16.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_15_argOut\nsc=StreamSplitter_256_64_17.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_16_taskOut\nsc=StreamSplitter_256_64_17.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_16_argOut\nsc=StreamSplitter_256_64_18.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_17_taskOut\nsc=StreamSplitter_256_64_18.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_17_argOut\nsc=StreamSplitter_256_64_19.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_18_taskOut\nsc=StreamSplitter_256_64_19.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_18_argOut\nsc=StreamSplitter_256_64_2.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_1_taskOut\nsc=StreamSplitter_256_64_2.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_1_argOut\nsc=StreamSplitter_256_64_20.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_19_taskOut\nsc=StreamSplitter_256_64_20.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_19_argOut\nsc=StreamSplitter_256_64_21.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_20_taskOut\nsc=StreamSplitter_256_64_21.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_20_argOut\nsc=StreamSplitter_256_64_22.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_21_taskOut\nsc=StreamSplitter_256_64_22.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_21_argOut\nsc=StreamSplitter_256_64_23.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_22_taskOut\nsc=StreamSplitter_256_64_23.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_22_argOut\nsc=StreamSplitter_256_64_24.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_23_taskOut\nsc=StreamSplitter_256_64_24.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_23_argOut\nsc=StreamSplitter_256_64_25.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_24_taskOut\nsc=StreamSplitter_256_64_25.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_24_argOut\nsc=StreamSplitter_256_64_26.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_25_taskOut\nsc=StreamSplitter_256_64_26.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_25_argOut\nsc=StreamSplitter_256_64_27.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_26_taskOut\nsc=StreamSplitter_256_64_27.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_26_argOut\nsc=StreamSplitter_256_64_28.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_27_taskOut\nsc=StreamSplitter_256_64_28.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_27_argOut\nsc=StreamSplitter_256_64_29.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_28_taskOut\nsc=StreamSplitter_256_64_29.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_28_argOut\nsc=StreamSplitter_256_64_3.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_2_taskOut\nsc=StreamSplitter_256_64_3.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_2_argOut\nsc=StreamSplitter_256_64_30.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_29_taskOut\nsc=StreamSplitter_256_64_30.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_29_argOut\nsc=StreamSplitter_256_64_31.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_30_taskOut\nsc=StreamSplitter_256_64_31.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_30_argOut\nsc=StreamSplitter_256_64_32.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_31_taskOut\nsc=StreamSplitter_256_64_32.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_31_argOut\nsc=StreamSplitter_256_64_4.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_3_taskOut\nsc=StreamSplitter_256_64_4.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_3_argOut\nsc=StreamSplitter_256_64_5.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_4_taskOut\nsc=StreamSplitter_256_64_5.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_4_argOut\nsc=StreamSplitter_256_64_6.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_5_taskOut\nsc=StreamSplitter_256_64_6.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_5_argOut\nsc=StreamSplitter_256_64_7.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_6_taskOut\nsc=StreamSplitter_256_64_7.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_6_argOut\nsc=StreamSplitter_256_64_8.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_7_taskOut\nsc=StreamSplitter_256_64_8.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_7_argOut\nsc=StreamSplitter_256_64_9.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_8_taskOut\nsc=StreamSplitter_256_64_9.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_8_argOut\nsc=ai_engine_0.PLIO_paper_exp3_task_0_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_0_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_0_taskOut_argOut:StreamSplitter_256_64_1.input\nsc=ai_engine_0.PLIO_paper_exp3_task_10_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_10_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_10_taskOut_argOut:StreamSplitter_256_64_11.input\nsc=ai_engine_0.PLIO_paper_exp3_task_11_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_11_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_11_taskOut_argOut:StreamSplitter_256_64_12.input\nsc=ai_engine_0.PLIO_paper_exp3_task_12_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_12_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_12_taskOut_argOut:StreamSplitter_256_64_13.input\nsc=ai_engine_0.PLIO_paper_exp3_task_13_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_13_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_13_taskOut_argOut:StreamSplitter_256_64_14.input\nsc=ai_engine_0.PLIO_paper_exp3_task_14_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_14_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_14_taskOut_argOut:StreamSplitter_256_64_15.input\nsc=ai_engine_0.PLIO_paper_exp3_task_15_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_15_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_15_taskOut_argOut:StreamSplitter_256_64_16.input\nsc=ai_engine_0.PLIO_paper_exp3_task_16_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_16_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_16_taskOut_argOut:StreamSplitter_256_64_17.input\nsc=ai_engine_0.PLIO_paper_exp3_task_17_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_17_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_17_taskOut_argOut:StreamSplitter_256_64_18.input\nsc=ai_engine_0.PLIO_paper_exp3_task_18_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_18_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_18_taskOut_argOut:StreamSplitter_256_64_19.input\nsc=ai_engine_0.PLIO_paper_exp3_task_19_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_19_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_19_taskOut_argOut:StreamSplitter_256_64_20.input\nsc=ai_engine_0.PLIO_paper_exp3_task_1_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_1_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_1_taskOut_argOut:StreamSplitter_256_64_2.input\nsc=ai_engine_0.PLIO_paper_exp3_task_20_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_20_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_20_taskOut_argOut:StreamSplitter_256_64_21.input\nsc=ai_engine_0.PLIO_paper_exp3_task_21_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_21_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_21_taskOut_argOut:StreamSplitter_256_64_22.input\nsc=ai_engine_0.PLIO_paper_exp3_task_22_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_22_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_22_taskOut_argOut:StreamSplitter_256_64_23.input\nsc=ai_engine_0.PLIO_paper_exp3_task_23_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_23_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_23_taskOut_argOut:StreamSplitter_256_64_24.input\nsc=ai_engine_0.PLIO_paper_exp3_task_24_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_24_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_24_taskOut_argOut:StreamSplitter_256_64_25.input\nsc=ai_engine_0.PLIO_paper_exp3_task_25_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_25_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_25_taskOut_argOut:StreamSplitter_256_64_26.input\nsc=ai_engine_0.PLIO_paper_exp3_task_26_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_26_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_26_taskOut_argOut:StreamSplitter_256_64_27.input\nsc=ai_engine_0.PLIO_paper_exp3_task_27_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_27_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_27_taskOut_argOut:StreamSplitter_256_64_28.input\nsc=ai_engine_0.PLIO_paper_exp3_task_28_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_28_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_28_taskOut_argOut:StreamSplitter_256_64_29.input\nsc=ai_engine_0.PLIO_paper_exp3_task_29_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_29_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_29_taskOut_argOut:StreamSplitter_256_64_30.input\nsc=ai_engine_0.PLIO_paper_exp3_task_2_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_2_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_2_taskOut_argOut:StreamSplitter_256_64_3.input\nsc=ai_engine_0.PLIO_paper_exp3_task_30_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_30_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_30_taskOut_argOut:StreamSplitter_256_64_31.input\nsc=ai_engine_0.PLIO_paper_exp3_task_31_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_31_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_31_taskOut_argOut:StreamSplitter_256_64_32.input\nsc=ai_engine_0.PLIO_paper_exp3_task_3_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_3_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_3_taskOut_argOut:StreamSplitter_256_64_4.input\nsc=ai_engine_0.PLIO_paper_exp3_task_4_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_4_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_4_taskOut_argOut:StreamSplitter_256_64_5.input\nsc=ai_engine_0.PLIO_paper_exp3_task_5_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_5_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_5_taskOut_argOut:StreamSplitter_256_64_6.input\nsc=ai_engine_0.PLIO_paper_exp3_task_6_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_6_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_6_taskOut_argOut:StreamSplitter_256_64_7.input\nsc=ai_engine_0.PLIO_paper_exp3_task_7_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_7_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_7_taskOut_argOut:StreamSplitter_256_64_8.input\nsc=ai_engine_0.PLIO_paper_exp3_task_8_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_8_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_8_taskOut_argOut:StreamSplitter_256_64_9.input\nsc=ai_engine_0.PLIO_paper_exp3_task_9_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_9_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_9_taskOut_argOut:StreamSplitter_256_64_10.input\nsc=exp3_1.BindTo_PE_paper_exp3_task_0_closureIn:ai_engine_0.PLIO_paper_exp3_task_0_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_0_taskIn:ai_engine_0.PLIO_paper_exp3_task_0_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_10_closureIn:ai_engine_0.PLIO_paper_exp3_task_10_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_10_taskIn:ai_engine_0.PLIO_paper_exp3_task_10_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_11_closureIn:ai_engine_0.PLIO_paper_exp3_task_11_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_11_taskIn:ai_engine_0.PLIO_paper_exp3_task_11_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_12_closureIn:ai_engine_0.PLIO_paper_exp3_task_12_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_12_taskIn:ai_engine_0.PLIO_paper_exp3_task_12_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_13_closureIn:ai_engine_0.PLIO_paper_exp3_task_13_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_13_taskIn:ai_engine_0.PLIO_paper_exp3_task_13_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_14_closureIn:ai_engine_0.PLIO_paper_exp3_task_14_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_14_taskIn:ai_engine_0.PLIO_paper_exp3_task_14_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_15_closureIn:ai_engine_0.PLIO_paper_exp3_task_15_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_15_taskIn:ai_engine_0.PLIO_paper_exp3_task_15_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_16_closureIn:ai_engine_0.PLIO_paper_exp3_task_16_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_16_taskIn:ai_engine_0.PLIO_paper_exp3_task_16_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_17_closureIn:ai_engine_0.PLIO_paper_exp3_task_17_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_17_taskIn:ai_engine_0.PLIO_paper_exp3_task_17_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_18_closureIn:ai_engine_0.PLIO_paper_exp3_task_18_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_18_taskIn:ai_engine_0.PLIO_paper_exp3_task_18_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_19_closureIn:ai_engine_0.PLIO_paper_exp3_task_19_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_19_taskIn:ai_engine_0.PLIO_paper_exp3_task_19_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_1_closureIn:ai_engine_0.PLIO_paper_exp3_task_1_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_1_taskIn:ai_engine_0.PLIO_paper_exp3_task_1_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_20_closureIn:ai_engine_0.PLIO_paper_exp3_task_20_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_20_taskIn:ai_engine_0.PLIO_paper_exp3_task_20_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_21_closureIn:ai_engine_0.PLIO_paper_exp3_task_21_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_21_taskIn:ai_engine_0.PLIO_paper_exp3_task_21_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_22_closureIn:ai_engine_0.PLIO_paper_exp3_task_22_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_22_taskIn:ai_engine_0.PLIO_paper_exp3_task_22_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_23_closureIn:ai_engine_0.PLIO_paper_exp3_task_23_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_23_taskIn:ai_engine_0.PLIO_paper_exp3_task_23_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_24_closureIn:ai_engine_0.PLIO_paper_exp3_task_24_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_24_taskIn:ai_engine_0.PLIO_paper_exp3_task_24_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_25_closureIn:ai_engine_0.PLIO_paper_exp3_task_25_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_25_taskIn:ai_engine_0.PLIO_paper_exp3_task_25_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_26_closureIn:ai_engine_0.PLIO_paper_exp3_task_26_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_26_taskIn:ai_engine_0.PLIO_paper_exp3_task_26_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_27_closureIn:ai_engine_0.PLIO_paper_exp3_task_27_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_27_taskIn:ai_engine_0.PLIO_paper_exp3_task_27_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_28_closureIn:ai_engine_0.PLIO_paper_exp3_task_28_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_28_taskIn:ai_engine_0.PLIO_paper_exp3_task_28_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_29_closureIn:ai_engine_0.PLIO_paper_exp3_task_29_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_29_taskIn:ai_engine_0.PLIO_paper_exp3_task_29_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_2_closureIn:ai_engine_0.PLIO_paper_exp3_task_2_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_2_taskIn:ai_engine_0.PLIO_paper_exp3_task_2_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_30_closureIn:ai_engine_0.PLIO_paper_exp3_task_30_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_30_taskIn:ai_engine_0.PLIO_paper_exp3_task_30_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_31_closureIn:ai_engine_0.PLIO_paper_exp3_task_31_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_31_taskIn:ai_engine_0.PLIO_paper_exp3_task_31_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_3_closureIn:ai_engine_0.PLIO_paper_exp3_task_3_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_3_taskIn:ai_engine_0.PLIO_paper_exp3_task_3_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_4_closureIn:ai_engine_0.PLIO_paper_exp3_task_4_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_4_taskIn:ai_engine_0.PLIO_paper_exp3_task_4_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_5_closureIn:ai_engine_0.PLIO_paper_exp3_task_5_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_5_taskIn:ai_engine_0.PLIO_paper_exp3_task_5_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_6_closureIn:ai_engine_0.PLIO_paper_exp3_task_6_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_6_taskIn:ai_engine_0.PLIO_paper_exp3_task_6_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_7_closureIn:ai_engine_0.PLIO_paper_exp3_task_7_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_7_taskIn:ai_engine_0.PLIO_paper_exp3_task_7_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_8_closureIn:ai_engine_0.PLIO_paper_exp3_task_8_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_8_taskIn:ai_engine_0.PLIO_paper_exp3_task_8_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_9_closureIn:ai_engine_0.PLIO_paper_exp3_task_9_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_9_taskIn:ai_engine_0.PLIO_paper_exp3_task_9_taskIn\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:11 2026",
+ "timestampMillis": "1775061671442",
+ "status": {
+  "cmdId": "161d6a3c-4993-43a1-af81-4af7acf28255",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Apr  1 18:41:12 2026",
+ "timestampMillis": "1775061672898",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "paper_exp1_hw",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "exp3",
+     "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/exp3-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "exp3_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "StreamSplitter_256_64",
+     "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/StreamSplitter_256_64-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "StreamSplitter_256_64_1",
+     "StreamSplitter_256_64_2",
+     "StreamSplitter_256_64_3",
+     "StreamSplitter_256_64_4",
+     "StreamSplitter_256_64_5",
+     "StreamSplitter_256_64_6",
+     "StreamSplitter_256_64_7",
+     "StreamSplitter_256_64_8",
+     "StreamSplitter_256_64_9",
+     "StreamSplitter_256_64_10",
+     "StreamSplitter_256_64_11",
+     "StreamSplitter_256_64_12",
+     "StreamSplitter_256_64_13",
+     "StreamSplitter_256_64_14",
+     "StreamSplitter_256_64_15",
+     "StreamSplitter_256_64_16",
+     "StreamSplitter_256_64_17",
+     "StreamSplitter_256_64_18",
+     "StreamSplitter_256_64_19",
+     "StreamSplitter_256_64_20",
+     "StreamSplitter_256_64_21",
+     "StreamSplitter_256_64_22",
+     "StreamSplitter_256_64_23",
+     "StreamSplitter_256_64_24",
+     "StreamSplitter_256_64_25",
+     "StreamSplitter_256_64_26",
+     "StreamSplitter_256_64_27",
+     "StreamSplitter_256_64_28",
+     "StreamSplitter_256_64_29",
+     "StreamSplitter_256_64_30",
+     "StreamSplitter_256_64_31",
+     "StreamSplitter_256_64_32"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11",
+  "aieInputs": {
+   "base": {
+    "type": "AI_LIBSDF",
+    "name": "libadf",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/libadf.a",
+    "reports": [
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie.partial.aiecompile_summary",
+      "name": "",
+      "fileType": "TEXT",
+      "reportType": "TASK_LOG_SUMMARY",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie_control_config.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_CONTROL_CONFIG",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie.router.soln.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_ROUTER_SOLUTION",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie.mapped.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_GRAPH_MAPPED",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie.compiler.report.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_COMPILER_REPORT",
+      "cmdId": ""
+     }
+    ],
+    "uuid": ""
+   },
+   "sources": [],
+   "type": "AI_UKNOWN"
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 18:41:12 2026",
+ "timestampMillis": "1775061672908",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie_control_config.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONTROL_CONFIG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:12 2026",
+ "timestampMillis": "1775061672999",
+ "buildStep": {
+  "cmdId": "335639d1-74a5-487c-90c2-c53ae46a96e1",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/exp3-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --xo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/StreamSplitter_256_64-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo -keep -memory-for-trace BRAM /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/.Xil/v++-1296209-lap-c024198l/hw.o --config /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm --target hw --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/exp3-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--xo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/xos/StreamSplitter_256_64-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "-keep",
+   "-memory-for-trace",
+   "BRAM",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/.Xil/v++-1296209-lap-c024198l/hw.o",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/syslinkConfig.ini",
+    "content": "nk=exp3:1:exp3_1\nnk=StreamSplitter_256_64:32:StreamSplitter_256_64_1,StreamSplitter_256_64_2,StreamSplitter_256_64_3,StreamSplitter_256_64_4,StreamSplitter_256_64_5,StreamSplitter_256_64_6,StreamSplitter_256_64_7,StreamSplitter_256_64_8,StreamSplitter_256_64_9,StreamSplitter_256_64_10,StreamSplitter_256_64_11,StreamSplitter_256_64_12,StreamSplitter_256_64_13,StreamSplitter_256_64_14,StreamSplitter_256_64_15,StreamSplitter_256_64_16,StreamSplitter_256_64_17,StreamSplitter_256_64_18,StreamSplitter_256_64_19,StreamSplitter_256_64_20,StreamSplitter_256_64_21,StreamSplitter_256_64_22,StreamSplitter_256_64_23,StreamSplitter_256_64_24,StreamSplitter_256_64_25,StreamSplitter_256_64_26,StreamSplitter_256_64_27,StreamSplitter_256_64_28,StreamSplitter_256_64_29,StreamSplitter_256_64_30,StreamSplitter_256_64_31,StreamSplitter_256_64_32\nsc=StreamSplitter_256_64_1.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_0_taskOut\nsc=StreamSplitter_256_64_1.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_0_argOut\nsc=StreamSplitter_256_64_10.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_9_taskOut\nsc=StreamSplitter_256_64_10.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_9_argOut\nsc=StreamSplitter_256_64_11.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_10_taskOut\nsc=StreamSplitter_256_64_11.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_10_argOut\nsc=StreamSplitter_256_64_12.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_11_taskOut\nsc=StreamSplitter_256_64_12.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_11_argOut\nsc=StreamSplitter_256_64_13.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_12_taskOut\nsc=StreamSplitter_256_64_13.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_12_argOut\nsc=StreamSplitter_256_64_14.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_13_taskOut\nsc=StreamSplitter_256_64_14.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_13_argOut\nsc=StreamSplitter_256_64_15.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_14_taskOut\nsc=StreamSplitter_256_64_15.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_14_argOut\nsc=StreamSplitter_256_64_16.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_15_taskOut\nsc=StreamSplitter_256_64_16.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_15_argOut\nsc=StreamSplitter_256_64_17.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_16_taskOut\nsc=StreamSplitter_256_64_17.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_16_argOut\nsc=StreamSplitter_256_64_18.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_17_taskOut\nsc=StreamSplitter_256_64_18.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_17_argOut\nsc=StreamSplitter_256_64_19.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_18_taskOut\nsc=StreamSplitter_256_64_19.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_18_argOut\nsc=StreamSplitter_256_64_2.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_1_taskOut\nsc=StreamSplitter_256_64_2.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_1_argOut\nsc=StreamSplitter_256_64_20.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_19_taskOut\nsc=StreamSplitter_256_64_20.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_19_argOut\nsc=StreamSplitter_256_64_21.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_20_taskOut\nsc=StreamSplitter_256_64_21.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_20_argOut\nsc=StreamSplitter_256_64_22.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_21_taskOut\nsc=StreamSplitter_256_64_22.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_21_argOut\nsc=StreamSplitter_256_64_23.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_22_taskOut\nsc=StreamSplitter_256_64_23.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_22_argOut\nsc=StreamSplitter_256_64_24.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_23_taskOut\nsc=StreamSplitter_256_64_24.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_23_argOut\nsc=StreamSplitter_256_64_25.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_24_taskOut\nsc=StreamSplitter_256_64_25.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_24_argOut\nsc=StreamSplitter_256_64_26.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_25_taskOut\nsc=StreamSplitter_256_64_26.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_25_argOut\nsc=StreamSplitter_256_64_27.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_26_taskOut\nsc=StreamSplitter_256_64_27.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_26_argOut\nsc=StreamSplitter_256_64_28.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_27_taskOut\nsc=StreamSplitter_256_64_28.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_27_argOut\nsc=StreamSplitter_256_64_29.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_28_taskOut\nsc=StreamSplitter_256_64_29.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_28_argOut\nsc=StreamSplitter_256_64_3.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_2_taskOut\nsc=StreamSplitter_256_64_3.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_2_argOut\nsc=StreamSplitter_256_64_30.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_29_taskOut\nsc=StreamSplitter_256_64_30.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_29_argOut\nsc=StreamSplitter_256_64_31.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_30_taskOut\nsc=StreamSplitter_256_64_31.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_30_argOut\nsc=StreamSplitter_256_64_32.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_31_taskOut\nsc=StreamSplitter_256_64_32.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_31_argOut\nsc=StreamSplitter_256_64_4.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_3_taskOut\nsc=StreamSplitter_256_64_4.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_3_argOut\nsc=StreamSplitter_256_64_5.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_4_taskOut\nsc=StreamSplitter_256_64_5.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_4_argOut\nsc=StreamSplitter_256_64_6.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_5_taskOut\nsc=StreamSplitter_256_64_6.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_5_argOut\nsc=StreamSplitter_256_64_7.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_6_taskOut\nsc=StreamSplitter_256_64_7.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_6_argOut\nsc=StreamSplitter_256_64_8.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_7_taskOut\nsc=StreamSplitter_256_64_8.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_7_argOut\nsc=StreamSplitter_256_64_9.outputs_0:exp3_1.BindTo_PE_paper_exp3_task_8_taskOut\nsc=StreamSplitter_256_64_9.outputs_1:exp3_1.BindTo_PE_paper_exp3_task_8_argOut\nsc=ai_engine_0.PLIO_paper_exp3_task_0_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_0_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_0_taskOut_argOut:StreamSplitter_256_64_1.input\nsc=ai_engine_0.PLIO_paper_exp3_task_10_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_10_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_10_taskOut_argOut:StreamSplitter_256_64_11.input\nsc=ai_engine_0.PLIO_paper_exp3_task_11_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_11_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_11_taskOut_argOut:StreamSplitter_256_64_12.input\nsc=ai_engine_0.PLIO_paper_exp3_task_12_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_12_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_12_taskOut_argOut:StreamSplitter_256_64_13.input\nsc=ai_engine_0.PLIO_paper_exp3_task_13_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_13_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_13_taskOut_argOut:StreamSplitter_256_64_14.input\nsc=ai_engine_0.PLIO_paper_exp3_task_14_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_14_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_14_taskOut_argOut:StreamSplitter_256_64_15.input\nsc=ai_engine_0.PLIO_paper_exp3_task_15_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_15_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_15_taskOut_argOut:StreamSplitter_256_64_16.input\nsc=ai_engine_0.PLIO_paper_exp3_task_16_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_16_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_16_taskOut_argOut:StreamSplitter_256_64_17.input\nsc=ai_engine_0.PLIO_paper_exp3_task_17_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_17_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_17_taskOut_argOut:StreamSplitter_256_64_18.input\nsc=ai_engine_0.PLIO_paper_exp3_task_18_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_18_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_18_taskOut_argOut:StreamSplitter_256_64_19.input\nsc=ai_engine_0.PLIO_paper_exp3_task_19_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_19_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_19_taskOut_argOut:StreamSplitter_256_64_20.input\nsc=ai_engine_0.PLIO_paper_exp3_task_1_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_1_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_1_taskOut_argOut:StreamSplitter_256_64_2.input\nsc=ai_engine_0.PLIO_paper_exp3_task_20_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_20_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_20_taskOut_argOut:StreamSplitter_256_64_21.input\nsc=ai_engine_0.PLIO_paper_exp3_task_21_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_21_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_21_taskOut_argOut:StreamSplitter_256_64_22.input\nsc=ai_engine_0.PLIO_paper_exp3_task_22_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_22_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_22_taskOut_argOut:StreamSplitter_256_64_23.input\nsc=ai_engine_0.PLIO_paper_exp3_task_23_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_23_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_23_taskOut_argOut:StreamSplitter_256_64_24.input\nsc=ai_engine_0.PLIO_paper_exp3_task_24_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_24_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_24_taskOut_argOut:StreamSplitter_256_64_25.input\nsc=ai_engine_0.PLIO_paper_exp3_task_25_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_25_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_25_taskOut_argOut:StreamSplitter_256_64_26.input\nsc=ai_engine_0.PLIO_paper_exp3_task_26_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_26_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_26_taskOut_argOut:StreamSplitter_256_64_27.input\nsc=ai_engine_0.PLIO_paper_exp3_task_27_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_27_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_27_taskOut_argOut:StreamSplitter_256_64_28.input\nsc=ai_engine_0.PLIO_paper_exp3_task_28_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_28_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_28_taskOut_argOut:StreamSplitter_256_64_29.input\nsc=ai_engine_0.PLIO_paper_exp3_task_29_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_29_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_29_taskOut_argOut:StreamSplitter_256_64_30.input\nsc=ai_engine_0.PLIO_paper_exp3_task_2_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_2_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_2_taskOut_argOut:StreamSplitter_256_64_3.input\nsc=ai_engine_0.PLIO_paper_exp3_task_30_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_30_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_30_taskOut_argOut:StreamSplitter_256_64_31.input\nsc=ai_engine_0.PLIO_paper_exp3_task_31_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_31_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_31_taskOut_argOut:StreamSplitter_256_64_32.input\nsc=ai_engine_0.PLIO_paper_exp3_task_3_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_3_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_3_taskOut_argOut:StreamSplitter_256_64_4.input\nsc=ai_engine_0.PLIO_paper_exp3_task_4_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_4_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_4_taskOut_argOut:StreamSplitter_256_64_5.input\nsc=ai_engine_0.PLIO_paper_exp3_task_5_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_5_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_5_taskOut_argOut:StreamSplitter_256_64_6.input\nsc=ai_engine_0.PLIO_paper_exp3_task_6_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_6_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_6_taskOut_argOut:StreamSplitter_256_64_7.input\nsc=ai_engine_0.PLIO_paper_exp3_task_7_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_7_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_7_taskOut_argOut:StreamSplitter_256_64_8.input\nsc=ai_engine_0.PLIO_paper_exp3_task_8_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_8_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_8_taskOut_argOut:StreamSplitter_256_64_9.input\nsc=ai_engine_0.PLIO_paper_exp3_task_9_spawnNext:exp3_1.BindTo_PE_paper_exp3_task_9_spawnNext\nsc=ai_engine_0.PLIO_paper_exp3_task_9_taskOut_argOut:StreamSplitter_256_64_10.input\nsc=exp3_1.BindTo_PE_paper_exp3_task_0_closureIn:ai_engine_0.PLIO_paper_exp3_task_0_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_0_taskIn:ai_engine_0.PLIO_paper_exp3_task_0_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_10_closureIn:ai_engine_0.PLIO_paper_exp3_task_10_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_10_taskIn:ai_engine_0.PLIO_paper_exp3_task_10_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_11_closureIn:ai_engine_0.PLIO_paper_exp3_task_11_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_11_taskIn:ai_engine_0.PLIO_paper_exp3_task_11_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_12_closureIn:ai_engine_0.PLIO_paper_exp3_task_12_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_12_taskIn:ai_engine_0.PLIO_paper_exp3_task_12_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_13_closureIn:ai_engine_0.PLIO_paper_exp3_task_13_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_13_taskIn:ai_engine_0.PLIO_paper_exp3_task_13_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_14_closureIn:ai_engine_0.PLIO_paper_exp3_task_14_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_14_taskIn:ai_engine_0.PLIO_paper_exp3_task_14_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_15_closureIn:ai_engine_0.PLIO_paper_exp3_task_15_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_15_taskIn:ai_engine_0.PLIO_paper_exp3_task_15_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_16_closureIn:ai_engine_0.PLIO_paper_exp3_task_16_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_16_taskIn:ai_engine_0.PLIO_paper_exp3_task_16_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_17_closureIn:ai_engine_0.PLIO_paper_exp3_task_17_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_17_taskIn:ai_engine_0.PLIO_paper_exp3_task_17_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_18_closureIn:ai_engine_0.PLIO_paper_exp3_task_18_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_18_taskIn:ai_engine_0.PLIO_paper_exp3_task_18_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_19_closureIn:ai_engine_0.PLIO_paper_exp3_task_19_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_19_taskIn:ai_engine_0.PLIO_paper_exp3_task_19_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_1_closureIn:ai_engine_0.PLIO_paper_exp3_task_1_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_1_taskIn:ai_engine_0.PLIO_paper_exp3_task_1_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_20_closureIn:ai_engine_0.PLIO_paper_exp3_task_20_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_20_taskIn:ai_engine_0.PLIO_paper_exp3_task_20_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_21_closureIn:ai_engine_0.PLIO_paper_exp3_task_21_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_21_taskIn:ai_engine_0.PLIO_paper_exp3_task_21_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_22_closureIn:ai_engine_0.PLIO_paper_exp3_task_22_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_22_taskIn:ai_engine_0.PLIO_paper_exp3_task_22_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_23_closureIn:ai_engine_0.PLIO_paper_exp3_task_23_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_23_taskIn:ai_engine_0.PLIO_paper_exp3_task_23_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_24_closureIn:ai_engine_0.PLIO_paper_exp3_task_24_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_24_taskIn:ai_engine_0.PLIO_paper_exp3_task_24_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_25_closureIn:ai_engine_0.PLIO_paper_exp3_task_25_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_25_taskIn:ai_engine_0.PLIO_paper_exp3_task_25_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_26_closureIn:ai_engine_0.PLIO_paper_exp3_task_26_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_26_taskIn:ai_engine_0.PLIO_paper_exp3_task_26_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_27_closureIn:ai_engine_0.PLIO_paper_exp3_task_27_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_27_taskIn:ai_engine_0.PLIO_paper_exp3_task_27_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_28_closureIn:ai_engine_0.PLIO_paper_exp3_task_28_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_28_taskIn:ai_engine_0.PLIO_paper_exp3_task_28_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_29_closureIn:ai_engine_0.PLIO_paper_exp3_task_29_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_29_taskIn:ai_engine_0.PLIO_paper_exp3_task_29_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_2_closureIn:ai_engine_0.PLIO_paper_exp3_task_2_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_2_taskIn:ai_engine_0.PLIO_paper_exp3_task_2_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_30_closureIn:ai_engine_0.PLIO_paper_exp3_task_30_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_30_taskIn:ai_engine_0.PLIO_paper_exp3_task_30_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_31_closureIn:ai_engine_0.PLIO_paper_exp3_task_31_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_31_taskIn:ai_engine_0.PLIO_paper_exp3_task_31_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_3_closureIn:ai_engine_0.PLIO_paper_exp3_task_3_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_3_taskIn:ai_engine_0.PLIO_paper_exp3_task_3_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_4_closureIn:ai_engine_0.PLIO_paper_exp3_task_4_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_4_taskIn:ai_engine_0.PLIO_paper_exp3_task_4_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_5_closureIn:ai_engine_0.PLIO_paper_exp3_task_5_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_5_taskIn:ai_engine_0.PLIO_paper_exp3_task_5_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_6_closureIn:ai_engine_0.PLIO_paper_exp3_task_6_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_6_taskIn:ai_engine_0.PLIO_paper_exp3_task_6_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_7_closureIn:ai_engine_0.PLIO_paper_exp3_task_7_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_7_taskIn:ai_engine_0.PLIO_paper_exp3_task_7_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_8_closureIn:ai_engine_0.PLIO_paper_exp3_task_8_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_8_taskIn:ai_engine_0.PLIO_paper_exp3_task_8_taskIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_9_closureIn:ai_engine_0.PLIO_paper_exp3_task_9_closureIn\nsc=exp3_1.BindTo_PE_paper_exp3_task_9_taskIn:ai_engine_0.PLIO_paper_exp3_task_9_taskIn\nsp=exp3_1.m_axi_00:MC_NOC0\nsp=exp3_1.m_axi_01:MC_NOC0\nsp=exp3_1.m_axi_02:MC_NOC0\nsp=exp3_1.m_axi_03:MC_NOC0\nsp=exp3_1.m_axi_04:MC_NOC0\nsp=exp3_1.m_axi_05:MC_NOC0\nsp=exp3_1.m_axi_06:MC_NOC0\nsp=exp3_1.m_axi_07:MC_NOC0\nsp=exp3_1.m_axi_08:MC_NOC0\nsp=exp3_1.m_axi_09:MC_NOC0\nsp=exp3_1.m_axi_10:MC_NOC0\nsp=exp3_1.m_axi_11:MC_NOC0\nsp=exp3_1.m_axi_12:MC_NOC0\nsp=exp3_1.m_axi_13:MC_NOC0\nsp=exp3_1.m_axi_14:MC_NOC0\nsp=exp3_1.m_axi_15:MC_NOC0\nsp=exp3_1.m_axi_16:MC_NOC0\nsp=exp3_1.m_axi_17:MC_NOC0\nsp=exp3_1.m_axi_18:MC_NOC0\nsp=exp3_1.m_axi_19:MC_NOC0\nsp=exp3_1.m_axi_20:MC_NOC0\nsp=exp3_1.m_axi_21:MC_NOC0\nsp=exp3_1.m_axi_22:MC_NOC0\nsp=exp3_1.m_axi_23:MC_NOC0\nsp=exp3_1.m_axi_24:MC_NOC0\nsp=exp3_1.m_axi_25:MC_NOC0\nsp=exp3_1.m_axi_26:MC_NOC0\nsp=exp3_1.m_axi_27:MC_NOC0\nsp=exp3_1.m_axi_28:MC_NOC0\nsp=exp3_1.m_axi_29:MC_NOC0\nsp=exp3_1.m_axi_30:MC_NOC0\nsp=exp3_1.m_axi_31:MC_NOC0\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:12 2026",
+ "timestampMillis": "1775061672999",
+ "status": {
+  "cmdId": "335639d1-74a5-487c-90c2-c53ae46a96e1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:31 2026",
+ "timestampMillis": "1775061691000",
+ "status": {
+  "cmdId": "335639d1-74a5-487c-90c2-c53ae46a96e1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:31 2026",
+ "timestampMillis": "1775061691002",
+ "buildStep": {
+  "cmdId": "247ab42d-e957-4c37-a8da-a79d5b0d30b3",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/sdsl.dat -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/cf2sw.rtd -nofilter /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/cf2sw_full.rtd -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.xml -o /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:31 2026",
+ "timestampMillis": "1775061691002",
+ "status": {
+  "cmdId": "247ab42d-e957-4c37-a8da-a79d5b0d30b3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709502",
+ "status": {
+  "cmdId": "247ab42d-e957-4c37-a8da-a79d5b0d30b3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709503",
+ "buildStep": {
+  "cmdId": "78f91800-7ae4-4abc-a6b6-582c9942cbf0",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709503",
+ "status": {
+  "cmdId": "78f91800-7ae4-4abc-a6b6-582c9942cbf0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709601",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709601",
+ "status": {
+  "cmdId": "78f91800-7ae4-4abc-a6b6-582c9942cbf0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709602",
+ "buildStep": {
+  "cmdId": "e3ce58e2-de33-4e0a-8fa9-5e41ddfe659b",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_64_1_0 --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp3_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "-s",
+   "-g",
+   "--kernel_frequency",
+   "300",
+   "--remote_ip_cache",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/.ipcache",
+   "--trace_memory",
+   "BRAM",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int",
+   "--log_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/logs/link",
+   "--report_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_64_1_0",
+   "--iprepo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp3_1_0",
+   "--messageDb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/run_link/vpl.pb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32\nmisc=BinaryName=paper_exp1_hw\n\n[connectivity]\nnk=exp3:1:exp3_1\nnk=StreamSplitter_256_64:32:StreamSplitter_256_64_1,StreamSplitter_256_64_2,StreamSplitter_256_64_3,StreamSplitter_256_64_4,StreamSplitter_256_64_5,StreamSplitter_256_64_6,StreamSplitter_256_64_7,StreamSplitter_256_64_8,StreamSplitter_256_64_9,StreamSplitter_256_64_10,StreamSplitter_256_64_11,StreamSplitter_256_64_12,StreamSplitter_256_64_13,StreamSplitter_256_64_14,StreamSplitter_256_64_15,StreamSplitter_256_64_16,StreamSplitter_256_64_17,StreamSplitter_256_64_18,StreamSplitter_256_64_19,StreamSplitter_256_64_20,StreamSplitter_256_64_21,StreamSplitter_256_64_22,StreamSplitter_256_64_23,StreamSplitter_256_64_24,StreamSplitter_256_64_25,StreamSplitter_256_64_26,StreamSplitter_256_64_27,StreamSplitter_256_64_28,StreamSplitter_256_64_29,StreamSplitter_256_64_30,StreamSplitter_256_64_31,StreamSplitter_256_64_32\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nsynth.jobs=32\nimpl.jobs=16\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:49 2026",
+ "timestampMillis": "1775061709602",
+ "status": {
+  "cmdId": "e3ce58e2-de33-4e0a-8fa9-5e41ddfe659b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:50 2026",
+ "timestampMillis": "1775061710090",
+ "buildStep": {
+  "cmdId": "5d622503-dd32-4393-b6dd-a84836a236b6",
+  "name": "vpl",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_64_1_0 --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp3_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:50 2026",
+ "timestampMillis": "1775061710090",
+ "status": {
+  "cmdId": "5d622503-dd32-4393-b6dd-a84836a236b6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Wed Apr  1 18:41:52 2026",
+ "timestampMillis": "1775061712192",
+ "vivadoProject": {
+  "openDir": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 18:41:52 2026",
+ "timestampMillis": "1775061712193",
+ "buildStep": {
+  "cmdId": "fbf3e902-4683-40f6-85b6-c25218e53651",
+  "name": "vivado",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:41:52 2026",
+ "timestampMillis": "1775061712193",
+ "status": {
+  "cmdId": "fbf3e902-4683-40f6-85b6-c25218e53651",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 18:42:11 2026",
+ "timestampMillis": "1775061731382",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 18:42:11 2026",
+ "timestampMillis": "1775061731446",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 18:54:18 2026",
+ "timestampMillis": "1775062458392",
+ "buildStep": {
+  "cmdId": "1ae91011-709a-466d-bd4b-e3fa70080ca2",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:54:18 2026",
+ "timestampMillis": "1775062458393",
+ "status": {
+  "cmdId": "1ae91011-709a-466d-bd4b-e3fa70080ca2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr  1 18:54:18 2026",
+ "timestampMillis": "1775062458393",
+ "buildStep": {
+  "cmdId": "5ef3fb5c-bea3-4323-9f5a-575a79de928c",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 18:54:18 2026",
+ "timestampMillis": "1775062458393",
+ "status": {
+  "cmdId": "5ef3fb5c-bea3-4323-9f5a-575a79de928c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:08:19 2026",
+ "timestampMillis": "1775066899681",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:08:19 2026",
+ "timestampMillis": "1775066899715",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:10:19 2026",
+ "timestampMillis": "1775067019860",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304861",
+ "status": {
+  "cmdId": "fbf3e902-4683-40f6-85b6-c25218e53651",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304912",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304913",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304913",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304913",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304913",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304913",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_aie_prog_0_synth_1_ulp_inst_0_axi_noc_aie_prog_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_kernel0_0_synth_1_ulp_inst_0_axi_noc_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_h2c_0_synth_1_ulp_inst_0_axi_noc_h2c_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S09_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S09_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dwc_ai_engine_0_M50_AXIS_0_synth_1_ulp_inst_0_dwc_ai_engine_0_M50_AXIS_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304917",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dwc_ai_engine_0_M51_AXIS_0_synth_1_ulp_inst_0_dwc_ai_engine_0_M51_AXIS_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_StreamSplitter_256_64_29_0_synth_1_ulp_inst_0_StreamSplitter_256_64_29_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S00_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S00_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S01_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S01_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S02_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S02_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S03_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S03_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S04_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S04_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S05_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S05_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S06_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S06_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S07_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S07_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_axi_noc_kernel0_S08_AXI_0_synth_1_ulp_inst_0_axi_ic_axi_noc_kernel0_S08_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon19_0_synth_1_ulp_inst_0_dpa_mon19_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon21_0_synth_1_ulp_inst_0_dpa_mon21_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon22_0_synth_1_ulp_inst_0_dpa_mon22_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304918",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon23_0_synth_1_ulp_inst_0_dpa_mon23_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon25_0_synth_1_ulp_inst_0_dpa_mon25_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon26_0_synth_1_ulp_inst_0_dpa_mon26_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon27_0_synth_1_ulp_inst_0_dpa_mon27_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon29_0_synth_1_ulp_inst_0_dpa_mon29_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon30_0_synth_1_ulp_inst_0_dpa_mon30_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon31_0_synth_1_ulp_inst_0_dpa_mon31_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect0_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect1_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304919",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dwc_exp3_1_BindTo_PE_paper_exp3_task_27_taskIn_0_synth_1_ulp_inst_0_dwc_exp3_1_BindTo_PE_paper_exp3_task_27_taskIn_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304920",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_exp3_1_0_synth_1_ulp_inst_0_exp3_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304920",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon18_0_synth_1_ulp_inst_0_dpa_mon18_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304920",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon17_0_synth_1_ulp_inst_0_dpa_mon17_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304920",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon15_0_synth_1_ulp_inst_0_dpa_mon15_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon14_0_synth_1_ulp_inst_0_dpa_mon14_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon13_0_synth_1_ulp_inst_0_dpa_mon13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon11_0_synth_1_ulp_inst_0_dpa_mon11_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon10_0_synth_1_ulp_inst_0_dpa_mon10_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon9_0_synth_1_ulp_inst_0_dpa_mon9_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon7_0_synth_1_ulp_inst_0_dpa_mon7_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon6_0_synth_1_ulp_inst_0_dpa_mon6_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon5_0_synth_1_ulp_inst_0_dpa_mon5_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon3_0_synth_1_ulp_inst_0_dpa_mon3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon1_0_synth_1_ulp_inst_0_dpa_mon1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304921",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon2_0_synth_1_ulp_inst_0_dpa_mon2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304922",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "5ef3fb5c-bea3-4323-9f5a-575a79de928c"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304923",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "5ef3fb5c-bea3-4323-9f5a-575a79de928c"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304923",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "5ef3fb5c-bea3-4323-9f5a-575a79de928c"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304937",
+ "status": {
+  "cmdId": "5d622503-dd32-4393-b6dd-a84836a236b6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304950",
+ "status": {
+  "cmdId": "e3ce58e2-de33-4e0a-8fa9-5e41ddfe659b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304950",
+ "buildStep": {
+  "cmdId": "b7a157db-a927-483d-8735-f92c35c5a884",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304950",
+ "status": {
+  "cmdId": "b7a157db-a927-483d-8735-f92c35c5a884",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304953",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304954",
+ "buildStep": {
+  "cmdId": "98456bcf-1dc5-4ca5-a2df-e6dc5f8bc870",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -force-enable-memory BRAM -a /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/address_map.xml -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/sdsl.dat -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.xml -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.rtd -o /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xml",
+  "args": [
+   "-force-enable-memory",
+   "BRAM",
+   "-a",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:44 2026",
+ "timestampMillis": "1775068304954",
+ "status": {
+  "cmdId": "98456bcf-1dc5-4ca5-a2df-e6dc5f8bc870",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315016",
+ "status": {
+  "cmdId": "98456bcf-1dc5-4ca5-a2df-e6dc5f8bc870",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315016",
+ "buildStep": {
+  "cmdId": "341b1f4a-7949-4252-8309-5aeb88a747b7",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315016",
+ "status": {
+  "cmdId": "341b1f4a-7949-4252-8309-5aeb88a747b7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315026",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315026",
+ "status": {
+  "cmdId": "341b1f4a-7949-4252-8309-5aeb88a747b7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315026",
+ "buildStep": {
+  "cmdId": "38b4a5e7-ddac-47a5-8ac8-bc9e94790a62",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315026",
+ "status": {
+  "cmdId": "38b4a5e7-ddac-47a5-8ac8-bc9e94790a62",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315027",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315027",
+ "status": {
+  "cmdId": "38b4a5e7-ddac-47a5-8ac8-bc9e94790a62",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315027",
+ "status": {
+  "cmdId": "b7a157db-a927-483d-8735-f92c35c5a884",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315028",
+ "buildStep": {
+  "cmdId": "626a108a-106c-4a6e-8be1-f6409069aff3",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.rtd --append-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xml --add-section SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json --add-section AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie_control_config.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1 --output /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "--append-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--add-section",
+   "AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/aie_control_config.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--output",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315028",
+ "status": {
+  "cmdId": "626a108a-106c-4a6e-8be1-f6409069aff3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315085",
+ "status": {
+  "cmdId": "626a108a-106c-4a6e-8be1-f6409069aff3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315086",
+ "buildStep": {
+  "cmdId": "6b363aec-00f0-4ed1-a3a6-8b90bf60d1e9",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin.info --input /home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin.info",
+   "--input",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315086",
+ "status": {
+  "cmdId": "6b363aec-00f0-4ed1-a3a6-8b90bf60d1e9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315202",
+ "status": {
+  "cmdId": "6b363aec-00f0-4ed1-a3a6-8b90bf60d1e9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315203",
+ "buildStep": {
+  "cmdId": "b56b8008-08f7-4240-b33c-0fe3b4e7844e",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315203",
+ "status": {
+  "cmdId": "b56b8008-08f7-4240-b33c-0fe3b4e7844e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315203",
+ "status": {
+  "cmdId": "b56b8008-08f7-4240-b33c-0fe3b4e7844e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315204",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/system_estimate_paper_exp1_hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315358",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315359",
+ "status": {
+  "cmdId": "161d6a3c-4993-43a1-af81-4af7acf28255",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315369",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/reports/link/v++_link_paper_exp1_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr  1 20:31:55 2026",
+ "timestampMillis": "1775068315369",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp3_pe32/_x/v++_link_paper_exp1_hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

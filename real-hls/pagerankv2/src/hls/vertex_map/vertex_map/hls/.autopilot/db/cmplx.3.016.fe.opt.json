@@ -1,0 +1,104 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 3 5 4 1",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pageRank.cpp",
+    "fileloc": 214,
+    "instructions": 63,
+    "memory_accesses": 0,
+    "name": "vertex_map",
+    "total_instructions": 393
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 14,
+    "file": "pageRank.cpp",
+    "fileloc": 183,
+    "instructions": 68,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 0,
+    "name": "write_arg",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 68
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "pageRank.cpp",
+    "fileloc": 150,
+    "instructions": 127,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "read_task",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 127
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 14,
+    "file": "pageRank.cpp",
+    "fileloc": 80,
+    "instructions": 61,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 5,
+    "name": "readVertex",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 61
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "pageRank.cpp",
+    "fileloc": 108,
+    "instructions": 44,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 8,
+    "name": "adder_function",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 44
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "pageRank.cpp",
+    "fileloc": 132,
+    "instructions": 30,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 6,
+    "name": "feed_adder_value",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 30
+  }
+}

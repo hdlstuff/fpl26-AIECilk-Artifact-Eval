@@ -1,0 +1,5 @@
+Vertex: 0 PageRank: 0.2
+Vertex: 1 PageRank: 0.2
+Vertex: 2 PageRank: 0.2
+Vertex: 3 PageRank: 0.2
+Vertex: 4 PageRank: 0.2

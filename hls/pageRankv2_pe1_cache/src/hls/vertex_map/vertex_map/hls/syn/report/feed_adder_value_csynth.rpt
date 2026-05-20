@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'feed_adder_value'
+================================================================
+* Date:           Wed Apr  1 19:51:43 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        vertex_map
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2LV-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.280 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |                                                      |                                            |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                       Instance                       |                   Module                   |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        |grp_feed_adder_value_Pipeline_VITIS_LOOP_135_1_fu_30  |feed_adder_value_Pipeline_VITIS_LOOP_135_1  |       12|       12|  48.000 ns|  48.000 ns|   11|   11|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_feed_adder_value_Pipeline_VITIS_LOOP_140_2_fu_36  |feed_adder_value_Pipeline_VITIS_LOOP_140_2  |        ?|        ?|          ?|          ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|       42|      211|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        0|       67|    -|
+|Register             |        -|     -|       39|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       81|      280|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------+--------------------------------------------+---------+----+----+-----+-----+
+    |                       Instance                       |                   Module                   | BRAM_18K| DSP| FF | LUT | URAM|
+    +------------------------------------------------------+--------------------------------------------+---------+----+----+-----+-----+
+    |grp_feed_adder_value_Pipeline_VITIS_LOOP_135_1_fu_30  |feed_adder_value_Pipeline_VITIS_LOOP_135_1  |        0|   0|   7|   73|    0|
+    |grp_feed_adder_value_Pipeline_VITIS_LOOP_140_2_fu_36  |feed_adder_value_Pipeline_VITIS_LOOP_140_2  |        0|   0|  35|  138|    0|
+    +------------------------------------------------------+--------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                 |                                            |        0|   0|  42|  211|    0|
+    +------------------------------------------------------+--------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |adder_in_feed_0_din    |   9|          2|   32|         64|
+    |adder_in_feed_0_write  |  14|          3|    1|          3|
+    |ap_NS_fsm              |  26|          5|    1|          5|
+    |ap_done                |   9|          2|    1|          2|
+    |v_size_1_blk_n         |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  67|         14|   36|         76|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |                                Name                               | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                          |   4|   0|    4|          0|
+    |ap_done_reg                                                        |   1|   0|    1|          0|
+    |grp_feed_adder_value_Pipeline_VITIS_LOOP_135_1_fu_30_ap_start_reg  |   1|   0|    1|          0|
+    |grp_feed_adder_value_Pipeline_VITIS_LOOP_140_2_fu_36_ap_start_reg  |   1|   0|    1|          0|
+    |v_size_reg_87                                                      |  32|   0|   32|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                              |  39|   0|   39|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_continue                     |   in|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  feed_adder_value|  return value|
+|v_size_1_dout                   |   in|   32|     ap_fifo|          v_size_1|       pointer|
+|v_size_1_empty_n                |   in|    1|     ap_fifo|          v_size_1|       pointer|
+|v_size_1_read                   |  out|    1|     ap_fifo|          v_size_1|       pointer|
+|v_size_1_num_data_valid         |   in|    5|     ap_fifo|          v_size_1|       pointer|
+|v_size_1_fifo_cap               |   in|    5|     ap_fifo|          v_size_1|       pointer|
+|adder_results_dout              |   in|   32|     ap_fifo|     adder_results|       pointer|
+|adder_results_empty_n           |   in|    1|     ap_fifo|     adder_results|       pointer|
+|adder_results_read              |  out|    1|     ap_fifo|     adder_results|       pointer|
+|adder_results_num_data_valid    |   in|    8|     ap_fifo|     adder_results|       pointer|
+|adder_results_fifo_cap          |   in|    8|     ap_fifo|     adder_results|       pointer|
+|adder_in_feed_0_din             |  out|   32|     ap_fifo|   adder_in_feed_0|       pointer|
+|adder_in_feed_0_full_n          |   in|    1|     ap_fifo|   adder_in_feed_0|       pointer|
+|adder_in_feed_0_write           |  out|    1|     ap_fifo|   adder_in_feed_0|       pointer|
+|adder_in_feed_0_num_data_valid  |   in|   32|     ap_fifo|   adder_in_feed_0|       pointer|
+|adder_in_feed_0_fifo_cap        |   in|   32|     ap_fifo|   adder_in_feed_0|       pointer|
++--------------------------------+-----+-----+------------+------------------+--------------+
+

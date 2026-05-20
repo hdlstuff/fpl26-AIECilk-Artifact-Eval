@@ -1,0 +1,1510 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_task'
+================================================================
+* Date:           Wed Apr  1 19:51:40 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        vertex_map
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2LV-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.920 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       74|       74|  0.296 us|  0.296 us|   74|   74|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 75
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.92>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %mem" [../pageRankReduce/pageRank.cpp:149]   --->   Operation 76 'read' 'mem_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.07ns)   --->   "%taskIn_read = read i512 @_ssdm_op_Read.axis.volatile.i512P128A, i512 %taskIn" [../pageRankReduce/pageRank.cpp:166]   --->   Operation 77 'read' 'taskIn_read' <Predicate = true> <Delay = 0.07> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.99> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%task_pPrCurr = trunc i512 %taskIn_read" [../pageRankReduce/pageRank.cpp:166]   --->   Operation 78 'trunc' 'task_pPrCurr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%task_pGraph = partselect i64 @_ssdm_op_PartSelect.i64.i512.i512, i512 %taskIn_read, i512 192" [../pageRankReduce/pageRank.cpp:166]   --->   Operation 79 'partselect' 'task_pGraph' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%tmp1 = partselect i28 @_ssdm_op_PartSelect.i28.i512.i32.i32, i512 %taskIn_read, i32 256, i32 283" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 80 'partselect' 'tmp1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i28.i4, i28 %tmp1, i4 0" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 81 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln168 = zext i32 %shl_ln" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 82 'zext' 'zext_ln168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln168 = add i64 %zext_ln168, i64 %mem_read" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 83 'add' 'add_ln168' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 84 [1/1] (0.84ns) (root node of TernaryAdder)   --->   "%add_ln168_1 = add i64 %add_ln168, i64 %task_pGraph" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 84 'add' 'add_ln168_1' <Predicate = true> <Delay = 0.84> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %add_ln168_1, i32 3, i32 63" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 85 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%trunc_ln179 = trunc i512 %taskIn_read" [../pageRankReduce/pageRank.cpp:179]   --->   Operation 86 'trunc' 'trunc_ln179' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.92>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%sext_ln168 = sext i61 %trunc_ln" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 87 'sext' 'sext_ln168' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%gmem_CHN_0_addr = getelementptr i64 %gmem_CHN_0, i64 %sext_ln168" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 88 'getelementptr' 'gmem_CHN_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [71/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 89 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.92>
+ST_3 : Operation 90 [70/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 90 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 2.92>
+ST_4 : Operation 91 [69/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 91 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 2.92>
+ST_5 : Operation 92 [68/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 92 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.92>
+ST_6 : Operation 93 [67/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 93 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.92>
+ST_7 : Operation 94 [66/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 94 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.92>
+ST_8 : Operation 95 [65/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 95 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 2.92>
+ST_9 : Operation 96 [64/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 96 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 2.92>
+ST_10 : Operation 97 [63/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 97 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 2.92>
+ST_11 : Operation 98 [62/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 98 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 2.92>
+ST_12 : Operation 99 [61/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 99 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 2.92>
+ST_13 : Operation 100 [60/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 100 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 2.92>
+ST_14 : Operation 101 [59/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 101 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 2.92>
+ST_15 : Operation 102 [58/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 102 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 2.92>
+ST_16 : Operation 103 [57/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 103 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 2.92>
+ST_17 : Operation 104 [56/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 104 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 2.92>
+ST_18 : Operation 105 [55/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 105 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 2.92>
+ST_19 : Operation 106 [54/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 106 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 2.92>
+ST_20 : Operation 107 [53/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 107 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 2.92>
+ST_21 : Operation 108 [52/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 108 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 21> <Delay = 2.92>
+ST_22 : Operation 109 [51/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 109 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 2.92>
+ST_23 : Operation 110 [50/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 110 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 2.92>
+ST_24 : Operation 111 [49/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 111 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 24> <Delay = 2.92>
+ST_25 : Operation 112 [48/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 112 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 25> <Delay = 2.92>
+ST_26 : Operation 113 [47/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 113 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 2.92>
+ST_27 : Operation 114 [46/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 114 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 27> <Delay = 2.92>
+ST_28 : Operation 115 [45/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 115 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 28> <Delay = 2.92>
+ST_29 : Operation 116 [44/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 116 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 29> <Delay = 2.92>
+ST_30 : Operation 117 [43/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 117 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 30> <Delay = 2.92>
+ST_31 : Operation 118 [42/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 118 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 31> <Delay = 2.92>
+ST_32 : Operation 119 [41/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 119 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 32> <Delay = 2.92>
+ST_33 : Operation 120 [40/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 120 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 33> <Delay = 2.92>
+ST_34 : Operation 121 [39/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 121 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 34> <Delay = 2.92>
+ST_35 : Operation 122 [38/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 122 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 35> <Delay = 2.92>
+ST_36 : Operation 123 [37/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 123 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 2.92>
+ST_37 : Operation 124 [36/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 124 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 2.92>
+ST_38 : Operation 125 [35/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 125 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 2.92>
+ST_39 : Operation 126 [34/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 126 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 2.92>
+ST_40 : Operation 127 [33/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 127 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 2.92>
+ST_41 : Operation 128 [32/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 128 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 41> <Delay = 2.92>
+ST_42 : Operation 129 [31/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 129 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 42> <Delay = 2.92>
+ST_43 : Operation 130 [30/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 130 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 43> <Delay = 2.92>
+ST_44 : Operation 131 [29/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 131 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 44> <Delay = 2.92>
+ST_45 : Operation 132 [28/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 132 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 45> <Delay = 2.92>
+ST_46 : Operation 133 [27/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 133 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 46> <Delay = 2.92>
+ST_47 : Operation 134 [26/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 134 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 47> <Delay = 2.92>
+ST_48 : Operation 135 [25/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 135 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 48> <Delay = 2.92>
+ST_49 : Operation 136 [24/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 136 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 50 <SV = 49> <Delay = 2.92>
+ST_50 : Operation 137 [23/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 137 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 50> <Delay = 2.92>
+ST_51 : Operation 138 [22/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 138 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 51> <Delay = 2.92>
+ST_52 : Operation 139 [21/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 139 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 53 <SV = 52> <Delay = 2.92>
+ST_53 : Operation 140 [20/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 140 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 53> <Delay = 2.92>
+ST_54 : Operation 141 [19/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 141 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 54> <Delay = 2.92>
+ST_55 : Operation 142 [18/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 142 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 55> <Delay = 2.92>
+ST_56 : Operation 143 [17/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 143 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 56> <Delay = 2.92>
+ST_57 : Operation 144 [16/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 144 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 57> <Delay = 2.92>
+ST_58 : Operation 145 [15/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 145 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 58> <Delay = 2.92>
+ST_59 : Operation 146 [14/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 146 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 59> <Delay = 2.92>
+ST_60 : Operation 147 [13/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 147 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 60> <Delay = 2.92>
+ST_61 : Operation 148 [12/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 148 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 61> <Delay = 2.92>
+ST_62 : Operation 149 [11/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 149 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 62> <Delay = 2.92>
+ST_63 : Operation 150 [10/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 150 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 63> <Delay = 2.92>
+ST_64 : Operation 151 [9/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 151 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 65 <SV = 64> <Delay = 2.92>
+ST_65 : Operation 152 [8/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 152 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 65> <Delay = 2.92>
+ST_66 : Operation 153 [7/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 153 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 66> <Delay = 2.92>
+ST_67 : Operation 154 [6/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 154 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 67> <Delay = 2.92>
+ST_68 : Operation 155 [5/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 155 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 68> <Delay = 2.92>
+ST_69 : Operation 156 [4/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 156 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 69> <Delay = 2.92>
+ST_70 : Operation 157 [3/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 157 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 70> <Delay = 2.92>
+ST_71 : Operation 158 [2/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 158 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 72 <SV = 71> <Delay = 2.92>
+ST_72 : Operation 159 [1/71] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_CHN_0_addr, i64 2" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 159 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 73 <SV = 72> <Delay = 2.92>
+ST_73 : Operation 160 [1/1] (2.92ns)   --->   "%v_neighbours = read i64 @_ssdm_op_Read.m_axi.p1i64, i64 %gmem_CHN_0_addr" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 160 'read' 'v_neighbours' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 74 <SV = 73> <Delay = 2.92>
+ST_74 : Operation 161 [1/1] (2.92ns)   --->   "%gmem_CHN_0_addr_read_1 = read i64 @_ssdm_op_Read.m_axi.p1i64, i64 %gmem_CHN_0_addr" [../pageRankReduce/pageRank.cpp:168]   --->   Operation 161 'read' 'gmem_CHN_0_addr_read_1' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_74 : Operation 162 [1/1] (0.00ns)   --->   "%v_neighbours_size = trunc i64 %gmem_CHN_0_addr_read_1" [../pageRankReduce/pageRank.cpp:169]   --->   Operation 162 'trunc' 'v_neighbours_size' <Predicate = true> <Delay = 0.00>
+
+State 75 <SV = 74> <Delay = 1.43>
+ST_75 : Operation 163 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i480 %taskToWrite, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 163 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 164 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %v_neighbours_stream, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 164 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 165 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adj_lists, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 165 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 166 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %Pcurrs, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 166 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 167 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %v_size_2, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 167 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 168 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %v_size_1, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 168 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 169 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %v_size_0, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 169 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 170 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %taskIn, void @empty_6, i32 1, i32 1, void @empty_5, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 170 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 171 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_CHN_0, void @empty_17, i32 0, i32 0, void @empty_16, i32 64, i32 0, void @empty_15, void @empty_14, void @empty_16, i32 16, i32 16, i32 16, i32 16, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 171 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 172 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln171 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %v_neighbours_stream, i64 %v_neighbours" [../pageRankReduce/pageRank.cpp:171]   --->   Operation 172 'write' 'write_ln171' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 9> <FIFO>
+ST_75 : Operation 173 [1/1] ( I:1.43ns O:1.43ns )   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %v_size_0, i32 %v_neighbours_size" [../pageRankReduce/pageRank.cpp:173]   --->   Operation 173 'write' 'write_ln173' <Predicate = true> <Delay = 1.43> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 9> <FIFO>
+ST_75 : Operation 174 [1/1] ( I:1.43ns O:1.43ns )   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %v_size_1, i32 %v_neighbours_size" [../pageRankReduce/pageRank.cpp:174]   --->   Operation 174 'write' 'write_ln174' <Predicate = true> <Delay = 1.43> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 9> <FIFO>
+ST_75 : Operation 175 [1/1] ( I:1.43ns O:1.43ns )   --->   "%write_ln175 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %v_size_2, i32 %v_neighbours_size" [../pageRankReduce/pageRank.cpp:175]   --->   Operation 175 'write' 'write_ln175' <Predicate = true> <Delay = 1.43> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 9> <FIFO>
+ST_75 : Operation 176 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln177 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %Pcurrs, i64 %task_pPrCurr" [../pageRankReduce/pageRank.cpp:177]   --->   Operation 176 'write' 'write_ln177' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 9> <FIFO>
+ST_75 : Operation 177 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln178 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %adj_lists, i64 %task_pGraph" [../pageRankReduce/pageRank.cpp:178]   --->   Operation 177 'write' 'write_ln178' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 9> <FIFO>
+ST_75 : Operation 178 [1/1] ( I:1.23ns O:1.23ns )   --->   "%write_ln179 = write void @_ssdm_op_Write.ap_fifo.volatile.i480P0A, i480 %taskToWrite, i480 %trunc_ln179" [../pageRankReduce/pageRank.cpp:179]   --->   Operation 178 'write' 'write_ln179' <Predicate = true> <Delay = 1.23> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 480> <Depth = 9> <FIFO>
+ST_75 : Operation 179 [1/1] (0.00ns)   --->   "%ret_ln180 = ret" [../pageRankReduce/pageRank.cpp:180]   --->   Operation 179 'ret' 'ret_ln180' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ gmem_CHN_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ mem]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ taskIn]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ v_neighbours_stream]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ Pcurrs]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ adj_lists]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ v_size_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ v_size_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ v_size_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ taskToWrite]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+mem_read               (read          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+taskIn_read            (read          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+task_pPrCurr           (trunc         ) [ 0011111111111111111111111111111111111111111111111111111111111111111111111111]
+task_pGraph            (partselect    ) [ 0011111111111111111111111111111111111111111111111111111111111111111111111111]
+tmp1                   (partselect    ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+shl_ln                 (bitconcatenate) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+zext_ln168             (zext          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+add_ln168              (add           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+add_ln168_1            (add           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+trunc_ln               (partselect    ) [ 0010000000000000000000000000000000000000000000000000000000000000000000000000]
+trunc_ln179            (trunc         ) [ 0011111111111111111111111111111111111111111111111111111111111111111111111111]
+sext_ln168             (sext          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+gmem_CHN_0_addr        (getelementptr ) [ 0001111111111111111111111111111111111111111111111111111111111111111111111110]
+empty                  (readreq       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+v_neighbours           (read          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000011]
+gmem_CHN_0_addr_read_1 (read          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+v_neighbours_size      (trunc         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000001]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0      (specinterface ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln171            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln173            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln174            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln175            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln177            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln178            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+write_ln179            (write         ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+ret_ln180              (ret           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="gmem_CHN_0">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gmem_CHN_0"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="mem">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mem"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="taskIn">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="taskIn"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="v_neighbours_stream">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v_neighbours_stream"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="Pcurrs">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Pcurrs"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="adj_lists">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="adj_lists"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="v_size_0">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v_size_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="v_size_1">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v_size_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="v_size_2">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v_size_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="taskToWrite">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="taskToWrite"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i512P128A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i64.i512.i512"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i28.i512.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i32.i28.i4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i61.i64.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_ReadReq.m_axi.p1i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.m_axi.p1i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_15"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1001" name="const_76">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1001" name="const_78">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i480P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="mem_read_read_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="64" slack="0"/>
+<pin id="84" dir="0" index="1" bw="64" slack="0"/>
+<pin id="85" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="mem_read/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="taskIn_read_read_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="512" slack="0"/>
+<pin id="90" dir="0" index="1" bw="512" slack="0"/>
+<pin id="91" dir="1" index="2" bw="512" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="taskIn_read/1 "/>
+</bind>
+</comp>
+
+<comp id="94" class="1004" name="write_ln171_write_fu_94">
+<pin_list>
+<pin id="95" dir="0" index="0" bw="0" slack="0"/>
+<pin id="96" dir="0" index="1" bw="64" slack="0"/>
+<pin id="97" dir="0" index="2" bw="64" slack="2"/>
+<pin id="98" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln171/75 "/>
+</bind>
+</comp>
+
+<comp id="101" class="1004" name="write_ln173_write_fu_101">
+<pin_list>
+<pin id="102" dir="0" index="0" bw="0" slack="0"/>
+<pin id="103" dir="0" index="1" bw="32" slack="0"/>
+<pin id="104" dir="0" index="2" bw="32" slack="1"/>
+<pin id="105" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/75 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="write_ln174_write_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="0" slack="0"/>
+<pin id="110" dir="0" index="1" bw="32" slack="0"/>
+<pin id="111" dir="0" index="2" bw="32" slack="1"/>
+<pin id="112" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln174/75 "/>
+</bind>
+</comp>
+
+<comp id="115" class="1004" name="write_ln175_write_fu_115">
+<pin_list>
+<pin id="116" dir="0" index="0" bw="0" slack="0"/>
+<pin id="117" dir="0" index="1" bw="32" slack="0"/>
+<pin id="118" dir="0" index="2" bw="32" slack="1"/>
+<pin id="119" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln175/75 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="write_ln177_write_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="0" slack="0"/>
+<pin id="124" dir="0" index="1" bw="64" slack="0"/>
+<pin id="125" dir="0" index="2" bw="64" slack="74"/>
+<pin id="126" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln177/75 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1004" name="write_ln178_write_fu_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="0" slack="0"/>
+<pin id="131" dir="0" index="1" bw="64" slack="0"/>
+<pin id="132" dir="0" index="2" bw="64" slack="74"/>
+<pin id="133" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln178/75 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="write_ln179_write_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="0" slack="0"/>
+<pin id="138" dir="0" index="1" bw="480" slack="0"/>
+<pin id="139" dir="0" index="2" bw="480" slack="74"/>
+<pin id="140" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln179/75 "/>
+</bind>
+</comp>
+
+<comp id="143" class="1004" name="grp_readreq_fu_143">
+<pin_list>
+<pin id="144" dir="0" index="0" bw="1" slack="0"/>
+<pin id="145" dir="0" index="1" bw="64" slack="0"/>
+<pin id="146" dir="0" index="2" bw="3" slack="0"/>
+<pin id="147" dir="1" index="3" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="readreq(1154) " fcode="readreq"/>
+<opset="empty/2 "/>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="grp_read_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="64" slack="0"/>
+<pin id="152" dir="0" index="1" bw="64" slack="71"/>
+<pin id="153" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="v_neighbours/73 gmem_CHN_0_addr_read_1/74 "/>
+</bind>
+</comp>
+
+<comp id="155" class="1004" name="task_pPrCurr_fu_155">
+<pin_list>
+<pin id="156" dir="0" index="0" bw="512" slack="0"/>
+<pin id="157" dir="1" index="1" bw="64" slack="74"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="task_pPrCurr/1 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="task_pGraph_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="64" slack="0"/>
+<pin id="161" dir="0" index="1" bw="512" slack="0"/>
+<pin id="162" dir="0" index="2" bw="9" slack="0"/>
+<pin id="163" dir="1" index="3" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="task_pGraph/1 "/>
+</bind>
+</comp>
+
+<comp id="167" class="1004" name="tmp1_fu_167">
+<pin_list>
+<pin id="168" dir="0" index="0" bw="28" slack="0"/>
+<pin id="169" dir="0" index="1" bw="512" slack="0"/>
+<pin id="170" dir="0" index="2" bw="10" slack="0"/>
+<pin id="171" dir="0" index="3" bw="10" slack="0"/>
+<pin id="172" dir="1" index="4" bw="28" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp1/1 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1004" name="shl_ln_fu_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="32" slack="0"/>
+<pin id="179" dir="0" index="1" bw="28" slack="0"/>
+<pin id="180" dir="0" index="2" bw="1" slack="0"/>
+<pin id="181" dir="1" index="3" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="shl_ln/1 "/>
+</bind>
+</comp>
+
+<comp id="185" class="1004" name="zext_ln168_fu_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="32" slack="0"/>
+<pin id="187" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln168/1 "/>
+</bind>
+</comp>
+
+<comp id="189" class="1004" name="add_ln168_fu_189">
+<pin_list>
+<pin id="190" dir="0" index="0" bw="32" slack="0"/>
+<pin id="191" dir="0" index="1" bw="64" slack="0"/>
+<pin id="192" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln168/1 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1004" name="add_ln168_1_fu_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="64" slack="0"/>
+<pin id="197" dir="0" index="1" bw="64" slack="0"/>
+<pin id="198" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln168_1/1 "/>
+</bind>
+</comp>
+
+<comp id="201" class="1004" name="trunc_ln_fu_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="61" slack="0"/>
+<pin id="203" dir="0" index="1" bw="64" slack="0"/>
+<pin id="204" dir="0" index="2" bw="3" slack="0"/>
+<pin id="205" dir="0" index="3" bw="7" slack="0"/>
+<pin id="206" dir="1" index="4" bw="61" slack="1"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln/1 "/>
+</bind>
+</comp>
+
+<comp id="211" class="1004" name="trunc_ln179_fu_211">
+<pin_list>
+<pin id="212" dir="0" index="0" bw="512" slack="0"/>
+<pin id="213" dir="1" index="1" bw="480" slack="74"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln179/1 "/>
+</bind>
+</comp>
+
+<comp id="215" class="1004" name="sext_ln168_fu_215">
+<pin_list>
+<pin id="216" dir="0" index="0" bw="61" slack="1"/>
+<pin id="217" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln168/2 "/>
+</bind>
+</comp>
+
+<comp id="218" class="1004" name="gmem_CHN_0_addr_fu_218">
+<pin_list>
+<pin id="219" dir="0" index="0" bw="64" slack="0"/>
+<pin id="220" dir="0" index="1" bw="61" slack="0"/>
+<pin id="221" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="gmem_CHN_0_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="225" class="1004" name="v_neighbours_size_fu_225">
+<pin_list>
+<pin id="226" dir="0" index="0" bw="64" slack="0"/>
+<pin id="227" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="v_neighbours_size/74 "/>
+</bind>
+</comp>
+
+<comp id="229" class="1005" name="task_pPrCurr_reg_229">
+<pin_list>
+<pin id="230" dir="0" index="0" bw="64" slack="74"/>
+<pin id="231" dir="1" index="1" bw="64" slack="74"/>
+</pin_list>
+<bind>
+<opset="task_pPrCurr "/>
+</bind>
+</comp>
+
+<comp id="234" class="1005" name="task_pGraph_reg_234">
+<pin_list>
+<pin id="235" dir="0" index="0" bw="64" slack="74"/>
+<pin id="236" dir="1" index="1" bw="64" slack="74"/>
+</pin_list>
+<bind>
+<opset="task_pGraph "/>
+</bind>
+</comp>
+
+<comp id="239" class="1005" name="trunc_ln_reg_239">
+<pin_list>
+<pin id="240" dir="0" index="0" bw="61" slack="1"/>
+<pin id="241" dir="1" index="1" bw="61" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln "/>
+</bind>
+</comp>
+
+<comp id="244" class="1005" name="trunc_ln179_reg_244">
+<pin_list>
+<pin id="245" dir="0" index="0" bw="480" slack="74"/>
+<pin id="246" dir="1" index="1" bw="480" slack="74"/>
+</pin_list>
+<bind>
+<opset="trunc_ln179 "/>
+</bind>
+</comp>
+
+<comp id="249" class="1005" name="gmem_CHN_0_addr_reg_249">
+<pin_list>
+<pin id="250" dir="0" index="0" bw="64" slack="1"/>
+<pin id="251" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="gmem_CHN_0_addr "/>
+</bind>
+</comp>
+
+<comp id="255" class="1005" name="v_neighbours_reg_255">
+<pin_list>
+<pin id="256" dir="0" index="0" bw="64" slack="2"/>
+<pin id="257" dir="1" index="1" bw="64" slack="2"/>
+</pin_list>
+<bind>
+<opset="v_neighbours "/>
+</bind>
+</comp>
+
+<comp id="260" class="1005" name="v_neighbours_size_reg_260">
+<pin_list>
+<pin id="261" dir="0" index="0" bw="32" slack="1"/>
+<pin id="262" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="v_neighbours_size "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="86"><net_src comp="20" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="87"><net_src comp="2" pin="0"/><net_sink comp="82" pin=1"/></net>
+
+<net id="92"><net_src comp="22" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="93"><net_src comp="4" pin="0"/><net_sink comp="88" pin=1"/></net>
+
+<net id="99"><net_src comp="76" pin="0"/><net_sink comp="94" pin=0"/></net>
+
+<net id="100"><net_src comp="6" pin="0"/><net_sink comp="94" pin=1"/></net>
+
+<net id="106"><net_src comp="78" pin="0"/><net_sink comp="101" pin=0"/></net>
+
+<net id="107"><net_src comp="12" pin="0"/><net_sink comp="101" pin=1"/></net>
+
+<net id="113"><net_src comp="78" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="114"><net_src comp="14" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="120"><net_src comp="78" pin="0"/><net_sink comp="115" pin=0"/></net>
+
+<net id="121"><net_src comp="16" pin="0"/><net_sink comp="115" pin=1"/></net>
+
+<net id="127"><net_src comp="76" pin="0"/><net_sink comp="122" pin=0"/></net>
+
+<net id="128"><net_src comp="8" pin="0"/><net_sink comp="122" pin=1"/></net>
+
+<net id="134"><net_src comp="76" pin="0"/><net_sink comp="129" pin=0"/></net>
+
+<net id="135"><net_src comp="10" pin="0"/><net_sink comp="129" pin=1"/></net>
+
+<net id="141"><net_src comp="80" pin="0"/><net_sink comp="136" pin=0"/></net>
+
+<net id="142"><net_src comp="18" pin="0"/><net_sink comp="136" pin=1"/></net>
+
+<net id="148"><net_src comp="44" pin="0"/><net_sink comp="143" pin=0"/></net>
+
+<net id="149"><net_src comp="46" pin="0"/><net_sink comp="143" pin=2"/></net>
+
+<net id="154"><net_src comp="48" pin="0"/><net_sink comp="150" pin=0"/></net>
+
+<net id="158"><net_src comp="88" pin="2"/><net_sink comp="155" pin=0"/></net>
+
+<net id="164"><net_src comp="24" pin="0"/><net_sink comp="159" pin=0"/></net>
+
+<net id="165"><net_src comp="88" pin="2"/><net_sink comp="159" pin=1"/></net>
+
+<net id="166"><net_src comp="26" pin="0"/><net_sink comp="159" pin=2"/></net>
+
+<net id="173"><net_src comp="28" pin="0"/><net_sink comp="167" pin=0"/></net>
+
+<net id="174"><net_src comp="88" pin="2"/><net_sink comp="167" pin=1"/></net>
+
+<net id="175"><net_src comp="30" pin="0"/><net_sink comp="167" pin=2"/></net>
+
+<net id="176"><net_src comp="32" pin="0"/><net_sink comp="167" pin=3"/></net>
+
+<net id="182"><net_src comp="34" pin="0"/><net_sink comp="177" pin=0"/></net>
+
+<net id="183"><net_src comp="167" pin="4"/><net_sink comp="177" pin=1"/></net>
+
+<net id="184"><net_src comp="36" pin="0"/><net_sink comp="177" pin=2"/></net>
+
+<net id="188"><net_src comp="177" pin="3"/><net_sink comp="185" pin=0"/></net>
+
+<net id="193"><net_src comp="185" pin="1"/><net_sink comp="189" pin=0"/></net>
+
+<net id="194"><net_src comp="82" pin="2"/><net_sink comp="189" pin=1"/></net>
+
+<net id="199"><net_src comp="189" pin="2"/><net_sink comp="195" pin=0"/></net>
+
+<net id="200"><net_src comp="159" pin="3"/><net_sink comp="195" pin=1"/></net>
+
+<net id="207"><net_src comp="38" pin="0"/><net_sink comp="201" pin=0"/></net>
+
+<net id="208"><net_src comp="195" pin="2"/><net_sink comp="201" pin=1"/></net>
+
+<net id="209"><net_src comp="40" pin="0"/><net_sink comp="201" pin=2"/></net>
+
+<net id="210"><net_src comp="42" pin="0"/><net_sink comp="201" pin=3"/></net>
+
+<net id="214"><net_src comp="88" pin="2"/><net_sink comp="211" pin=0"/></net>
+
+<net id="222"><net_src comp="0" pin="0"/><net_sink comp="218" pin=0"/></net>
+
+<net id="223"><net_src comp="215" pin="1"/><net_sink comp="218" pin=1"/></net>
+
+<net id="224"><net_src comp="218" pin="2"/><net_sink comp="143" pin=1"/></net>
+
+<net id="228"><net_src comp="150" pin="2"/><net_sink comp="225" pin=0"/></net>
+
+<net id="232"><net_src comp="155" pin="1"/><net_sink comp="229" pin=0"/></net>
+
+<net id="233"><net_src comp="229" pin="1"/><net_sink comp="122" pin=2"/></net>
+
+<net id="237"><net_src comp="159" pin="3"/><net_sink comp="234" pin=0"/></net>
+
+<net id="238"><net_src comp="234" pin="1"/><net_sink comp="129" pin=2"/></net>
+
+<net id="242"><net_src comp="201" pin="4"/><net_sink comp="239" pin=0"/></net>
+
+<net id="243"><net_src comp="239" pin="1"/><net_sink comp="215" pin=0"/></net>
+
+<net id="247"><net_src comp="211" pin="1"/><net_sink comp="244" pin=0"/></net>
+
+<net id="248"><net_src comp="244" pin="1"/><net_sink comp="136" pin=2"/></net>
+
+<net id="252"><net_src comp="218" pin="2"/><net_sink comp="249" pin=0"/></net>
+
+<net id="253"><net_src comp="249" pin="1"/><net_sink comp="143" pin=1"/></net>
+
+<net id="254"><net_src comp="249" pin="1"/><net_sink comp="150" pin=1"/></net>
+
+<net id="258"><net_src comp="150" pin="2"/><net_sink comp="255" pin=0"/></net>
+
+<net id="259"><net_src comp="255" pin="1"/><net_sink comp="94" pin=2"/></net>
+
+<net id="263"><net_src comp="225" pin="1"/><net_sink comp="260" pin=0"/></net>
+
+<net id="264"><net_src comp="260" pin="1"/><net_sink comp="101" pin=2"/></net>
+
+<net id="265"><net_src comp="260" pin="1"/><net_sink comp="108" pin=2"/></net>
+
+<net id="266"><net_src comp="260" pin="1"/><net_sink comp="115" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: v_neighbours_stream | {75 }
+	Port: Pcurrs | {75 }
+	Port: adj_lists | {75 }
+	Port: v_size_0 | {75 }
+	Port: v_size_1 | {75 }
+	Port: v_size_2 | {75 }
+	Port: taskToWrite | {75 }
+ - Input state : 
+	Port: read_task : gmem_CHN_0 | {2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 }
+	Port: read_task : mem | {1 }
+	Port: read_task : taskIn | {1 }
+  - Chain level:
+	State 1
+		shl_ln : 1
+		zext_ln168 : 2
+		add_ln168 : 3
+		add_ln168_1 : 4
+		trunc_ln : 5
+	State 2
+		gmem_CHN_0_addr : 1
+		empty : 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------|---------|---------|
+| Operation|      Functional Unit     |    FF   |   LUT   |
+|----------|--------------------------|---------|---------|
+|    add   |     add_ln168_fu_189     |    0    |    64   |
+|          |    add_ln168_1_fu_195    |    0    |    64   |
+|----------|--------------------------|---------|---------|
+|          |    mem_read_read_fu_82   |    0    |    0    |
+|   read   |  taskIn_read_read_fu_88  |    0    |    0    |
+|          |      grp_read_fu_150     |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|          |  write_ln171_write_fu_94 |    0    |    0    |
+|          | write_ln173_write_fu_101 |    0    |    0    |
+|          | write_ln174_write_fu_108 |    0    |    0    |
+|   write  | write_ln175_write_fu_115 |    0    |    0    |
+|          | write_ln177_write_fu_122 |    0    |    0    |
+|          | write_ln178_write_fu_129 |    0    |    0    |
+|          | write_ln179_write_fu_136 |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|  readreq |    grp_readreq_fu_143    |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|          |    task_pPrCurr_fu_155   |    0    |    0    |
+|   trunc  |    trunc_ln179_fu_211    |    0    |    0    |
+|          | v_neighbours_size_fu_225 |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|          |    task_pGraph_fu_159    |    0    |    0    |
+|partselect|        tmp1_fu_167       |    0    |    0    |
+|          |      trunc_ln_fu_201     |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|bitconcatenate|       shl_ln_fu_177      |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|   zext   |     zext_ln168_fu_185    |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|   sext   |     sext_ln168_fu_215    |    0    |    0    |
+|----------|--------------------------|---------|---------|
+|   Total  |                          |    0    |   128   |
+|----------|--------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+| gmem_CHN_0_addr_reg_249 |   64   |
+|   task_pGraph_reg_234   |   64   |
+|   task_pPrCurr_reg_229  |   64   |
+|   trunc_ln179_reg_244   |   480  |
+|     trunc_ln_reg_239    |   61   |
+|   v_neighbours_reg_255  |   64   |
+|v_neighbours_size_reg_260|   32   |
++-------------------------+--------+
+|          Total          |   829  |
++-------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------------------|------|------|------|--------||---------||---------||---------|
+|        Comp        |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
+|--------------------|------|------|------|--------||---------||---------||---------|
+| grp_readreq_fu_143 |  p1  |   2  |  64  |   128  ||    0    ||    9    |
+|--------------------|------|------|------|--------||---------||---------||---------|
+|        Total       |      |      |      |   128  ||  0.387  ||    0    ||    9    |
+|--------------------|------|------|------|--------||---------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   128  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    0   |    0   |    9   |
+|  Register |    -   |   829  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    0   |   829  |   137  |
++-----------+--------+--------+--------+

@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vitis HLS Report for 'feed_adder_value'
+================================================================
+* Date:           Thu Apr  2 14:13:46 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        vertex_map
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2LV-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.280 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.43>
+ST_1 : Operation 5 [1/1] ( I:1.43ns O:1.43ns )   --->   "%v_size = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %v_size_1" [../pageRankReduce/pageRank.cpp:134]   --->   Operation 5 'read' 'v_size' <Predicate = true> <Delay = 1.43> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 9> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%fence_ln136 = fence void @_ssdm_op_Fence, i32 %v_size_1, i32 4294967295, i32 %adder_in_feed_0, i32 0" [../pageRankReduce/pageRank.cpp:136]   --->   Operation 6 'fence' 'fence_ln136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ln0 = call void @feed_adder_value_Pipeline_VITIS_LOOP_136_1, i32 %adder_in_feed_0"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 1.48>
+ST_2 : Operation 8 [1/2] (1.48ns)   --->   "%call_ln0 = call void @feed_adder_value_Pipeline_VITIS_LOOP_136_1, i32 %adder_in_feed_0"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 1.48> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.26>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%fence_ln141 = fence void @_ssdm_op_Fence, i32 %adder_in_feed_0, i32 4294967295, i32 %adder_results, i32 %adder_in_feed_0, i32 0" [../pageRankReduce/pageRank.cpp:141]   --->   Operation 9 'fence' 'fence_ln141' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%fence_ln141 = fence void @_ssdm_op_Fence, i32 %v_size_1, i32 %adder_in_feed_0, i32 4294967295, i32 %adder_results, i32 %adder_in_feed_0, i32 0" [../pageRankReduce/pageRank.cpp:141]   --->   Operation 10 'fence' 'fence_ln141' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [2/2] (1.26ns)   --->   "%call_ln134 = call void @feed_adder_value_Pipeline_VITIS_LOOP_141_2, i32 %v_size, i32 %adder_results, i32 %adder_in_feed_0" [../pageRankReduce/pageRank.cpp:134]   --->   Operation 11 'call' 'call_ln134' <Predicate = true> <Delay = 1.26> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 1.65>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %v_size_1, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %adder_results, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %adder_in_feed_0, void @empty_4, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/2] (1.65ns)   --->   "%call_ln134 = call void @feed_adder_value_Pipeline_VITIS_LOOP_141_2, i32 %v_size, i32 %adder_results, i32 %adder_in_feed_0" [../pageRankReduce/pageRank.cpp:134]   --->   Operation 15 'call' 'call_ln134' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%ret_ln145 = ret" [../pageRankReduce/pageRank.cpp:145]   --->   Operation 16 'ret' 'ret_ln145' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 1.432ns
+The critical path consists of the following:
+	fifo read operation ('v_size', ../pageRankReduce/pageRank.cpp:134) on port 'v_size_1' (../pageRankReduce/pageRank.cpp:134) [7]  (1.432 ns)
+
+ <State 2>: 1.482ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'feed_adder_value_Pipeline_VITIS_LOOP_136_1' [9]  (1.482 ns)
+
+ <State 3>: 1.267ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln134', ../pageRankReduce/pageRank.cpp:134) to 'feed_adder_value_Pipeline_VITIS_LOOP_141_2' [12]  (1.267 ns)
+
+ <State 4>: 1.654ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln134', ../pageRankReduce/pageRank.cpp:134) to 'feed_adder_value_Pipeline_VITIS_LOOP_141_2' [12]  (1.654 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

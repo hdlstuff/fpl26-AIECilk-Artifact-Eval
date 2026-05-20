@@ -1,0 +1,121 @@
+---
+MainSourceFile:  /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          509840
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          510306
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          510773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /tools/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          805351
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          1998986
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_38_2:  '
+    FileOffset:      38
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          1999030
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_38_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_58_3:  '
+    FileOffset:      58
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          1999630
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_58_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_65_4:  '
+    FileOffset:      65
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          1999804
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_65_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_95_1:  '
+    FileOffset:      95
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          2000643
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_95_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_1:  '
+    FileOffset:      118
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          2001529
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_2:  '
+    FileOffset:      123
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          2001666
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_136_1:  '
+    FileOffset:      136
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          2001967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_136_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_141_2:  '
+    FileOffset:      141
+    FilePath:        pageRank.cpp
+    Replacements:    
+      - FilePath:        /home/eryilmaz/repos/fpl26-aie/hls/pageRankReduce/pagerankreduce/hls/.autopilot/db/pageRank.pp.0.cpp
+        Offset:          2002066
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_141_2: '
+...

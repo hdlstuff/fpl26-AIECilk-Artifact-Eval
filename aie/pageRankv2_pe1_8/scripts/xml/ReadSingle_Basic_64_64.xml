@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root versionMajor="1" versionMinor="9">
+  <kernel name="ReadSingle_Basic_64_64" language="ip" vlnv="epfl.ch:hardcilk:ReadSingle_Basic_64_64:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" hwControlProtocol="ap_ctrl_none">
+    <ports>
+      <port name="m_axi" mode="master" range="0x3FFFFFFFF" dataWidth="64" portType="addressable" base="0x0"/>
+      <!-- AXI-Stream ports for AIE connectivity -->
+      <!-- output from kernel = write_only, input to kernel = read_only -->
+      <port name="sourceTask" mode="write_only" dataWidth="64" portType="stream"/>
+      <port name="sinkResult" mode="read_only" dataWidth="64" portType="stream"/>
+    </ports>
+    <args>
+      <arg name="mem_7" addressQualifier="1" id="0" port="m_axi" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <!-- Stream port args -->
+      <arg name="sourceTask" addressQualifier="4" id="1" port="sourceTask" size="0x4" offset="0x0" hostOffset="0x0" hostSize="0x4" type="stream"/>
+      <arg name="sinkResult" addressQualifier="4" id="2" port="sinkResult" size="0x4" offset="0x0" hostOffset="0x0" hostSize="0x4" type="stream"/>
+    </args>
+  </kernel>
+</root>

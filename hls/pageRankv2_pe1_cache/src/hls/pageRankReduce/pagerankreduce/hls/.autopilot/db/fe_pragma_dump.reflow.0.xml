@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="pageRank.cpp" line="39" pragmaType="pipeline" parentfunction="pageRankReduce" off="0" ii="1" rewind="0" style=""/>
+<pragma file="pageRank.cpp" line="24" pragmaType="interface" parentfunction="pageRankReduce" mode="axis" port="taskIn" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="pageRank.cpp" line="25" pragmaType="interface" parentfunction="pageRankReduce" mode="axis" port="taskOutGlobal" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="pageRank.cpp" line="26" pragmaType="interface" parentfunction="pageRankReduce" mode="axis" port="argOut" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+</pragmas>

@@ -1,0 +1,23 @@
+MEMORIES SIZE: 1
+Join counter value: 40353608
+Allocation #1: Created contiguous BO of 0.0625 MB in bank 0 (addr: 0xc100000000)
+Allocation #2: Created contiguous BO of 0.0625 MB in bank 0 (addr: 0xc100010000)
+NOTE: RETURN ADDRESS VALUE SHOULD BE SET BY THE USER CORRECTLY BASED ON ARGUMENT NOTIIFICATION
+Return address set to 0xc100010000
+Initializing task paper_exp1_task
+Allocation #3: Created contiguous BO of 512 MB in bank 0 (addr: 0xc100020000)
+Address written to scheduler server raddr: c100020000
+        Initialized scheduler server at address 10 with length 2000000, fifoTail 0, fifoHead 0,
+        Data address start: 0xc100020000, end: 0xc120020000
+Allocation #4: Created contiguous BO of 512 MB in bank 0 (addr: 0xc120020000)
+Address written to scheduler server raddr: c120020000
+        Initialized scheduler server at address 50 with length 2000000, fifoTail 0, fifoHead 0,
+        Data address start: 0xc120020000, end: 0xc140020000
+        Writing root task data to the scheduler server with data at address c100020000
+        Wrote root task data to the scheduler server
+        Initialized root task at scheduler server at address 0x10 with length 0x2000000, fifoHead 0x0, fifoTail 0x1, dataAddress 0xc100020000
+Time taken for init: 0.588083s
+Found value 1 at return address c100010000
+Finished processing.
+Time taken for management loop: 13.5101s
+Destroying XRTMemory. Total BOs created: 4

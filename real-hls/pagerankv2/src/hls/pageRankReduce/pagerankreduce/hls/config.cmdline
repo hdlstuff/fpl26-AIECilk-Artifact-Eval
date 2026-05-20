@@ -1,0 +1,3 @@
+relativeroot=/home/eryilmaz/repos/fpl26-aie/real-hls/pagerankv2/src/hls/pageRankReduce
+original_argv=-c --mode hls --config hls_config.cfg 
+

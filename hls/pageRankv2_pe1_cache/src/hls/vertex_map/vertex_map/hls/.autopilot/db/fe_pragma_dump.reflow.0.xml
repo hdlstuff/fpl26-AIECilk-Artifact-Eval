@@ -1,0 +1,94 @@
+<pragmas>
+<pragma file="../pageRankReduce/pageRank.cpp" line="95" pragmaType="pipeline" parentfunction="readVertex" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<23, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="123" pragmaType="pipeline" parentfunction="adder_function" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="118" pragmaType="pipeline" parentfunction="adder_function" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<1, false>::ap_bit_ref(ap_int_base<1, false> const*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_bool" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_task.h" line="93" pragmaType="inline" parentfunction="hls::task::task<void (&)(hls::stream<unsigned int, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&), hls::stream<unsigned int, 9>&, hls::stream<float, 9>&, hls::stream<float, 128>&, hls::stream<float, 128>&, hls::stream<float, 128>&>(void (&)(hls::stream<unsigned int, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&), hls::stream<unsigned int, 9>&, hls::stream<float, 9>&, hls::stream<float, 128>&, hls::stream<float, 128>&, hls::stream<float, 128>&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_task.h" line="93" pragmaType="inline" parentfunction="hls::task::task<void (&)(void*, hls::stream<unsigned long, 0>&, hls::stream<vertex_map_args, 0>&, hls::stream<float, 0>&), void*&, hls::stream<unsigned long, 0>&, hls::stream<vertex_map_args, 9>&, hls::stream<float, 9>&>(void (&)(void*, hls::stream<unsigned long, 0>&, hls::stream<vertex_map_args, 0>&, hls::stream<float, 0>&), void*&, hls::stream<unsigned long, 0>&, hls::stream<vertex_map_args, 9>&, hls::stream<float, 9>&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_task.h" line="93" pragmaType="inline" parentfunction="hls::task::task<void (&)(void*, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<vertex_map_args, 0>&), void*&, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned int, 9>&, hls::stream<vertex_map_args, 9>&>(void (&)(void*, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<vertex_map_args, 0>&), void*&, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned int, 9>&, hls::stream<vertex_map_args, 9>&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_task.h" line="93" pragmaType="inline" parentfunction="hls::task::task<void (&)(void*, void*, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<float, 0>&), void*&, void*&, hls::stream<unsigned long, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<float, 128>&>(void (&)(void*, void*, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<float, 0>&), void*&, void*&, hls::stream<unsigned long, 9>&, hls::stream<unsigned int, 9>&, hls::stream<unsigned long, 9>&, hls::stream<unsigned long, 9>&, hls::stream<float, 128>&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_task.h" line="93" pragmaType="inline" parentfunction="hls::task::task<void (&)(hls::stream<unsigned int, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&), hls::stream<unsigned int, 9>&, hls::stream<float, 128>&, hls::stream<float, 128>&>(void (&)(hls::stream<unsigned int, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&), hls::stream<unsigned int, 9>&, hls::stream<float, 128>&, hls::stream<float, 128>&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned long, 9>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<unsigned long, 9>::stream()" depth="9" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 9>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<float, 9>::stream()" depth="9" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vertex_map_args, 9>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<vertex_map_args, 9>::stream()" depth="9" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 128>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<float, 128>::stream()" depth="128" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 9>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<unsigned int, 9>::stream()" depth="9" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<1, false>::ap_bit_ref(ap_int_base<1, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vertex_map_args, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="231" pragmaType="dataflow" parentfunction="vertex_map" disable_start_propagation="0"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="221" pragmaType="interface" parentfunction="vertex_map" mode="axis" port="taskIn" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="222" pragmaType="interface" parentfunction="vertex_map" mode="axis" port="argOut" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="223" pragmaType="interface" parentfunction="vertex_map" mode="m_axi" port="mem_0" bundle="gmem" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="64" max_widen_bitwidth="-1" channel="0"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="224" pragmaType="interface" parentfunction="vertex_map" mode="m_axi" port="mem_1" bundle="gmem" offset="" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="1" max_burst_read_length="16" max_burst_write_length="-1" latency="64" max_widen_bitwidth="256" channel="1"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="225" pragmaType="interface" parentfunction="vertex_map" mode="m_axi" port="mem_2" bundle="gmem" offset="" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="1" max_burst_read_length="16" max_burst_write_length="-1" latency="64" max_widen_bitwidth="256" channel="2"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="226" pragmaType="interface" parentfunction="vertex_map" mode="m_axi" port="mem_5" bundle="gmem" offset="" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="1" max_burst_read_length="16" max_burst_write_length="-1" latency="64" max_widen_bitwidth="256" channel="5"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<32, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/include/header_files/etc/ap_common.h" line="539" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<32, false>::ap_bit_ref(ap_int_base<32, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<1, false>::operator=(unsigned long long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<23, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/include/header_files/etc/ap_common.h" line="539" pragmaType="inline" parentfunction="_ZN8ssdm_intILi23ELb0EEC2EDq23_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>::ap_range_ref(ap_int_base<32, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<8, false>(ap_range_ref<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/include/header_files/etc/ap_common.h" line="539" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>& ap_range_ref<32, false>::operator=<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<23, false>(ap_int_base<23, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>& ap_range_ref<32, false>::operator=<23, false>(ap_range_ref<23, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<23, false>::operator()(int, int) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>& ap_range_ref<32, false>::operator=<23, false>(ap_int_base<23, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="141" pragmaType="pipeline" parentfunction="feed_adder_value" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../pageRankReduce/pageRank.cpp" line="136" pragmaType="pipeline" parentfunction="feed_adder_value" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>& ap_range_ref<32, false>::operator=<8, false>(ap_range_ref<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::operator()(int, int) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::operator[](int) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<32, false>::operator=(bool)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned long, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+</pragmas>

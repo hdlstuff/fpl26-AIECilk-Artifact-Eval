@@ -1,0 +1,14 @@
+[
+  {
+    "directory": "/home/shahawy/vitis_testing/pageRank/pageRankReduce",
+    "arguments": [
+      "/alpha/tools/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++",
+      "-fhls",
+      "-hls-syn-headers-dir=/alpha/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot",
+      "",
+      "-c",
+      "/home/shahawy/vitis_testing/pageRank/pageRankReduce/pageRank.cpp"
+    ],
+    "file": "/home/shahawy/vitis_testing/pageRank/pageRankReduce/pageRank.cpp"
+  }
+]

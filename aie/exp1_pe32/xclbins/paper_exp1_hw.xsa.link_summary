@@ -1,0 +1,1820 @@
+<ENTRY>
+{
+ "thisFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/xclbins/paper_exp1_hw.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:08 2026",
+ "timestampMillis": "1774949048174",
+ "buildStep": {
+  "cmdId": "54353834-7868-42b1-b330-42ee9fc64675",
+  "name": "v++",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target=hw --platform=xilinx_vck5000_gen4x8_qdma_2_202220_1 --save-temps -g --profile.data all:all:all --kernel_frequency 300 -l -o xclbins/paper_exp1_hw.xsa ./libadf.a xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --config ./connectivity.cfg --vivado.synth.jobs 32 --vivado.impl.jobs 16 ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "--target=hw",
+   "--platform=xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--save-temps",
+   "-g",
+   "--profile.data",
+   "all:all:all",
+   "--kernel_frequency",
+   "300",
+   "-l",
+   "-o",
+   "xclbins/paper_exp1_hw.xsa",
+   "./libadf.a",
+   "xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--config",
+   "./connectivity.cfg",
+   "--vivado.synth.jobs",
+   "32",
+   "--vivado.impl.jobs",
+   "16"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/connectivity.cfg",
+    "content": "[connectivity]\nnk=exp1:1:exp1_1\n\nsp=exp1_1.m_axi_00:MC_NOC0\nsp=exp1_1.m_axi_01:MC_NOC0\nsp=exp1_1.m_axi_02:MC_NOC0\nsp=exp1_1.m_axi_03:MC_NOC0\n\nsc=ai_engine_0.PLIO_paper_exp1_task_0_argOut:exp1_1.BindTo_PE_paper_exp1_task_0_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_0_taskOut:exp1_1.BindTo_PE_paper_exp1_task_0_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_10_argOut:exp1_1.BindTo_PE_paper_exp1_task_10_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_10_taskOut:exp1_1.BindTo_PE_paper_exp1_task_10_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_11_argOut:exp1_1.BindTo_PE_paper_exp1_task_11_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_11_taskOut:exp1_1.BindTo_PE_paper_exp1_task_11_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_12_argOut:exp1_1.BindTo_PE_paper_exp1_task_12_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_12_taskOut:exp1_1.BindTo_PE_paper_exp1_task_12_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_13_argOut:exp1_1.BindTo_PE_paper_exp1_task_13_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_13_taskOut:exp1_1.BindTo_PE_paper_exp1_task_13_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_14_argOut:exp1_1.BindTo_PE_paper_exp1_task_14_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_14_taskOut:exp1_1.BindTo_PE_paper_exp1_task_14_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_15_argOut:exp1_1.BindTo_PE_paper_exp1_task_15_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_15_taskOut:exp1_1.BindTo_PE_paper_exp1_task_15_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_16_argOut:exp1_1.BindTo_PE_paper_exp1_task_16_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_16_taskOut:exp1_1.BindTo_PE_paper_exp1_task_16_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_17_argOut:exp1_1.BindTo_PE_paper_exp1_task_17_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_17_taskOut:exp1_1.BindTo_PE_paper_exp1_task_17_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_18_argOut:exp1_1.BindTo_PE_paper_exp1_task_18_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_18_taskOut:exp1_1.BindTo_PE_paper_exp1_task_18_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_19_argOut:exp1_1.BindTo_PE_paper_exp1_task_19_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_19_taskOut:exp1_1.BindTo_PE_paper_exp1_task_19_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_1_argOut:exp1_1.BindTo_PE_paper_exp1_task_1_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_1_taskOut:exp1_1.BindTo_PE_paper_exp1_task_1_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_20_argOut:exp1_1.BindTo_PE_paper_exp1_task_20_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_20_taskOut:exp1_1.BindTo_PE_paper_exp1_task_20_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_21_argOut:exp1_1.BindTo_PE_paper_exp1_task_21_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_21_taskOut:exp1_1.BindTo_PE_paper_exp1_task_21_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_22_argOut:exp1_1.BindTo_PE_paper_exp1_task_22_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_22_taskOut:exp1_1.BindTo_PE_paper_exp1_task_22_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_23_argOut:exp1_1.BindTo_PE_paper_exp1_task_23_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_23_taskOut:exp1_1.BindTo_PE_paper_exp1_task_23_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_24_argOut:exp1_1.BindTo_PE_paper_exp1_task_24_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_24_taskOut:exp1_1.BindTo_PE_paper_exp1_task_24_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_25_argOut:exp1_1.BindTo_PE_paper_exp1_task_25_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_25_taskOut:exp1_1.BindTo_PE_paper_exp1_task_25_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_26_argOut:exp1_1.BindTo_PE_paper_exp1_task_26_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_26_taskOut:exp1_1.BindTo_PE_paper_exp1_task_26_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_27_argOut:exp1_1.BindTo_PE_paper_exp1_task_27_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_27_taskOut:exp1_1.BindTo_PE_paper_exp1_task_27_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_28_argOut:exp1_1.BindTo_PE_paper_exp1_task_28_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_28_taskOut:exp1_1.BindTo_PE_paper_exp1_task_28_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_29_argOut:exp1_1.BindTo_PE_paper_exp1_task_29_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_29_taskOut:exp1_1.BindTo_PE_paper_exp1_task_29_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_2_argOut:exp1_1.BindTo_PE_paper_exp1_task_2_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_2_taskOut:exp1_1.BindTo_PE_paper_exp1_task_2_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_30_argOut:exp1_1.BindTo_PE_paper_exp1_task_30_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_30_taskOut:exp1_1.BindTo_PE_paper_exp1_task_30_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_31_argOut:exp1_1.BindTo_PE_paper_exp1_task_31_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_31_taskOut:exp1_1.BindTo_PE_paper_exp1_task_31_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_3_argOut:exp1_1.BindTo_PE_paper_exp1_task_3_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_3_taskOut:exp1_1.BindTo_PE_paper_exp1_task_3_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_4_argOut:exp1_1.BindTo_PE_paper_exp1_task_4_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_4_taskOut:exp1_1.BindTo_PE_paper_exp1_task_4_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_5_argOut:exp1_1.BindTo_PE_paper_exp1_task_5_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_5_taskOut:exp1_1.BindTo_PE_paper_exp1_task_5_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_6_argOut:exp1_1.BindTo_PE_paper_exp1_task_6_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_6_taskOut:exp1_1.BindTo_PE_paper_exp1_task_6_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_7_argOut:exp1_1.BindTo_PE_paper_exp1_task_7_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_7_taskOut:exp1_1.BindTo_PE_paper_exp1_task_7_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_8_argOut:exp1_1.BindTo_PE_paper_exp1_task_8_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_8_taskOut:exp1_1.BindTo_PE_paper_exp1_task_8_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_9_argOut:exp1_1.BindTo_PE_paper_exp1_task_9_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_9_taskOut:exp1_1.BindTo_PE_paper_exp1_task_9_taskOut\nsc=exp1_1.BindTo_PE_paper_exp1_task_0_taskIn:ai_engine_0.PLIO_paper_exp1_task_0_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_10_taskIn:ai_engine_0.PLIO_paper_exp1_task_10_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_11_taskIn:ai_engine_0.PLIO_paper_exp1_task_11_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_12_taskIn:ai_engine_0.PLIO_paper_exp1_task_12_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_13_taskIn:ai_engine_0.PLIO_paper_exp1_task_13_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_14_taskIn:ai_engine_0.PLIO_paper_exp1_task_14_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_15_taskIn:ai_engine_0.PLIO_paper_exp1_task_15_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_16_taskIn:ai_engine_0.PLIO_paper_exp1_task_16_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_17_taskIn:ai_engine_0.PLIO_paper_exp1_task_17_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_18_taskIn:ai_engine_0.PLIO_paper_exp1_task_18_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_19_taskIn:ai_engine_0.PLIO_paper_exp1_task_19_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_1_taskIn:ai_engine_0.PLIO_paper_exp1_task_1_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_20_taskIn:ai_engine_0.PLIO_paper_exp1_task_20_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_21_taskIn:ai_engine_0.PLIO_paper_exp1_task_21_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_22_taskIn:ai_engine_0.PLIO_paper_exp1_task_22_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_23_taskIn:ai_engine_0.PLIO_paper_exp1_task_23_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_24_taskIn:ai_engine_0.PLIO_paper_exp1_task_24_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_25_taskIn:ai_engine_0.PLIO_paper_exp1_task_25_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_26_taskIn:ai_engine_0.PLIO_paper_exp1_task_26_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_27_taskIn:ai_engine_0.PLIO_paper_exp1_task_27_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_28_taskIn:ai_engine_0.PLIO_paper_exp1_task_28_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_29_taskIn:ai_engine_0.PLIO_paper_exp1_task_29_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_2_taskIn:ai_engine_0.PLIO_paper_exp1_task_2_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_30_taskIn:ai_engine_0.PLIO_paper_exp1_task_30_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_31_taskIn:ai_engine_0.PLIO_paper_exp1_task_31_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_3_taskIn:ai_engine_0.PLIO_paper_exp1_task_3_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_4_taskIn:ai_engine_0.PLIO_paper_exp1_task_4_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_5_taskIn:ai_engine_0.PLIO_paper_exp1_task_5_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_6_taskIn:ai_engine_0.PLIO_paper_exp1_task_6_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_7_taskIn:ai_engine_0.PLIO_paper_exp1_task_7_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_8_taskIn:ai_engine_0.PLIO_paper_exp1_task_8_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_9_taskIn:ai_engine_0.PLIO_paper_exp1_task_9_taskIn\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:08 2026",
+ "timestampMillis": "1774949048174",
+ "status": {
+  "cmdId": "54353834-7868-42b1-b330-42ee9fc64675",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049725",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "paper_exp1_hw",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "exp1",
+     "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "exp1_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11",
+  "aieInputs": {
+   "base": {
+    "type": "AI_LIBSDF",
+    "name": "libadf",
+    "file": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/libadf.a",
+    "reports": [
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie.partial.aiecompile_summary",
+      "name": "",
+      "fileType": "TEXT",
+      "reportType": "TASK_LOG_SUMMARY",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie_control_config.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_CONTROL_CONFIG",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie.router.soln.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_ROUTER_SOLUTION",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie.mapped.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_GRAPH_MAPPED",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie.compiler.report.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_COMPILER_REPORT",
+      "cmdId": ""
+     }
+    ],
+    "uuid": ""
+   },
+   "sources": [],
+   "type": "AI_UKNOWN"
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049736",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie_control_config.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONTROL_CONFIG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049827",
+ "buildStep": {
+  "cmdId": "795c1941-385c-4cf3-81a8-ed3f6215a658",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo -keep -memory-for-trace BRAM /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/.Xil/v++-15411-lap-c024198l/hw.o --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm --target hw --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/xos/exp1-hw-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "-keep",
+   "-memory-for-trace",
+   "BRAM",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/.Xil/v++-15411-lap-c024198l/hw.o",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/syslinkConfig.ini",
+    "content": "nk=exp1:1:exp1_1\nsc=ai_engine_0.PLIO_paper_exp1_task_0_argOut:exp1_1.BindTo_PE_paper_exp1_task_0_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_0_taskOut:exp1_1.BindTo_PE_paper_exp1_task_0_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_10_argOut:exp1_1.BindTo_PE_paper_exp1_task_10_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_10_taskOut:exp1_1.BindTo_PE_paper_exp1_task_10_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_11_argOut:exp1_1.BindTo_PE_paper_exp1_task_11_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_11_taskOut:exp1_1.BindTo_PE_paper_exp1_task_11_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_12_argOut:exp1_1.BindTo_PE_paper_exp1_task_12_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_12_taskOut:exp1_1.BindTo_PE_paper_exp1_task_12_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_13_argOut:exp1_1.BindTo_PE_paper_exp1_task_13_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_13_taskOut:exp1_1.BindTo_PE_paper_exp1_task_13_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_14_argOut:exp1_1.BindTo_PE_paper_exp1_task_14_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_14_taskOut:exp1_1.BindTo_PE_paper_exp1_task_14_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_15_argOut:exp1_1.BindTo_PE_paper_exp1_task_15_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_15_taskOut:exp1_1.BindTo_PE_paper_exp1_task_15_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_16_argOut:exp1_1.BindTo_PE_paper_exp1_task_16_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_16_taskOut:exp1_1.BindTo_PE_paper_exp1_task_16_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_17_argOut:exp1_1.BindTo_PE_paper_exp1_task_17_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_17_taskOut:exp1_1.BindTo_PE_paper_exp1_task_17_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_18_argOut:exp1_1.BindTo_PE_paper_exp1_task_18_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_18_taskOut:exp1_1.BindTo_PE_paper_exp1_task_18_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_19_argOut:exp1_1.BindTo_PE_paper_exp1_task_19_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_19_taskOut:exp1_1.BindTo_PE_paper_exp1_task_19_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_1_argOut:exp1_1.BindTo_PE_paper_exp1_task_1_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_1_taskOut:exp1_1.BindTo_PE_paper_exp1_task_1_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_20_argOut:exp1_1.BindTo_PE_paper_exp1_task_20_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_20_taskOut:exp1_1.BindTo_PE_paper_exp1_task_20_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_21_argOut:exp1_1.BindTo_PE_paper_exp1_task_21_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_21_taskOut:exp1_1.BindTo_PE_paper_exp1_task_21_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_22_argOut:exp1_1.BindTo_PE_paper_exp1_task_22_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_22_taskOut:exp1_1.BindTo_PE_paper_exp1_task_22_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_23_argOut:exp1_1.BindTo_PE_paper_exp1_task_23_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_23_taskOut:exp1_1.BindTo_PE_paper_exp1_task_23_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_24_argOut:exp1_1.BindTo_PE_paper_exp1_task_24_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_24_taskOut:exp1_1.BindTo_PE_paper_exp1_task_24_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_25_argOut:exp1_1.BindTo_PE_paper_exp1_task_25_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_25_taskOut:exp1_1.BindTo_PE_paper_exp1_task_25_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_26_argOut:exp1_1.BindTo_PE_paper_exp1_task_26_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_26_taskOut:exp1_1.BindTo_PE_paper_exp1_task_26_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_27_argOut:exp1_1.BindTo_PE_paper_exp1_task_27_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_27_taskOut:exp1_1.BindTo_PE_paper_exp1_task_27_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_28_argOut:exp1_1.BindTo_PE_paper_exp1_task_28_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_28_taskOut:exp1_1.BindTo_PE_paper_exp1_task_28_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_29_argOut:exp1_1.BindTo_PE_paper_exp1_task_29_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_29_taskOut:exp1_1.BindTo_PE_paper_exp1_task_29_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_2_argOut:exp1_1.BindTo_PE_paper_exp1_task_2_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_2_taskOut:exp1_1.BindTo_PE_paper_exp1_task_2_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_30_argOut:exp1_1.BindTo_PE_paper_exp1_task_30_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_30_taskOut:exp1_1.BindTo_PE_paper_exp1_task_30_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_31_argOut:exp1_1.BindTo_PE_paper_exp1_task_31_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_31_taskOut:exp1_1.BindTo_PE_paper_exp1_task_31_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_3_argOut:exp1_1.BindTo_PE_paper_exp1_task_3_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_3_taskOut:exp1_1.BindTo_PE_paper_exp1_task_3_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_4_argOut:exp1_1.BindTo_PE_paper_exp1_task_4_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_4_taskOut:exp1_1.BindTo_PE_paper_exp1_task_4_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_5_argOut:exp1_1.BindTo_PE_paper_exp1_task_5_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_5_taskOut:exp1_1.BindTo_PE_paper_exp1_task_5_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_6_argOut:exp1_1.BindTo_PE_paper_exp1_task_6_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_6_taskOut:exp1_1.BindTo_PE_paper_exp1_task_6_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_7_argOut:exp1_1.BindTo_PE_paper_exp1_task_7_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_7_taskOut:exp1_1.BindTo_PE_paper_exp1_task_7_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_8_argOut:exp1_1.BindTo_PE_paper_exp1_task_8_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_8_taskOut:exp1_1.BindTo_PE_paper_exp1_task_8_taskOut\nsc=ai_engine_0.PLIO_paper_exp1_task_9_argOut:exp1_1.BindTo_PE_paper_exp1_task_9_argOut\nsc=ai_engine_0.PLIO_paper_exp1_task_9_taskOut:exp1_1.BindTo_PE_paper_exp1_task_9_taskOut\nsc=exp1_1.BindTo_PE_paper_exp1_task_0_taskIn:ai_engine_0.PLIO_paper_exp1_task_0_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_10_taskIn:ai_engine_0.PLIO_paper_exp1_task_10_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_11_taskIn:ai_engine_0.PLIO_paper_exp1_task_11_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_12_taskIn:ai_engine_0.PLIO_paper_exp1_task_12_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_13_taskIn:ai_engine_0.PLIO_paper_exp1_task_13_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_14_taskIn:ai_engine_0.PLIO_paper_exp1_task_14_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_15_taskIn:ai_engine_0.PLIO_paper_exp1_task_15_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_16_taskIn:ai_engine_0.PLIO_paper_exp1_task_16_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_17_taskIn:ai_engine_0.PLIO_paper_exp1_task_17_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_18_taskIn:ai_engine_0.PLIO_paper_exp1_task_18_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_19_taskIn:ai_engine_0.PLIO_paper_exp1_task_19_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_1_taskIn:ai_engine_0.PLIO_paper_exp1_task_1_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_20_taskIn:ai_engine_0.PLIO_paper_exp1_task_20_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_21_taskIn:ai_engine_0.PLIO_paper_exp1_task_21_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_22_taskIn:ai_engine_0.PLIO_paper_exp1_task_22_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_23_taskIn:ai_engine_0.PLIO_paper_exp1_task_23_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_24_taskIn:ai_engine_0.PLIO_paper_exp1_task_24_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_25_taskIn:ai_engine_0.PLIO_paper_exp1_task_25_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_26_taskIn:ai_engine_0.PLIO_paper_exp1_task_26_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_27_taskIn:ai_engine_0.PLIO_paper_exp1_task_27_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_28_taskIn:ai_engine_0.PLIO_paper_exp1_task_28_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_29_taskIn:ai_engine_0.PLIO_paper_exp1_task_29_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_2_taskIn:ai_engine_0.PLIO_paper_exp1_task_2_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_30_taskIn:ai_engine_0.PLIO_paper_exp1_task_30_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_31_taskIn:ai_engine_0.PLIO_paper_exp1_task_31_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_3_taskIn:ai_engine_0.PLIO_paper_exp1_task_3_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_4_taskIn:ai_engine_0.PLIO_paper_exp1_task_4_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_5_taskIn:ai_engine_0.PLIO_paper_exp1_task_5_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_6_taskIn:ai_engine_0.PLIO_paper_exp1_task_6_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_7_taskIn:ai_engine_0.PLIO_paper_exp1_task_7_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_8_taskIn:ai_engine_0.PLIO_paper_exp1_task_8_taskIn\nsc=exp1_1.BindTo_PE_paper_exp1_task_9_taskIn:ai_engine_0.PLIO_paper_exp1_task_9_taskIn\nsp=exp1_1.m_axi_00:MC_NOC0\nsp=exp1_1.m_axi_01:MC_NOC0\nsp=exp1_1.m_axi_02:MC_NOC0\nsp=exp1_1.m_axi_03:MC_NOC0\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:09 2026",
+ "timestampMillis": "1774949049827",
+ "status": {
+  "cmdId": "795c1941-385c-4cf3-81a8-ed3f6215a658",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058904",
+ "status": {
+  "cmdId": "795c1941-385c-4cf3-81a8-ed3f6215a658",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058905",
+ "buildStep": {
+  "cmdId": "9c9463de-d1d2-4c7e-a004-ac6b0222c02a",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/sdsl.dat -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/cf2sw.rtd -nofilter /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/cf2sw_full.rtd -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.xml -o /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:18 2026",
+ "timestampMillis": "1774949058905",
+ "status": {
+  "cmdId": "9c9463de-d1d2-4c7e-a004-ac6b0222c02a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062747",
+ "status": {
+  "cmdId": "9c9463de-d1d2-4c7e-a004-ac6b0222c02a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062748",
+ "buildStep": {
+  "cmdId": "c1e9726a-393e-4e21-b496-6fa2038cde0c",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062748",
+ "status": {
+  "cmdId": "c1e9726a-393e-4e21-b496-6fa2038cde0c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062851",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062851",
+ "status": {
+  "cmdId": "c1e9726a-393e-4e21-b496-6fa2038cde0c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062852",
+ "buildStep": {
+  "cmdId": "7a952b03-76c7-42f6-ba5c-37e7798e960e",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "-s",
+   "-g",
+   "--kernel_frequency",
+   "300",
+   "--remote_ip_cache",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/.ipcache",
+   "--trace_memory",
+   "BRAM",
+   "--output_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int",
+   "--log_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/logs/link",
+   "--report_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link",
+   "--config",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0",
+   "--messageDb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/run_link/vpl.pb",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32\nmisc=BinaryName=paper_exp1_hw\n\n[connectivity]\nnk=exp1:1:exp1_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nsynth.jobs=32\nimpl.jobs=16\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:22 2026",
+ "timestampMillis": "1774949062852",
+ "status": {
+  "cmdId": "7a952b03-76c7-42f6-ba5c-37e7798e960e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:23 2026",
+ "timestampMillis": "1774949063369",
+ "buildStep": {
+  "cmdId": "91285d93-ac43-4199-b523-958ced23303b",
+  "name": "vpl",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/.ipcache --trace_memory BRAM --output_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int --log_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/logs/link --report_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link --config /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link --no-info --iprepo /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_exp1_1_0 --messageDb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/run_link/vpl.pb /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:23 2026",
+ "timestampMillis": "1774949063369",
+ "status": {
+  "cmdId": "91285d93-ac43-4199-b523-958ced23303b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue Mar 31 11:24:25 2026",
+ "timestampMillis": "1774949065653",
+ "vivadoProject": {
+  "openDir": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 11:24:25 2026",
+ "timestampMillis": "1774949065654",
+ "buildStep": {
+  "cmdId": "b3ac3b4e-6d72-453c-95a6-c21ebc667514",
+  "name": "vivado",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:24:25 2026",
+ "timestampMillis": "1774949065654",
+ "status": {
+  "cmdId": "b3ac3b4e-6d72-453c-95a6-c21ebc667514",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:42 2026",
+ "timestampMillis": "1774949082769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 11:24:42 2026",
+ "timestampMillis": "1774949082800",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:34:04 2026",
+ "timestampMillis": "1774949644578",
+ "buildStep": {
+  "cmdId": "14ed94be-aa75-41c4-a69e-d2b68db5a400",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:34:04 2026",
+ "timestampMillis": "1774949644578",
+ "status": {
+  "cmdId": "14ed94be-aa75-41c4-a69e-d2b68db5a400",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 31 11:34:04 2026",
+ "timestampMillis": "1774949644579",
+ "buildStep": {
+  "cmdId": "3b395ed8-535c-40de-9e79-d1c8d20ebbf2",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 11:34:04 2026",
+ "timestampMillis": "1774949644579",
+ "status": {
+  "cmdId": "3b395ed8-535c-40de-9e79-d1c8d20ebbf2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:07:36 2026",
+ "timestampMillis": "1774951656191",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:07:36 2026",
+ "timestampMillis": "1774951656191",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:08:35 2026",
+ "timestampMillis": "1774951715331",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597741",
+ "status": {
+  "cmdId": "b3ac3b4e-6d72-453c-95a6-c21ebc667514",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597767",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597767",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597768",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597768",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597768",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597768",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_aie_prog_0_synth_1_ulp_inst_0_axi_noc_aie_prog_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_kernel0_0_synth_1_ulp_inst_0_axi_noc_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_noc_h2c_0_synth_1_ulp_inst_0_axi_noc_h2c_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon15_0_synth_1_ulp_inst_0_dpa_mon15_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon14_0_synth_1_ulp_inst_0_dpa_mon14_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon13_0_synth_1_ulp_inst_0_dpa_mon13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597769",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon12_0_synth_1_ulp_inst_0_dpa_mon12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon11_0_synth_1_ulp_inst_0_dpa_mon11_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_exp1_1_0_synth_1_ulp_inst_0_exp1_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon21_0_synth_1_ulp_inst_0_dpa_mon21_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon20_0_synth_1_ulp_inst_0_dpa_mon20_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon19_0_synth_1_ulp_inst_0_dpa_mon19_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon18_0_synth_1_ulp_inst_0_dpa_mon18_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon17_0_synth_1_ulp_inst_0_dpa_mon17_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon16_0_synth_1_ulp_inst_0_dpa_mon16_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon0_0_synth_1_ulp_inst_0_dpa_mon0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon1_0_synth_1_ulp_inst_0_dpa_mon1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon2_0_synth_1_ulp_inst_0_dpa_mon2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon3_0_synth_1_ulp_inst_0_dpa_mon3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon4_0_synth_1_ulp_inst_0_dpa_mon4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon5_0_synth_1_ulp_inst_0_dpa_mon5_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597770",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon6_0_synth_1_ulp_inst_0_dpa_mon6_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon7_0_synth_1_ulp_inst_0_dpa_mon7_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon8_0_synth_1_ulp_inst_0_dpa_mon8_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon9_0_synth_1_ulp_inst_0_dpa_mon9_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon10_0_synth_1_ulp_inst_0_dpa_mon10_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon22_0_synth_1_ulp_inst_0_dpa_mon22_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon23_0_synth_1_ulp_inst_0_dpa_mon23_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon24_0_synth_1_ulp_inst_0_dpa_mon24_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon25_0_synth_1_ulp_inst_0_dpa_mon25_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon26_0_synth_1_ulp_inst_0_dpa_mon26_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon27_0_synth_1_ulp_inst_0_dpa_mon27_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon28_0_synth_1_ulp_inst_0_dpa_mon28_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon29_0_synth_1_ulp_inst_0_dpa_mon29_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon30_0_synth_1_ulp_inst_0_dpa_mon30_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_mon31_0_synth_1_ulp_inst_0_dpa_mon31_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597771",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_hub_0_synth_1_ulp_inst_0_dpa_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597772",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_trace_s2mm_0_synth_1_ulp_inst_0_dpa_trace_s2mm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597772",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597772",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect2_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597772",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect0_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597772",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/syn/ulp_inst_0_dpa_ctrl_interconnect1_0_synth_1_ulp_inst_0_dpa_ctrl_interconnect1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597773",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "3b395ed8-535c-40de-9e79-d1c8d20ebbf2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597773",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "3b395ed8-535c-40de-9e79-d1c8d20ebbf2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597773",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_qdma_2_202220_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "3b395ed8-535c-40de-9e79-d1c8d20ebbf2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597786",
+ "status": {
+  "cmdId": "91285d93-ac43-4199-b523-958ced23303b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597794",
+ "status": {
+  "cmdId": "7a952b03-76c7-42f6-ba5c-37e7798e960e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597795",
+ "buildStep": {
+  "cmdId": "cc94d9da-5c30-47d6-a6a6-04e56e27c732",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597795",
+ "status": {
+  "cmdId": "cc94d9da-5c30-47d6-a6a6-04e56e27c732",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597796",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597797",
+ "buildStep": {
+  "cmdId": "33ed52ec-52b5-42cd-9f73-b02a4132b75e",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -force-enable-memory BRAM -a /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/address_map.xml -sdsl /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/sdsl.dat -xclbin /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.xml -rtd /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.rtd -o /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xml",
+  "args": [
+   "-force-enable-memory",
+   "BRAM",
+   "-a",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "-o",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:17 2026",
+ "timestampMillis": "1774952597797",
+ "status": {
+  "cmdId": "33ed52ec-52b5-42cd-9f73-b02a4132b75e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599289",
+ "status": {
+  "cmdId": "33ed52ec-52b5-42cd-9f73-b02a4132b75e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599290",
+ "buildStep": {
+  "cmdId": "e171115e-e7c9-4a92-b262-410af2562f85",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599290",
+ "status": {
+  "cmdId": "e171115e-e7c9-4a92-b262-410af2562f85",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "status": {
+  "cmdId": "e171115e-e7c9-4a92-b262-410af2562f85",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "buildStep": {
+  "cmdId": "e8e85895-acc3-408f-bbc5-5dcd6783702a",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "status": {
+  "cmdId": "e8e85895-acc3-408f-bbc5-5dcd6783702a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "status": {
+  "cmdId": "e8e85895-acc3-408f-bbc5-5dcd6783702a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599294",
+ "status": {
+  "cmdId": "cc94d9da-5c30-47d6-a6a6-04e56e27c732",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599295",
+ "buildStep": {
+  "cmdId": "da6c6c56-11da-47a5-84b3-869287963d2f",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.rtd --append-section :JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xml --add-section SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json --add-section AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie_control_config.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1 --output /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.rtd",
+   "--append-section",
+   ":JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--add-section",
+   "AIE_METADATA:JSON:/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/aie_control_config.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--output",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599295",
+ "status": {
+  "cmdId": "da6c6c56-11da-47a5-84b3-869287963d2f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599332",
+ "status": {
+  "cmdId": "da6c6c56-11da-47a5-84b3-869287963d2f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599333",
+ "buildStep": {
+  "cmdId": "42ac9c51-8b82-4926-9fcf-51d22bae4dc0",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin.info --input /home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin.info",
+   "--input",
+   "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/link/int/paper_exp1_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599333",
+ "status": {
+  "cmdId": "42ac9c51-8b82-4926-9fcf-51d22bae4dc0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599398",
+ "status": {
+  "cmdId": "42ac9c51-8b82-4926-9fcf-51d22bae4dc0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599398",
+ "buildStep": {
+  "cmdId": "9ea6034b-b7f3-44d7-88de-8abc56fd0b4f",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599399",
+ "status": {
+  "cmdId": "9ea6034b-b7f3-44d7-88de-8abc56fd0b4f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599399",
+ "status": {
+  "cmdId": "9ea6034b-b7f3-44d7-88de-8abc56fd0b4f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599399",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/system_estimate_paper_exp1_hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599489",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599489",
+ "status": {
+  "cmdId": "54353834-7868-42b1-b330-42ee9fc64675",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599500",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/reports/link/v++_link_paper_exp1_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 31 12:23:19 2026",
+ "timestampMillis": "1774952599500",
+ "report": {
+  "path": "/home/eryilmaz/repos/fpl26-aie/aie/exp1_pe32/_x/v++_link_paper_exp1_hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root versionMajor="1" versionMinor="9">
+  <kernel name="pageRankHS" language="ip" vlnv="epfl.ch:hardcilk:pageRankHS:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" hwControlProtocol="user_managed">
+    <ports>
+      <port name="m_axi_00" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_01" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_02" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_03" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_04" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_05" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_06" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_07" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_08" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_09" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_10" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_11" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_12" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="m_axi_13" mode="master" range="0x3FFFFFFFF" dataWidth="256" portType="addressable" base="0x0"/>
+      <port name="s_axil_mgmt_hardcilk" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x0"/>
+      <port name="vertex_map_0_s_axi_control" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x0"/>
+    </ports>
+    <args>
+      <arg name="pageRankReduce_scheduler_0_rPause" addressQualifier="0" id="0" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_rAddr" addressQualifier="0" id="1" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x18" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_maxLen" addressQualifier="0" id="2" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x20" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_fifoTailReg" addressQualifier="0" id="3" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x28" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_fifoHeadReg" addressQualifier="0" id="4" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x30" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_procInterrupt" addressQualifier="0" id="5" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x38" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_0_currLen" addressQualifier="0" id="6" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x40" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_rPause" addressQualifier="0" id="7" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x48" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_rAddr" addressQualifier="0" id="8" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x50" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_maxLen" addressQualifier="0" id="9" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x58" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_fifoTailReg" addressQualifier="0" id="10" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x60" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_fifoHeadReg" addressQualifier="0" id="11" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x68" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_procInterrupt" addressQualifier="0" id="12" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x70" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="pageRankReduce_scheduler_1_currLen" addressQualifier="0" id="13" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x78" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_rPause" addressQualifier="0" id="14" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x80" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_rAddr" addressQualifier="0" id="15" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x88" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_maxLen" addressQualifier="0" id="16" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x90" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_fifoTailReg" addressQualifier="0" id="17" port="s_axil_mgmt_hardcilk" size="0x8" offset="0x98" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_fifoHeadReg" addressQualifier="0" id="18" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xa0" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_procInterrupt" addressQualifier="0" id="19" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xa8" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_0_currLen" addressQualifier="0" id="20" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xb0" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_rPause" addressQualifier="0" id="21" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xb8" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_rAddr" addressQualifier="0" id="22" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xc0" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_maxLen" addressQualifier="0" id="23" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xc8" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_fifoTailReg" addressQualifier="0" id="24" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xd0" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_fifoHeadReg" addressQualifier="0" id="25" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xd8" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_procInterrupt" addressQualifier="0" id="26" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xe0" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_scheduler_1_currLen" addressQualifier="0" id="27" port="s_axil_mgmt_hardcilk" size="0x8" offset="0xe8" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="mem_0" addressQualifier="1" id="28" port="m_axi_00" size="0x8" offset="0x108" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_1" addressQualifier="1" id="29" port="m_axi_01" size="0x8" offset="0x120" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_2" addressQualifier="1" id="30" port="m_axi_02" size="0x8" offset="0x128" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_3" addressQualifier="1" id="31" port="m_axi_03" size="0x8" offset="0x130" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_4" addressQualifier="1" id="32" port="m_axi_04" size="0x8" offset="0x138" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_5" addressQualifier="1" id="33" port="m_axi_05" size="0x8" offset="0x140" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="mem_6" addressQualifier="1" id="34" port="m_axi_06" size="0x8" offset="0x148" hostOffset="0x0" hostSize="0x8" type="void*"/>
+      <arg name="vertex_map_0_mem_0" addressQualifier="0" id="35" port="vertex_map_0_s_axi_control" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_0_mem_1" addressQualifier="0" id="36" port="vertex_map_0_s_axi_control" size="0x8" offset="0x1c" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_0_mem_2" addressQualifier="0" id="37" port="vertex_map_0_s_axi_control" size="0x8" offset="0x28" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+      <arg name="vertex_map_0_mem_5" addressQualifier="0" id="38" port="vertex_map_0_s_axi_control" size="0x8" offset="0x34" hostOffset="0x0" hostSize="0x8" type="ap_uint&lt;64>"/>
+    </args>
+  </kernel>
+</root>
