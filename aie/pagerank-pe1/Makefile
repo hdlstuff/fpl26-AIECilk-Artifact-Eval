@@ -92,7 +92,7 @@ $(dir $(XSA_OBJ)):
 # xclbin generation
 ###########################################################################
 VPP := v++
-VPPFLAGS := --target=$(TARGET) --platform=$(PLATFORM) --save-temps -g --kernel_frequency 300
+VPPFLAGS := --target=$(TARGET) --platform=$(PLATFORM) --save-temps -g --profile.data all:all:all --kernel_frequency 300
 # VPPFLAGS += --profile.data all:all:all
 
 $(XSA_OBJ): $(AIE_OBJ) $(RTL_XOS) $(dir $(XSA_OBJ))

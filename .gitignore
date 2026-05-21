@@ -37,3 +37,6 @@ hls/pagerank_pe1/pageRank_output_3_fpga.txt
 hls/pagerank_pe1/pageRank_output_2_fpga.txt
 
 *.jou
+aie/pagerank-pe1/pageRank_output_2_fpga.txt
+aie/pagerank-pe1/pageRank_output_3_fpga.txt
+aie/pagerank-pe1/xclbins/pageRankHS_hw.bk.xclbin
