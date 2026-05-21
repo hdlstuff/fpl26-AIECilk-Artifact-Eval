@@ -24,8 +24,8 @@ Address written to scheduler server raddr: c140020000
         Writing root task data to the scheduler server with data at address c120020000
         Wrote root task data to the scheduler server
         Initialized root task at scheduler server at address 0x50 with length 0x2000000, fifoHead 0x0, fifoTail 0x1, dataAddress 0xc120020000
-Time taken for init: 0.775785s
+Time taken for init: 0.738983s
 Found value 1 at return address c100010000
 Finished processing.
-Time taken for management loop: 0.507942s
+Time taken for management loop: 0.507934s
 Destroying XRTMemory. Total BOs created: 5

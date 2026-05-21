@@ -1,0 +1,54 @@
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: pageRank.cpp, Line: 53, Column: 11 }
+Function:        _Z14pageRankReduceRN3hls6streamI15vertex_map_argsLi0EEERNS0_I19pageRankReduce_argsLi0EEERNS0_ImLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          partial_sums
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: pageRank.cpp, Line: 34, Column: 20 }
+Function:        _Z14pageRankReduceRN3hls6streamI15vertex_map_argsLi0EEERNS0_I19pageRankReduce_argsLi0EEERNS0_ImLi0EEE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_34_1
+  - String:          ' '
+  - LoopLoc:         'pageRank.cpp:34:20'
+  - String:          ' '
+  - Function:        'pageRankReduce(hls::stream<vertex_map_args, 0>&, hls::stream<pageRankReduce_args, 0>&, hls::stream<unsigned long, 0>&)'
+    DebugLoc:        { File: pageRank.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_62_4
+  - String:          '> at '
+  - LoopLoc:         'pageRank.cpp:62:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' '
+...

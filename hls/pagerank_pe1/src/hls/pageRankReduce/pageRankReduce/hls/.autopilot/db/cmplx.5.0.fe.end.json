@@ -1,0 +1,74 @@
+{
+    "1": {
+        "name": "pageRankReduce_Pipeline_VITIS_LOOP_38_2",
+        "file": "pageRank.cpp",
+        "fileloc": "38",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "pageRankReduce_Pipeline_VITIS_LOOP_62_4",
+        "file": "pageRank.cpp",
+        "fileloc": "35",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "pageRankReduce_Pipeline_VITIS_LOOP_55_3",
+        "file": "pageRank.cpp",
+        "fileloc": "53",
+        "instructions": "49",
+        "total_instructions": "49",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "pageRankReduce",
+        "file": "pageRank.cpp",
+        "fileloc": "18",
+        "instructions": "67",
+        "total_instructions": "165",
+        "calls": "1 3 2",
+        "basicblocks": "6",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

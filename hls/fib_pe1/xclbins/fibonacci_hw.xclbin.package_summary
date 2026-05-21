@@ -1,0 +1,112 @@
+<ENTRY>
+{
+ "thisFile": "/home/eryilmaz/repos/fib/xclbins/fibonacci_hw.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Mar 19 13:44:01 2026",
+ "timestampMillis": "1773924241138",
+ "buildStep": {
+  "cmdId": "acc55c3a-809f-46ae-aca5-7822447aa893",
+  "name": "v++",
+  "logFile": "/home/eryilmaz/repos/fib/_x/package/package.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p -t hw -f xilinx_vck5000_gen4x8_qdma_2_202220_1 xclbins/fibonacci_hw.xsa -o xclbins/fibonacci_hw.xclbin --package.boot_mode=ospi ",
+  "args": [
+   "-p",
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "xclbins/fibonacci_hw.xsa",
+   "-o",
+   "xclbins/fibonacci_hw.xclbin",
+   "--package.boot_mode=ospi"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Mar 19 13:44:01 2026",
+ "timestampMillis": "1773924241138",
+ "status": {
+  "cmdId": "acc55c3a-809f-46ae-aca5-7822447aa893",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Mar 19 13:44:02 2026",
+ "timestampMillis": "1773924242702",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_PACKAGE",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "fibonacci_hw",
+    "file": "/home/eryilmaz/repos/fib/xclbins/fibonacci_hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Mar 19 13:44:02 2026",
+ "timestampMillis": "1773924242739",
+ "status": {
+  "cmdId": "acc55c3a-809f-46ae-aca5-7822447aa893",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Mar 19 13:44:02 2026",
+ "timestampMillis": "1773924242747",
+ "report": {
+  "path": "/home/eryilmaz/repos/fib/_x/reports/package/v++_package_fibonacci_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Mar 19 13:44:02 2026",
+ "timestampMillis": "1773924242747",
+ "report": {
+  "path": "/home/eryilmaz/repos/fib/_x/v++_package_fibonacci_hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

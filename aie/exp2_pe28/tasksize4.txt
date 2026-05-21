@@ -24,10 +24,10 @@ Address written to scheduler server raddr: c140020000
         Writing root task data to the scheduler server with data at address c120020000
         Wrote root task data to the scheduler server
         Initialized root task at scheduler server at address 0x50 with length 0x2000000, fifoHead 0x0, fifoTail 0x1, dataAddress 0xc120020000
-Time taken for init: 0.744363s
+Time taken for init: 0.750455s
 Managing scheduler server of task type paper_exp2_task2 at address 144 with rAddress 830002561024 and maxLength 33554432
 Allocation #6: Created contiguous BO of 1024 MB in bank 0 (addr: 0xc160020000)
 Found value 1 at return address c100010000
 Finished processing.
-Time taken for management loop: 0.813903s
+Time taken for management loop: 0.810307s
 Destroying XRTMemory. Total BOs created: 6

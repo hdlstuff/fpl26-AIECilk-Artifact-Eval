@@ -1,0 +1,155 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 10 5 4 13",
+    "file": "pageRank.cpp",
+    "fileloc": 277,
+    "instructions": 94,
+    "name": "vertex_map",
+    "total_instructions": 361
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "fabsfloat.cpp",
+    "fileloc": 7,
+    "instructions": 2,
+    "name": "fabsf",
+    "total_instructions": 40
+  },
+  "10": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "pageRank.cpp",
+    "fileloc": 77,
+    "instructions": 40,
+    "loads": {
+      "L": 3
+    },
+    "name": "readVertex",
+    "total_instructions": 40
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "total_instructions": 19
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "8 7",
+    "file": "hls_copysign.h",
+    "fileloc": 10,
+    "instructions": 7,
+    "name": "generic_copysign<float>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 36
+  },
+  "13": {
+    "basicblocks": 3,
+    "calls": "6",
+    "file": "pageRank.cpp",
+    "fileloc": 180,
+    "instructions": 60,
+    "loads": {
+      "L": 4
+    },
+    "name": "write_arg",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 102
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "hls_fabs.h",
+    "fileloc": 12,
+    "instructions": 2,
+    "name": "generic_fabs<float>",
+    "total_instructions": 38
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "pageRank.cpp",
+    "fileloc": 147,
+    "instructions": 71,
+    "loads": {
+      "L": 2
+    },
+    "name": "read_task",
+    "total_instructions": 71
+  },
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "pageRank.cpp",
+    "fileloc": 105,
+    "instructions": 30,
+    "name": "adder_function",
+    "total_instructions": 30
+  },
+  "5": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "pageRank.cpp",
+    "fileloc": 129,
+    "instructions": 24,
+    "name": "feed_adder_value",
+    "total_instructions": 24
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "std_abs.h",
+    "fileloc": 74,
+    "instructions": 2,
+    "name": "abs",
+    "total_instructions": 42
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 21
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 8,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 14,
+    "loads": {
+      "L": 4
+    },
+    "name": "data",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 14
+  }
+}

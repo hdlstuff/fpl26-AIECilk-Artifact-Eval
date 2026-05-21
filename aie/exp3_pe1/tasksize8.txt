@@ -79,7 +79,7 @@ Allocation #6: Created contiguous BO of 64 MB in bank 0 (addr: 0xc130020000)
         Initialized allocation server at address 0x90 with length 0x800000
         continuation_tasks_holder_addr address start: 0xc120020000, end: 0xc130020000
         continuation_queue_addr address start: 0xc130020000, end: 0xc134020000
-Time taken for init: 1.08614s
+Time taken for init: 1.06863s
 Found value 1 at return address c100010000
 Finished processing.
 Time taken for management loop: 4.8571s

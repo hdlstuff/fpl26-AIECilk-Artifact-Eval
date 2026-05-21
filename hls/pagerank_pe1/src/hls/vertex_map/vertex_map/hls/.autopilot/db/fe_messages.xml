@@ -1,0 +1,111 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = axis port = taskIn" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = axis port = taskOutGlobal" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = axis port = argOut" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=partial_sums complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:56:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pageRankReduce" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="readVertex" ARG_PragmaIsValid="1" ARG_PragmaOptions="II =1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adder_function" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="adder_function" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="feed_adder_value" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="feed_adder_value" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:218:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process" ARG_PragmaIsValid="1" ARG_PragmaOptions="port=return mode=ap_ctrl_chain" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=vertex_map" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:285:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = axis port = taskIn" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:286:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = axis port = taskOutGlobal" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:287:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = mem_0 bundle=gmem channel=0 latency=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:288:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = mem_1 bundle=gmem channel=1 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = mem_2 bundle=gmem channel=2 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:290:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = mem_5 bundle=gmem channel=5 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:292:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="port=mem_1 lines=2 depth=32" ARG_PragmaType="cache" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:293:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaOptions="port=mem_2 lines=2 depth=32" ARG_PragmaType="cache" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:295:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vertex_map" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:282:0" msg_body="A depth specification is required for MAXI interface port 'mem_0' for cosimulation.">
+        <args Name="mem_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:282:0" msg_body="A depth specification is required for MAXI interface port 'mem_1' for cosimulation.">
+        <args Name="mem_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:282:0" msg_body="A depth specification is required for MAXI interface port 'mem_2' for cosimulation.">
+        <args Name="mem_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="../pageRankReduce/pageRank.cpp:282:0" msg_body="A depth specification is required for MAXI interface port 'mem_5' for cosimulation.">
+        <args Name="mem_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:322:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::data() const' into 'fp_struct&lt;float&gt;::to_float() const'">
+        <args Callee="fp_struct&lt;float&gt;::data() const" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 309 Column 0" Caller="fp_struct&lt;float&gt;::to_float() const" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 322 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::to_float() const' into 'fp_struct&lt;float&gt;::to_ieee() const'">
+        <args Callee="fp_struct&lt;float&gt;::to_float() const" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 322 Column 0" Caller="fp_struct&lt;float&gt;::to_ieee() const" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 346 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'float generic_copysign&lt;float&gt;(float, float)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 283 Column 0" Caller="float generic_copysign&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h Line 10 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::to_ieee() const' into 'float generic_copysign&lt;float&gt;(float, float)'">
+        <args Callee="fp_struct&lt;float&gt;::to_ieee() const" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 346 Column 0" Caller="float generic_copysign&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h Line 10 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0" msg_body="Inlining function 'float generic_copysign&lt;float&gt;(float, float)' into 'float generic_fabs&lt;float&gt;(float)'">
+        <args Callee="float generic_copysign&lt;float&gt;(float, float)" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h Line 10 Column 0" Caller="float generic_fabs&lt;float&gt;(float)" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h Line 12 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp:7:0" msg_body="Inlining function 'float generic_fabs&lt;float&gt;(float)' into 'fabsf'">
+        <args Callee="float generic_fabs&lt;float&gt;(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h Line 12 Column 0" Caller="fabsf" Caller-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp Line 7 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h:75:0" msg_body="Inlining function 'fabsf' into 'std::abs(float)'">
+        <args Callee="fabsf" Callee-DebugLoc="File /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp Line 7 Column 0" Caller="std::abs(float)" Caller-DebugLoc="File /alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h Line 75 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../pageRankReduce/pageRank.cpp:184:0" msg_body="Inlining function 'std::abs(float)' into 'write_arg(void*, hls::stream&lt;pageRankReduce_args, 0&gt;&amp;, hls::stream&lt;vertex_map_args, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)'">
+        <args Callee="std::abs(float)" Callee-DebugLoc="File /alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h Line 75 Column 0" Caller="write_arg(void*, hls::stream&lt;pageRankReduce_args, 0&gt;&amp;, hls::stream&lt;vertex_map_args, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)" Caller-DebugLoc="File ../pageRankReduce/pageRank.cpp Line 184 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../pageRankReduce/pageRank.cpp:311:66" msg_body="Aggregating fifo (hls::stream) variable 'taskToWrite' with compact=bit mode in 480-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="480" HwTyName="fifo (hls::stream)" Name="taskToWrite"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

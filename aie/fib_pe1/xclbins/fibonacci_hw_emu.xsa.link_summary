@@ -1,0 +1,1000 @@
+<ENTRY>
+{
+ "thisFile": "/home/eryilmaz/repos/aie-fib/xclbins/fibonacci_hw_emu.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:13 2026",
+ "timestampMillis": "1772536393978",
+ "buildStep": {
+  "cmdId": "b57add81-e663-4db5-8e4a-2453546b8134",
+  "name": "v++",
+  "logFile": "/home/eryilmaz/repos/aie-fib/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target=hw_emu --platform=xilinx_vck5000_gen4x8_qdma_2_202220_1 --save-temps -g --profile.data all:all:all --kernel_frequency 300 -l -o xclbins/fibonacci_hw_emu.xsa ./libadf.a xos/fibonacci-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo xos/StreamSplitter_256_256-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo xos/StreamSplitter_64_512-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --config ./connectivity.cfg --vivado.synth.jobs 32 --vivado.impl.jobs 16 ",
+  "args": [
+   "--target=hw_emu",
+   "--platform=xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "--save-temps",
+   "-g",
+   "--profile.data",
+   "all:all:all",
+   "--kernel_frequency",
+   "300",
+   "-l",
+   "-o",
+   "xclbins/fibonacci_hw_emu.xsa",
+   "./libadf.a",
+   "xos/fibonacci-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "xos/StreamSplitter_256_256-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "xos/StreamSplitter_64_512-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--config",
+   "./connectivity.cfg",
+   "--vivado.synth.jobs",
+   "32",
+   "--vivado.impl.jobs",
+   "16"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/aie-fib/connectivity.cfg",
+    "content": "[connectivity]\nnk=fibonacci:1:fibonacci_1\nnk=StreamSplitter_64_512:1:StreamSplitter_64_512_1\nnk=StreamSplitter_256_256:1:StreamSplitter_256_256_1\n\n\nsp=fibonacci_1.m_axi_00:MC_NOC0\nsp=fibonacci_1.m_axi_01:MC_NOC0\nsp=fibonacci_1.m_axi_02:MC_NOC0\nsp=fibonacci_1.m_axi_03:MC_NOC0\nsp=fibonacci_1.m_axi_04:MC_NOC0\nsp=fibonacci_1.m_axi_05:MC_NOC0\nsp=fibonacci_1.m_axi_06:MC_NOC0\nsp=fibonacci_1.m_axi_07:MC_NOC0\nsp=fibonacci_1.m_axi_08:MC_NOC0\n\n# Fib Task In\nsc=fibonacci_1.BindTo_PE_fib_0_taskIn:ai_engine_0.PLIO_fib_taskIn\n\n# Fib Task Out Arg Data Out\nsc=ai_engine_0.PLIO_fib_taskOut_argDataOut:StreamSplitter_256_256_1.input\nsc=StreamSplitter_256_256_1.outputs_0:fibonacci_1.BindTo_PE_fib_0_taskOut\nsc=StreamSplitter_256_256_1.outputs_1:fibonacci_1.BindTo_PE_fib_0_argDataOut\n\n# Fib Closure In\nsc=fibonacci_1.BindTo_PE_fib_0_closureIn:ai_engine_0.PLIO_fib_closureIn\n\n# Fib Arg Out Spawn Next\nsc=ai_engine_0.PLIO_fib_argOut_SpawnNext:StreamSplitter_64_512_1.input\nsc=StreamSplitter_64_512_1.outputs_0:fibonacci_1.BindTo_PE_fib_0_argOut\nsc=StreamSplitter_64_512_1.outputs_1:fibonacci_1.BindTo_PE_fib_0_spawnNext\n\n# Fib Cont0 Task In\nsc=fibonacci_1.BindTo_PE_fib_cont0_0_taskIn:ai_engine_0.PLIO_fib_cont0_taskIn\n\n# Fib Cont0 Arg Data Out\nsc=ai_engine_0.PLIO_fib_cont0_argDataOut:fibonacci_1.BindTo_PE_fib_cont0_0_argDataOut\n\n# Fib Cont0 Arg Out\nsc=ai_engine_0.PLIO_fib_cont0_argOut:fibonacci_1.BindTo_PE_fib_cont0_0_argOut"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:13 2026",
+ "timestampMillis": "1772536393979",
+ "status": {
+  "cmdId": "b57add81-e663-4db5-8e4a-2453546b8134",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Mar  3 11:13:15 2026",
+ "timestampMillis": "1772536395986",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "fibonacci_hw_emu",
+    "file": "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "fibonacci",
+     "file": "/home/eryilmaz/repos/aie-fib/xos/fibonacci-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "fibonacci_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "StreamSplitter_256_256",
+     "file": "/home/eryilmaz/repos/aie-fib/xos/StreamSplitter_256_256-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "StreamSplitter_256_256_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "StreamSplitter_64_512",
+     "file": "/home/eryilmaz/repos/aie-fib/xos/StreamSplitter_64_512-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "StreamSplitter_64_512_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11",
+  "aieInputs": {
+   "base": {
+    "type": "AI_LIBSDF",
+    "name": "libadf",
+    "file": "/home/eryilmaz/repos/aie-fib/libadf.a",
+    "reports": [
+     {
+      "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie.partial.aiecompile_summary",
+      "name": "",
+      "fileType": "TEXT",
+      "reportType": "TASK_LOG_SUMMARY",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie_control_config.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_CONTROL_CONFIG",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie.router.soln.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_ROUTER_SOLUTION",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie.mapped.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_GRAPH_MAPPED",
+      "cmdId": ""
+     },
+     {
+      "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie.compiler.report.json",
+      "name": "",
+      "fileType": "JSON",
+      "reportType": "AIE_COMPILER_REPORT",
+      "cmdId": ""
+     }
+    ],
+    "uuid": ""
+   },
+   "sources": [],
+   "type": "AI_UKNOWN"
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:13:16 2026",
+ "timestampMillis": "1772536396000",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/aie_control_config.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONTROL_CONFIG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:16 2026",
+ "timestampMillis": "1772536396127",
+ "buildStep": {
+  "cmdId": "35cb2b9e-14fd-4710-96f0-093e977d4abe",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/eryilmaz/repos/aie-fib/xos/fibonacci-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --xo /home/eryilmaz/repos/aie-fib/xos/StreamSplitter_256_256-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo --xo /home/eryilmaz/repos/aie-fib/xos/StreamSplitter_64_512-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo -keep /home/eryilmaz/repos/aie-fib/.Xil/v++-31082-vck5000-vm/hw.o --config /home/eryilmaz/repos/aie-fib/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm --target emu --output_dir /home/eryilmaz/repos/aie-fib/_x/link/int --temp_dir /home/eryilmaz/repos/aie-fib/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/eryilmaz/repos/aie-fib/xos/fibonacci-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--xo",
+   "/home/eryilmaz/repos/aie-fib/xos/StreamSplitter_256_256-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "--xo",
+   "/home/eryilmaz/repos/aie-fib/xos/StreamSplitter_64_512-hw_emu-xilinx_vck5000_gen4x8_qdma_2_202220_1.xo",
+   "-keep",
+   "/home/eryilmaz/repos/aie-fib/.Xil/v++-31082-vck5000-vm/hw.o",
+   "--config",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/xilinx_vck5000_gen4x8_qdma_2_202220_1.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int",
+   "--temp_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/syslinkConfig.ini",
+    "content": "nk=fibonacci:1:fibonacci_1\nnk=StreamSplitter_64_512:1:StreamSplitter_64_512_1\nnk=StreamSplitter_256_256:1:StreamSplitter_256_256_1\nsc=fibonacci_1.BindTo_PE_fib_0_taskIn:ai_engine_0.PLIO_fib_taskIn\nsc=ai_engine_0.PLIO_fib_taskOut_argDataOut:StreamSplitter_256_256_1.input\nsc=StreamSplitter_256_256_1.outputs_0:fibonacci_1.BindTo_PE_fib_0_taskOut\nsc=StreamSplitter_256_256_1.outputs_1:fibonacci_1.BindTo_PE_fib_0_argDataOut\nsc=fibonacci_1.BindTo_PE_fib_0_closureIn:ai_engine_0.PLIO_fib_closureIn\nsc=ai_engine_0.PLIO_fib_argOut_SpawnNext:StreamSplitter_64_512_1.input\nsc=StreamSplitter_64_512_1.outputs_0:fibonacci_1.BindTo_PE_fib_0_argOut\nsc=StreamSplitter_64_512_1.outputs_1:fibonacci_1.BindTo_PE_fib_0_spawnNext\nsc=fibonacci_1.BindTo_PE_fib_cont0_0_taskIn:ai_engine_0.PLIO_fib_cont0_taskIn\nsc=ai_engine_0.PLIO_fib_cont0_argDataOut:fibonacci_1.BindTo_PE_fib_cont0_0_argDataOut\nsc=ai_engine_0.PLIO_fib_cont0_argOut:fibonacci_1.BindTo_PE_fib_cont0_0_argOut\nsp=fibonacci_1.m_axi_00:MC_NOC0\nsp=fibonacci_1.m_axi_01:MC_NOC0\nsp=fibonacci_1.m_axi_02:MC_NOC0\nsp=fibonacci_1.m_axi_03:MC_NOC0\nsp=fibonacci_1.m_axi_04:MC_NOC0\nsp=fibonacci_1.m_axi_05:MC_NOC0\nsp=fibonacci_1.m_axi_06:MC_NOC0\nsp=fibonacci_1.m_axi_07:MC_NOC0\nsp=fibonacci_1.m_axi_08:MC_NOC0\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:16 2026",
+ "timestampMillis": "1772536396128",
+ "status": {
+  "cmdId": "35cb2b9e-14fd-4710-96f0-093e977d4abe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:25 2026",
+ "timestampMillis": "1772536405277",
+ "status": {
+  "cmdId": "35cb2b9e-14fd-4710-96f0-093e977d4abe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:25 2026",
+ "timestampMillis": "1772536405280",
+ "buildStep": {
+  "cmdId": "f671aa41-10c4-4a1d-b821-f4d0eca78e61",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/eryilmaz/repos/aie-fib/_x/link/int/sdsl.dat -rtd /home/eryilmaz/repos/aie-fib/_x/link/int/cf2sw.rtd -nofilter /home/eryilmaz/repos/aie-fib/_x/link/int/cf2sw_full.rtd -xclbin /home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.xml -o /home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:25 2026",
+ "timestampMillis": "1772536405280",
+ "status": {
+  "cmdId": "f671aa41-10c4-4a1d-b821-f4d0eca78e61",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407140",
+ "status": {
+  "cmdId": "f671aa41-10c4-4a1d-b821-f4d0eca78e61",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407141",
+ "buildStep": {
+  "cmdId": "2e5e0b77-cf34-4944-92f7-86922a338b31",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407142",
+ "status": {
+  "cmdId": "2e5e0b77-cf34-4944-92f7-86922a338b31",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407238",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407238",
+ "status": {
+  "cmdId": "2e5e0b77-cf34-4944-92f7-86922a338b31",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407239",
+ "buildStep": {
+  "cmdId": "bca5f73b-967b-4c9d-95fd-5771fdac91c9",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw_emu -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/aie-fib/.ipcache --output_dir /home/eryilmaz/repos/aie-fib/_x/link/int --log_dir /home/eryilmaz/repos/aie-fib/_x/logs/link --report_dir /home/eryilmaz/repos/aie-fib/_x/reports/link --config /home/eryilmaz/repos/aie-fib/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/aie-fib/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/aie-fib/_x/link --emulation_mode debug_waveform --no-info --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_64_512_1_0 --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_256_1_0 --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_fibonacci_1_0 --messageDb /home/eryilmaz/repos/aie-fib/_x/link/run_link/vpl.pb /home/eryilmaz/repos/aie-fib/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw_emu",
+   "-f",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "-s",
+   "-g",
+   "--kernel_frequency",
+   "300",
+   "--remote_ip_cache",
+   "/home/eryilmaz/repos/aie-fib/.ipcache",
+   "--output_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int",
+   "--log_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/logs/link",
+   "--report_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/reports/link",
+   "--config",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/eryilmaz/repos/aie-fib/_x/link",
+   "--emulation_mode",
+   "debug_waveform",
+   "--no-info",
+   "--iprepo",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_64_512_1_0",
+   "--iprepo",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_256_1_0",
+   "--iprepo",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_fibonacci_1_0",
+   "--messageDb",
+   "/home/eryilmaz/repos/aie-fib/_x/link/run_link/vpl.pb",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/eryilmaz/repos/aie-fib\nmisc=BinaryName=fibonacci_hw_emu\n\n[connectivity]\nnk=fibonacci:1:fibonacci_1\nnk=StreamSplitter_256_256:1:StreamSplitter_256_256_1\nnk=StreamSplitter_64_512:1:StreamSplitter_64_512_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nsynth.jobs=32\nimpl.jobs=16\n\n"
+   }
+  ],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407240",
+ "status": {
+  "cmdId": "bca5f73b-967b-4c9d-95fd-5771fdac91c9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407862",
+ "buildStep": {
+  "cmdId": "9f9edaed-2d8f-4681-a3fa-294ad5b6b65a",
+  "name": "vpl",
+  "logFile": "/home/eryilmaz/repos/aie-fib/_x/link/link.steps.log",
+  "commandLine": "/tools/2022.2/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw_emu -f xilinx_vck5000_gen4x8_qdma_2_202220_1 -s -g --kernel_frequency 300 --remote_ip_cache /home/eryilmaz/repos/aie-fib/.ipcache --output_dir /home/eryilmaz/repos/aie-fib/_x/link/int --log_dir /home/eryilmaz/repos/aie-fib/_x/logs/link --report_dir /home/eryilmaz/repos/aie-fib/_x/reports/link --config /home/eryilmaz/repos/aie-fib/_x/link/int/vplConfig.ini -k /home/eryilmaz/repos/aie-fib/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/eryilmaz/repos/aie-fib/_x/link --emulation_mode debug_waveform --no-info --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_64_512_1_0 --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_StreamSplitter_256_256_1_0 --iprepo /home/eryilmaz/repos/aie-fib/_x/link/int/xo/ip_repo/epfl_ch_hardcilk_fibonacci_1_0 --messageDb /home/eryilmaz/repos/aie-fib/_x/link/run_link/vpl.pb /home/eryilmaz/repos/aie-fib/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:27 2026",
+ "timestampMillis": "1772536407862",
+ "status": {
+  "cmdId": "9f9edaed-2d8f-4681-a3fa-294ad5b6b65a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue Mar  3 11:13:32 2026",
+ "timestampMillis": "1772536412095",
+ "vivadoProject": {
+  "openDir": "/home/eryilmaz/repos/aie-fib/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:13:32 2026",
+ "timestampMillis": "1772536412096",
+ "buildStep": {
+  "cmdId": "832b44b4-55a6-4173-b2ae-1d113fb4ca0f",
+  "name": "vivado",
+  "logFile": "/home/eryilmaz/repos/aie-fib/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:13:32 2026",
+ "timestampMillis": "1772536412096",
+ "status": {
+  "cmdId": "832b44b4-55a6-4173-b2ae-1d113fb4ca0f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:14:09 2026",
+ "timestampMillis": "1772536449613",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:14:09 2026",
+ "timestampMillis": "1772536449632",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903127",
+ "status": {
+  "cmdId": "832b44b4-55a6-4173-b2ae-1d113fb4ca0f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903461",
+ "status": {
+  "cmdId": "9f9edaed-2d8f-4681-a3fa-294ad5b6b65a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903472",
+ "status": {
+  "cmdId": "bca5f73b-967b-4c9d-95fd-5771fdac91c9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903474",
+ "buildStep": {
+  "cmdId": "ffad08f1-8a33-49c5-993d-c9ada7baa960",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903474",
+ "status": {
+  "cmdId": "ffad08f1-8a33-49c5-993d-c9ada7baa960",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903476",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903477",
+ "buildStep": {
+  "cmdId": "f1e63b12-ad17-4545-8c01-4f395d84b8cf",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/eryilmaz/repos/aie-fib/_x/link/int/address_map.xml -sdsl /home/eryilmaz/repos/aie-fib/_x/link/int/sdsl.dat -xclbin /home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.xml -rtd /home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.rtd -o /home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xml",
+  "args": [
+   "-a",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.rtd",
+   "-o",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:43 2026",
+ "timestampMillis": "1772536903477",
+ "status": {
+  "cmdId": "f1e63b12-ad17-4545-8c01-4f395d84b8cf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:45 2026",
+ "timestampMillis": "1772536905070",
+ "status": {
+  "cmdId": "f1e63b12-ad17-4545-8c01-4f395d84b8cf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907296",
+ "buildStep": {
+  "cmdId": "bdd8b9ee-dc67-444f-b295-ff6782e5be2e",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.rtd",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907296",
+ "status": {
+  "cmdId": "bdd8b9ee-dc67-444f-b295-ff6782e5be2e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907298",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907299",
+ "status": {
+  "cmdId": "bdd8b9ee-dc67-444f-b295-ff6782e5be2e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907299",
+ "buildStep": {
+  "cmdId": "602ec3aa-88ca-4e9b-8728-f484e5280669",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907299",
+ "status": {
+  "cmdId": "602ec3aa-88ca-4e9b-8728-f484e5280669",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907301",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907301",
+ "status": {
+  "cmdId": "602ec3aa-88ca-4e9b-8728-f484e5280669",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907301",
+ "status": {
+  "cmdId": "ffad08f1-8a33-49c5-993d-c9ada7baa960",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907308",
+ "buildStep": {
+  "cmdId": "52609ea3-ad88-484b-b036-01fc42ad74fe",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section PDI:RAW:/home/eryilmaz/repos/aie-fib/_x/link/run_link/../int/vpl_gen_fixed_presynth.pdi --add-section DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu_xml.rtd --add-section BUILD_METADATA:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xml --add-section SYSTEM_METADATA:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/systemDiagramModelSlrBaseAddress.json --add-section AIE_METADATA:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/aie_control_config.json --key-value SYS:PlatformVBNV:xilinx.com_xd_vck5000_1_0 --output /home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin",
+  "args": [
+   "--add-section",
+   "PDI:RAW:/home/eryilmaz/repos/aie-fib/_x/link/run_link/../int/vpl_gen_fixed_presynth.pdi",
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/behav.xse",
+   "--force",
+   "--target",
+   "hw_emu",
+   "--key-value",
+   "SYS:dfx_enable:false",
+   "--add-section",
+   ":JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/eryilmaz/repos/aie-fib/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--add-section",
+   "AIE_METADATA:JSON:/home/eryilmaz/repos/aie-fib/_x/link/int/aie_control_config.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx.com_xd_vck5000_1_0",
+   "--output",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907309",
+ "status": {
+  "cmdId": "52609ea3-ad88-484b-b036-01fc42ad74fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907443",
+ "status": {
+  "cmdId": "52609ea3-ad88-484b-b036-01fc42ad74fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907444",
+ "buildStep": {
+  "cmdId": "c128eff4-f64f-439a-9c29-bbd58d71790f",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin.info --input /home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin.info",
+   "--input",
+   "/home/eryilmaz/repos/aie-fib/_x/link/int/fibonacci_hw_emu.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907445",
+ "status": {
+  "cmdId": "c128eff4-f64f-439a-9c29-bbd58d71790f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907711",
+ "status": {
+  "cmdId": "c128eff4-f64f-439a-9c29-bbd58d71790f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907713",
+ "buildStep": {
+  "cmdId": "ebd12a57-4fab-4651-94d0-fd597096b93c",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/eryilmaz/repos/aie-fib"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907713",
+ "status": {
+  "cmdId": "ebd12a57-4fab-4651-94d0-fd597096b93c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907714",
+ "status": {
+  "cmdId": "ebd12a57-4fab-4651-94d0-fd597096b93c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:47 2026",
+ "timestampMillis": "1772536907716",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/reports/link/system_estimate_fibonacci_hw_emu.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:51 2026",
+ "timestampMillis": "1772536911193",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar  3 11:21:51 2026",
+ "timestampMillis": "1772536911194",
+ "status": {
+  "cmdId": "b57add81-e663-4db5-8e4a-2453546b8134",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:51 2026",
+ "timestampMillis": "1772536911233",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/reports/link/v++_link_fibonacci_hw_emu_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar  3 11:21:51 2026",
+ "timestampMillis": "1772536911233",
+ "report": {
+  "path": "/home/eryilmaz/repos/aie-fib/_x/v++_link_fibonacci_hw_emu_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

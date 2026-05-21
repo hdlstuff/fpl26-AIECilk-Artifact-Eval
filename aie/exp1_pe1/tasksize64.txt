@@ -16,7 +16,7 @@ Address written to scheduler server raddr: c120020000
         Writing root task data to the scheduler server with data at address c100020000
         Wrote root task data to the scheduler server
         Initialized root task at scheduler server at address 0x10 with length 0x2000000, fifoHead 0x0, fifoTail 0x1, dataAddress 0xc100020000
-Time taken for init: 0.517048s
+Time taken for init: 0.51623s
 Found value 1 at return address c100010000
 Finished processing.
 Time taken for management loop: 13.5101s

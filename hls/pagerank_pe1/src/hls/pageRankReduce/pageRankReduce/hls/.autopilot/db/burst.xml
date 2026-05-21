@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="pageRank.cpp:34:20" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="pageRank.cpp:34:20" LoopName="VITIS_LOOP_34_1" ParentFunc="pageRankReduce(hls::stream&lt;vertex_map_args, 0&gt;&amp;, hls::stream&lt;pageRankReduce_args, 0&gt;&amp;, hls::stream&lt;unsigned long, 0&gt;&amp;)"/>
+</VitisHLS:BurstInfo>
+

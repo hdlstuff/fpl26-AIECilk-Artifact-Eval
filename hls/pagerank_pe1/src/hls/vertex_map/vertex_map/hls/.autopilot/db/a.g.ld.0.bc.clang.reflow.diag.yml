@@ -1,0 +1,358 @@
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 282, Column: 0 }
+Function:        _Z10vertex_mapPvS_S_S_RN3hls6streamI15vertex_map_argsLi0EEERNS1_I19pageRankReduce_argsLi0EEE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mem_0
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 282, Column: 0 }
+Function:        _Z10vertex_mapPvS_S_S_RN3hls6streamI15vertex_map_argsLi0EEERNS1_I19pageRankReduce_argsLi0EEE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mem_1
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 282, Column: 0 }
+Function:        _Z10vertex_mapPvS_S_S_RN3hls6streamI15vertex_map_argsLi0EEERNS1_I19pageRankReduce_argsLi0EEE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mem_2
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 282, Column: 0 }
+Function:        _Z10vertex_mapPvS_S_S_RN3hls6streamI15vertex_map_argsLi0EEERNS1_I19pageRankReduce_argsLi0EEE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mem_5
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 322, Column: 0 }
+Function:        _ZNK9fp_structIfE8to_floatEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 346, Column: 0 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z12generic_fabsIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_fabs<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp, 
+                   Line: 7, Column: 0 }
+Function:        fabsf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float generic_fabs<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fabsf
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h', 
+                   Line: 75, Column: 0 }
+Function:        _ZSt3absf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          fabsf
+    DebugLoc:        { File: /wrk/ci/prod/2024.1/hls_product/continuous/545/2024.1/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::abs(float)'
+    DebugLoc:        { File: '/alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h', 
+                       Line: 75, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 184, Column: 0 }
+Function:        _Z9write_argPvRN3hls6streamI19pageRankReduce_argsLi0EEERNS1_I15vertex_map_argsLi0EEERNS1_IfLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::abs(float)'
+    DebugLoc:        { File: '/alpha/tools/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/std_abs.h', 
+                       Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write_arg(void*, hls::stream<pageRankReduce_args, 0>&, hls::stream<vertex_map_args, 0>&, hls::stream<float, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 184, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 311, Column: 66 }
+Function:        _Z10vertex_mapPvS_S_S_RN3hls6streamI15vertex_map_argsLi0EEERNS1_I19pageRankReduce_argsLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            taskToWrite
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '480'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CacheUnderlyingObject
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 94, Column: 15 }
+Function:        _Z10readVertexPvS_RN3hls6streamImLi0EEERNS1_IjLi0EEES3_S3_RNS1_IfLi0EEE
+Args:            
+  - String:          Using a cache line to infer a burst is less efficient in terms of resources than writing the code to automatically infer the burst
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      u
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 94, 
+                       Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+  - ArrayName:       mem0
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'readVertex(void*, void*, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<float, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 84, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CacheUnderlyingObject
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 98, Column: 25 }
+Function:        _Z10readVertexPvS_RN3hls6streamImLi0EEERNS1_IjLi0EEES3_S3_RNS1_IfLi0EEE
+Args:            
+  - String:          Using a cache line to infer a burst is less efficient in terms of resources than writing the code to automatically infer the burst
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 98, 
+                       Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.14
+  - ArrayName:       mem0
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'readVertex(void*, void*, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<float, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 84, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CacheUnderlyingObject
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 99, Column: 21 }
+Function:        _Z10readVertexPvS_RN3hls6streamImLi0EEERNS1_IjLi0EEES3_S3_RNS1_IfLi0EEE
+Args:            
+  - String:          Using a cache line to infer a burst is less efficient in terms of resources than writing the code to automatically infer the burst
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      Pcurr_u
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 99, 
+                       Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.22
+  - ArrayName:       mem1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'readVertex(void*, void*, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<float, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 84, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, Column: 25 }
+Function:        _Z9read_taskPvRN3hls6streamI15vertex_map_argsLi0EEERNS1_ImLi0EEES6_S6_RNS1_IjLi0EEES8_S8_S4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'read_task(void*, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<vertex_map_args, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 156, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, 
+                       Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          entry.load.25
+  - OrigAccess:      load
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 167, 
+                       Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          entry.load.30
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, Column: 25 }
+Function:        _Z9read_taskPvRN3hls6streamI15vertex_map_argsLi0EEERNS1_ImLi0EEES6_S6_RNS1_IjLi0EEES8_S8_S4_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '1'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, 
+                       Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          seq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'read_task(void*, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<vertex_map_args, 0>&)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 156, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, Column: 25 }
+Function:        _Z9read_taskPvRN3hls6streamI15vertex_map_argsLi0EEERNS1_ImLi0EEES6_S6_RNS1_IjLi0EEES8_S8_S4_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem_CHN_0
+  - String:          ' '
+  - Function:        'read_task(void*, hls::stream<vertex_map_args, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned long, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<unsigned int, 0>&, hls::stream<vertex_map_args, 0>&) (.1)'
+    DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 156, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../pageRankReduce/pageRank.cpp, Line: 166, Column: 25 }
+Function:        _Z9read_taskPvRN3hls6streamI15vertex_map_argsLi0EEERNS1_ImLi0EEES6_S6_RNS1_IjLi0EEES8_S8_S4_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem_CHN_0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

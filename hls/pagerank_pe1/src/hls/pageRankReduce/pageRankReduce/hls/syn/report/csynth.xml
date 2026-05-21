@@ -1,0 +1,744 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplusHBM</ProductFamily>
+        <Part>xcu55c-fsvh2892-2LV-e</Part>
+        <TopModelName>pageRankReduce</TopModelName>
+        <TargetClockPeriod>4.00</TargetClockPeriod>
+        <ClockUncertainty>1.08</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.231</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_34_1>
+                <Slack>2.92</Slack>
+                <TripCount>undef</TripCount>
+                <Latency>undef</Latency>
+                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                <IterationLatency>undef</IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_34_1>
+        </SummaryOfLoopLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>pageRank.cpp:31</SourceLocation>
+            <SummaryOfLoopViolations>
+                <VITIS_LOOP_34_1>
+                    <Name>VITIS_LOOP_34_1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>pageRank.cpp:34</SourceLocation>
+                </VITIS_LOOP_34_1>
+            </SummaryOfLoopViolations>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>2</DSP>
+            <FF>2233</FF>
+            <LUT>1433</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>pageRankReduce</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskOutGlobal_TDATA</name>
+            <Object>taskOutGlobal</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskOutGlobal_TVALID</name>
+            <Object>taskOutGlobal</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskOutGlobal_TREADY</name>
+            <Object>taskOutGlobal</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskIn_TDATA</name>
+            <Object>taskIn</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskIn_TVALID</name>
+            <Object>taskIn</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>taskIn_TREADY</name>
+            <Object>taskIn</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>argOut_TDATA</name>
+            <Object>argOut</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>argOut_TVALID</name>
+            <Object>argOut</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>argOut_TREADY</name>
+            <Object>argOut</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>pageRankReduce</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_pageRankReduce_Pipeline_VITIS_LOOP_38_2_fu_180</InstName>
+                    <ModuleName>pageRankReduce_Pipeline_VITIS_LOOP_38_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>180</ID>
+                    <BindInstances>icmp_ln38_fu_101_p2 i_fu_107_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_pageRankReduce_Pipeline_VITIS_LOOP_55_3_fu_192</InstName>
+                    <ModuleName>pageRankReduce_Pipeline_VITIS_LOOP_55_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>192</ID>
+                    <BindInstances>icmp_ln55_fu_146_p2 i_2_fu_152_p2 sparsemux_9_2_32_1_1_U7 fadd_32ns_32ns_32_4_no_dsp_1_U6</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_pageRankReduce_Pipeline_VITIS_LOOP_62_4_fu_203</InstName>
+                    <ModuleName>pageRankReduce_Pipeline_VITIS_LOOP_62_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>203</ID>
+                    <BindInstances>icmp_ln62_fu_108_p2 add_ln62_fu_114_p2 sparsemux_9_2_32_1_1_U17 fadd_32ns_32ns_32_7_full_dsp_1_U16</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>icmp_ln70_1_fu_365_p2 icmp_ln70_2_fu_371_p2 or_ln70_1_fu_377_p2 icmp_ln70_3_fu_310_p2 icmp_ln70_4_fu_316_p2 or_ln70_2_fu_381_p2 and_ln70_fu_385_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U24 and_ln70_1_fu_391_p2 icmp_ln70_fu_322_p2 or_ln70_fu_397_p2 add_ln34_fu_402_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>pageRankReduce_Pipeline_VITIS_LOOP_38_2</Name>
+            <Loops>
+                <VITIS_LOOP_38_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>4.00</TargetClockPeriod>
+                    <ClockUncertainty>1.08</ClockUncertainty>
+                    <EstimatedClockPeriod>1.654</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_38_2>
+                        <Name>VITIS_LOOP_38_2</Name>
+                        <Slack>2.92</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_38_2>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>pageRank.cpp:40</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_38_2>
+                            <Name>VITIS_LOOP_38_2</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>pageRank.cpp:38</SourceLocation>
+                        </VITIS_LOOP_38_2>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>67</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>129</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_38_2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln38_fu_101_p2" SOURCE="pageRank.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln38" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_38_2" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_107_p2" SOURCE="pageRank.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pageRankReduce_Pipeline_VITIS_LOOP_55_3</Name>
+            <Loops>
+                <VITIS_LOOP_55_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>4.00</TargetClockPeriod>
+                    <ClockUncertainty>1.08</ClockUncertainty>
+                    <EstimatedClockPeriod>3.231</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_55_3>
+                        <Name>VITIS_LOOP_55_3</Name>
+                        <Slack>2.92</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_55_3>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>Timing Violation</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>pageRank.cpp:55</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_55_3>
+                            <Name>VITIS_LOOP_55_3</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>pageRank.cpp:55</SourceLocation>
+                        </VITIS_LOOP_55_3>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>500</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>623</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_55_3" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln55_fu_146_p2" SOURCE="pageRank.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln55" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_55_3" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_152_p2" SOURCE="pageRank.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="i_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_55_3" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_32_1_1_U7" SOURCE="pageRank.cpp:58" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="3" LOOP="VITIS_LOOP_55_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U6" SOURCE="pageRank.cpp:58" STORAGESUBTYPE="" URAM="0" VARIABLE="partial_sums_4" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pageRankReduce_Pipeline_VITIS_LOOP_62_4</Name>
+            <Loops>
+                <VITIS_LOOP_62_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>4.00</TargetClockPeriod>
+                    <ClockUncertainty>1.08</ClockUncertainty>
+                    <EstimatedClockPeriod>2.729</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>27</Best-caseLatency>
+                    <Average-caseLatency>27</Average-caseLatency>
+                    <Worst-caseLatency>27</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.108 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.108 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.108 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>26</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_62_4>
+                        <Name>VITIS_LOOP_62_4</Name>
+                        <Slack>2.92</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>25</Latency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
+                        <PipelineII>6</PipelineII>
+                        <PipelineDepth>8</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_62_4>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>pageRank.cpp:35</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_62_4>
+                            <Name>VITIS_LOOP_62_4</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>pageRank.cpp:62</SourceLocation>
+                        </VITIS_LOOP_62_4>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>395</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>351</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_62_4" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln62_fu_108_p2" SOURCE="pageRank.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln62" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_62_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_fu_114_p2" SOURCE="pageRank.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln62" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_62_4" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_32_1_1_U17" SOURCE="pageRank.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_62_4" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U16" SOURCE="pageRank.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_1" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pageRankReduce</Name>
+            <Loops>
+                <VITIS_LOOP_34_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>4.00</TargetClockPeriod>
+                    <ClockUncertainty>1.08</ClockUncertainty>
+                    <EstimatedClockPeriod>3.231</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_34_1>
+                        <Name>VITIS_LOOP_34_1</Name>
+                        <Slack>2.92</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>undef</IterationLatency>
+                        <PipelineDepth>undef</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_pageRankReduce_Pipeline_VITIS_LOOP_38_2_fu_180</Instance>
+                            <Instance>grp_pageRankReduce_Pipeline_VITIS_LOOP_55_3_fu_192</Instance>
+                            <Instance>grp_pageRankReduce_Pipeline_VITIS_LOOP_62_4_fu_203</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_34_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>pageRank.cpp:31</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_34_1>
+                            <Name>VITIS_LOOP_34_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>pageRank.cpp:34</SourceLocation>
+                        </VITIS_LOOP_34_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2233</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1433</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln70_1_fu_365_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln70_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln70_2_fu_371_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln70_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="or" PRAGMA="" RTLNAME="or_ln70_1_fu_377_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln70_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln70_3_fu_310_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln70_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln70_4_fu_316_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln70_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="or" PRAGMA="" RTLNAME="or_ln70_2_fu_381_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln70_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="and" PRAGMA="" RTLNAME="and_ln70_fu_385_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln70" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_34_1" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U24" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="and" PRAGMA="" RTLNAME="and_ln70_1_fu_391_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln70_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln70_fu_322_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln70" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="or" PRAGMA="" RTLNAME="or_ln70_fu_397_p2" SOURCE="pageRank.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln70" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_402_p2" SOURCE="pageRank.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="taskOutGlobal" index="0" direction="out" srcType="stream&lt;vertex_map_args, 0&gt;&amp;" srcSize="512">
+            <hwRefs>
+                <hwRef type="interface" interface="taskOutGlobal" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="taskIn" index="1" direction="in" srcType="stream&lt;pageRankReduce_args, 0&gt;&amp;" srcSize="512">
+            <hwRefs>
+                <hwRef type="interface" interface="taskIn" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="argOut" index="2" direction="out" srcType="stream&lt;unsigned long, 0&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="interface" interface="argOut" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">taskOutGlobal:taskIn:argOut</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="taskOutGlobal" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="512" portPrefix="taskOutGlobal_">
+            <ports>
+                <port>taskOutGlobal_TDATA</port>
+                <port>taskOutGlobal_TREADY</port>
+                <port>taskOutGlobal_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="taskOutGlobal"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="taskIn" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="512" portPrefix="taskIn_">
+            <ports>
+                <port>taskIn_TDATA</port>
+                <port>taskIn_TREADY</port>
+                <port>taskIn_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="taskIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="argOut" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="64" portPrefix="argOut_">
+            <ports>
+                <port>argOut_TDATA</port>
+                <port>argOut_TREADY</port>
+                <port>argOut_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="argOut"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table>
+                    <keys size="6">Interface, Direction, Register Mode, TDATA, TREADY, TVALID</keys>
+                    <column name="argOut">out, both, 64, 1, 1</column>
+                    <column name="taskIn">in, both, 512, 1, 1</column>
+                    <column name="taskOutGlobal">out, both, 512, 1, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="taskOutGlobal">out, stream&lt;vertex_map_args 0&gt;&amp;</column>
+                    <column name="taskIn">in, stream&lt;pageRankReduce_args 0&gt;&amp;</column>
+                    <column name="argOut">out, stream&lt;unsigned long 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="taskOutGlobal">taskOutGlobal, interface</column>
+                    <column name="taskIn">taskIn, interface</column>
+                    <column name="argOut">argOut, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="interface" location="pageRank.cpp:24" status="valid" parentFunction="pagerankreduce" variable="" isDirective="0" options="mode = axis port = taskIn"/>
+        <Pragma type="interface" location="pageRank.cpp:25" status="valid" parentFunction="pagerankreduce" variable="" isDirective="0" options="mode = axis port = taskOutGlobal"/>
+        <Pragma type="interface" location="pageRank.cpp:26" status="valid" parentFunction="pagerankreduce" variable="" isDirective="0" options="mode = axis port = argOut"/>
+        <Pragma type="pipeline" location="pageRank.cpp:39" status="valid" parentFunction="pagerankreduce" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="pageRank.cpp:54" status="valid" parentFunction="pagerankreduce" variable="partial_sums" isDirective="0" options="variable=partial_sums complete dim=1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:56" status="valid" parentFunction="pagerankreduce" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:93" status="valid" parentFunction="readvertex" variable="" isDirective="0" options="II =1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:116" status="valid" parentFunction="adder_function" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:121" status="valid" parentFunction="adder_function" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="pageRank.cpp:134" status="valid" parentFunction="feed_adder_value" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:139" status="valid" parentFunction="feed_adder_value" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="pageRank.cpp:157" status="valid" parentFunction="read_task" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="pageRank.cpp:185" status="valid" parentFunction="write_arg" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="pageRank.cpp:218" status="valid" parentFunction="process" variable="return" isDirective="0" options="port=return mode=ap_ctrl_chain"/>
+        <Pragma type="dataflow" location="pageRank.cpp:221" status="valid" parentFunction="process" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="pageRank.cpp:284" status="valid" parentFunction="vertex_map" variable="return" isDirective="0" options="port=return mode=ap_ctrl_chain"/>
+        <Pragma type="interface" location="pageRank.cpp:285" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = axis port = taskIn"/>
+        <Pragma type="interface" location="pageRank.cpp:286" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = axis port = taskOutGlobal"/>
+        <Pragma type="interface" location="pageRank.cpp:287" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = m_axi port = mem_0 bundle=gmem channel=0 latency=64"/>
+        <Pragma type="interface" location="pageRank.cpp:288" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = m_axi port = mem_1 bundle=gmem channel=1 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256"/>
+        <Pragma type="interface" location="pageRank.cpp:289" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = m_axi port = mem_2 bundle=gmem channel=2 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256"/>
+        <Pragma type="interface" location="pageRank.cpp:290" status="valid" parentFunction="vertex_map" variable="" isDirective="0" options="mode = m_axi port = mem_5 bundle=gmem channel=5 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256"/>
+        <Pragma type="cache" location="pageRank.cpp:292" status="valid" parentFunction="vertex_map" variable="mem_1" isDirective="0" options="port=mem_1 lines=2 depth=32"/>
+        <Pragma type="cache" location="pageRank.cpp:293" status="valid" parentFunction="vertex_map" variable="mem_2" isDirective="0" options="port=mem_2 lines=2 depth=32"/>
+    </PragmaReport>
+</profile>
+

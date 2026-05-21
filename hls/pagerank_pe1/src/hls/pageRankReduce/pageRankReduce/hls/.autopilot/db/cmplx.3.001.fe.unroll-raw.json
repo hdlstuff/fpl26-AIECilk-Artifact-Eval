@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "pageRank.cpp",
+    "fileloc": 18,
+    "instructions": 111,
+    "loads": {
+      "L": 2
+    },
+    "name": "pageRankReduce",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 111
+  }
+}

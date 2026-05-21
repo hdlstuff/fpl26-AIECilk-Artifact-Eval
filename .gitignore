@@ -18,7 +18,11 @@ aie/matmul*
 !aie/pageRankv2_pe1_8
 
 hls/*
-!hls/pageRankv2_pe1_cache
+!hls/pagerank_pe1
+!hls/fib_pe1
+!hls/power_stats.py
+!hls/run-real.fish
+!hls/xbutil_power_logger.sh
 
 real/*
 !real/pagerankv2
@@ -26,7 +30,10 @@ real/*
 real-hls/*
 !real-hls/pagerankv2
 
-aie/pageRankv2_pe1_8/output.txt
-hls/pageRankv2_pe1_cache/output.txt
-hls/pageRankv2_pe1_cache/pageRank_output_3_fpga.txt
-hls/pageRankv2_pe1_cache/pageRank_output_2_fpga.txt
+aie/pagerank_pe1/output.txt
+aie/fib_pe1/xclbins/fibonacci_hw_emu.xsa
+hls/pagerank_pe1/output.txt
+hls/pagerank_pe1/pageRank_output_3_fpga.txt
+hls/pagerank_pe1/pageRank_output_2_fpga.txt
+
+*.jou

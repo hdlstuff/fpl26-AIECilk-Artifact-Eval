@@ -1,0 +1,156 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pageRankReduce'
+================================================================
++ General Information: 
+    * Date:           Thu Aug 14 16:12:00 2025
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        pageRankReduce
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: virtexuplusHBM
+    * Target device:  xcu55c-fsvh2892-2LV-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |                   Modules                   |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |            |            |     |
+    |                   & Loops                   |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
+    +---------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |+ pageRankReduce                             |  Timing|  -0.31|        -|        -|         -|        -|     -|        no|     -|  2 (~0%)|  2233 (~0%)|  1433 (~0%)|    -|
+    | o VITIS_LOOP_34_1                           |       -|   2.92|        -|        -|         -|        -|     -|        no|     -|        -|           -|           -|    -|
+    |  + pageRankReduce_Pipeline_VITIS_LOOP_38_2  |       -|   1.27|        -|        -|         -|        -|     -|        no|     -|        -|    67 (~0%)|   129 (~0%)|    -|
+    |   o VITIS_LOOP_38_2                         |       -|   2.92|        -|        -|         2|        1|     -|       yes|     -|        -|           -|           -|    -|
+    |  + pageRankReduce_Pipeline_VITIS_LOOP_55_3  |  Timing|  -0.31|        -|        -|         -|        -|     -|        no|     -|        -|   500 (~0%)|   623 (~0%)|    -|
+    |   o VITIS_LOOP_55_3                         |       -|   2.92|        -|        -|         5|        1|     -|       yes|     -|        -|           -|           -|    -|
+    |  + pageRankReduce_Pipeline_VITIS_LOOP_62_4  |       -|   0.19|       27|  108.000|         -|       27|     -|        no|     -|  2 (~0%)|   395 (~0%)|   351 (~0%)|    -|
+    |   o VITIS_LOOP_62_4                         |      II|   2.92|       25|  100.000|         8|        6|     4|       yes|     -|        -|           -|           -|    -|
+    +---------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++---------------+-----------+---------------+-------+--------+--------+
+| Interface     | Direction | Register Mode | TDATA | TREADY | TVALID |
++---------------+-----------+---------------+-------+--------+--------+
+| argOut        | out       | both          | 64    | 1      | 1      |
+| taskIn        | in        | both          | 512   | 1      | 1      |
+| taskOutGlobal | out       | both          | 512   | 1      | 1      |
++---------------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------+-----------+---------------------------------+
+| Argument      | Direction | Datatype                        |
++---------------+-----------+---------------------------------+
+| taskOutGlobal | out       | stream<vertex_map_args, 0>&     |
+| taskIn        | in        | stream<pageRankReduce_args, 0>& |
+| argOut        | out       | stream<unsigned long, 0>&       |
++---------------+-----------+---------------------------------+
+
+* SW-to-HW Mapping
++---------------+---------------+-----------+
+| Argument      | HW Interface  | HW Type   |
++---------------+---------------+-----------+
+| taskOutGlobal | taskOutGlobal | interface |
+| taskIn        | taskIn        | interface |
+| argOut        | argOut        | interface |
++---------------+---------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+----------------+-----------+---------+---------+
+| Name                                       | DSP | Pragma | Variable       | Op        | Impl    | Latency |
++--------------------------------------------+-----+--------+----------------+-----------+---------+---------+
+| + pageRankReduce                           | 2   |        |                |           |         |         |
+|   icmp_ln70_1_fu_365_p2                    |     |        | icmp_ln70_1    | setne     | auto    | 0       |
+|   icmp_ln70_2_fu_371_p2                    |     |        | icmp_ln70_2    | seteq     | auto    | 0       |
+|   or_ln70_1_fu_377_p2                      |     |        | or_ln70_1      | or        | auto    | 0       |
+|   icmp_ln70_3_fu_310_p2                    |     |        | icmp_ln70_3    | setne     | auto    | 0       |
+|   icmp_ln70_4_fu_316_p2                    |     |        | icmp_ln70_4    | seteq     | auto    | 0       |
+|   or_ln70_2_fu_381_p2                      |     |        | or_ln70_2      | or        | auto    | 0       |
+|   and_ln70_fu_385_p2                       |     |        | and_ln70       | and       | auto    | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U24          |     |        | tmp_8          | fcmp      | auto    | 1       |
+|   and_ln70_1_fu_391_p2                     |     |        | and_ln70_1     | and       | auto    | 0       |
+|   icmp_ln70_fu_322_p2                      |     |        | icmp_ln70      | setgt     | auto    | 0       |
+|   or_ln70_fu_397_p2                        |     |        | or_ln70        | or        | auto    | 0       |
+|   add_ln34_fu_402_p2                       |     |        | add_ln34       | add       | fabric  | 0       |
+|  + pageRankReduce_Pipeline_VITIS_LOOP_38_2 | 0   |        |                |           |         |         |
+|    icmp_ln38_fu_101_p2                     |     |        | icmp_ln38      | seteq     | auto    | 0       |
+|    i_fu_107_p2                             |     |        | i              | add       | fabric  | 0       |
+|  + pageRankReduce_Pipeline_VITIS_LOOP_55_3 | 0   |        |                |           |         |         |
+|    icmp_ln55_fu_146_p2                     |     |        | icmp_ln55      | seteq     | auto    | 0       |
+|    i_2_fu_152_p2                           |     |        | i_2            | add       | fabric  | 0       |
+|    sparsemux_9_2_32_1_1_U7                 |     |        | tmp_2          | sparsemux | auto    | 0       |
+|    fadd_32ns_32ns_32_4_no_dsp_1_U6         |     |        | partial_sums_4 | fadd      | fabric  | 3       |
+|  + pageRankReduce_Pipeline_VITIS_LOOP_62_4 | 2   |        |                |           |         |         |
+|    icmp_ln62_fu_108_p2                     |     |        | icmp_ln62      | seteq     | auto    | 0       |
+|    add_ln62_fu_114_p2                      |     |        | add_ln62       | add       | fabric  | 0       |
+|    sparsemux_9_2_32_1_1_U17                |     |        | tmp_3          | sparsemux | auto    | 0       |
+|    fadd_32ns_32ns_32_7_full_dsp_1_U16      | 2   |        | sum_1          | fadd      | fulldsp | 6       |
++--------------------------------------------+-----+--------+----------------+-----------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
+| Type            | Options                                                                                                                                                    | Location                                        |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
+| interface       | mode = axis port = taskIn                                                                                                                                  | pageRank.cpp:24 in pagerankreduce               |
+| interface       | mode = axis port = taskOutGlobal                                                                                                                           | pageRank.cpp:25 in pagerankreduce               |
+| interface       | mode = axis port = argOut                                                                                                                                  | pageRank.cpp:26 in pagerankreduce               |
+| pipeline        | II=1                                                                                                                                                       | pageRank.cpp:39 in pagerankreduce               |
+| array_partition | variable=partial_sums complete dim=1                                                                                                                       | pageRank.cpp:54 in pagerankreduce, partial_sums |
+| pipeline        | II=1                                                                                                                                                       | pageRank.cpp:56 in pagerankreduce               |
+| pipeline        | II =1                                                                                                                                                      | pageRank.cpp:93 in readvertex                   |
+| pipeline        | II=1                                                                                                                                                       | pageRank.cpp:116 in adder_function              |
+| pipeline        |                                                                                                                                                            | pageRank.cpp:121 in adder_function              |
+| pipeline        | II=1                                                                                                                                                       | pageRank.cpp:134 in feed_adder_value            |
+| pipeline        | II=1                                                                                                                                                       | pageRank.cpp:139 in feed_adder_value            |
+| pipeline        |                                                                                                                                                            | pageRank.cpp:157 in read_task                   |
+| pipeline        |                                                                                                                                                            | pageRank.cpp:185 in write_arg                   |
+| interface       | port=return mode=ap_ctrl_chain                                                                                                                             | pageRank.cpp:218 in process, return             |
+| dataflow        |                                                                                                                                                            | pageRank.cpp:221 in process                     |
+| interface       | port=return mode=ap_ctrl_chain                                                                                                                             | pageRank.cpp:284 in vertex_map, return          |
+| interface       | mode = axis port = taskIn                                                                                                                                  | pageRank.cpp:285 in vertex_map                  |
+| interface       | mode = axis port = taskOutGlobal                                                                                                                           | pageRank.cpp:286 in vertex_map                  |
+| interface       | mode = m_axi port = mem_0 bundle=gmem channel=0 latency=64                                                                                                 | pageRank.cpp:287 in vertex_map                  |
+| interface       | mode = m_axi port = mem_1 bundle=gmem channel=1 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256 | pageRank.cpp:288 in vertex_map                  |
+| interface       | mode = m_axi port = mem_2 bundle=gmem channel=2 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256 | pageRank.cpp:289 in vertex_map                  |
+| interface       | mode = m_axi port = mem_5 bundle=gmem channel=5 latency=64 num_write_outstanding=1 num_read_outstanding=64 max_read_burst_length=16 max_widen_bitwidth=256 | pageRank.cpp:290 in vertex_map                  |
+| cache           | port=mem_1 lines=2 depth=32                                                                                                                                | pageRank.cpp:292 in vertex_map, mem_1           |
+| cache           | port=mem_2 lines=2 depth=32                                                                                                                                | pageRank.cpp:293 in vertex_map, mem_2           |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
+
+
